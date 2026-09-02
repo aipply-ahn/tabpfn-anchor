@@ -1,0 +1,55 @@
+name: CI
+
+# Checks that need no backbone checkpoint. Downloading one requires logging in
+# to Prior Labs and accepting the model licence, so the fitting tests skip
+# themselves here; see THIRD_PARTY_NOTICES.md.
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Compile every module
+        run: python -m compileall -q tabpfn_anchor example tests
+
+      - name: Build the wheel
+        run: |
+          python -m pip install --upgrade pip build
+          python -m build
+
+      - name: Install and run the checkpoint-free tests
+        run: |
+          python -m pip install ".[test]"
+          pytest -q
+
+      - name: Verify the export manifest
+        run: sha256sum -c MANIFEST.sha256
+
+      - name: The tree must contain nothing outside the manifest
+        # sha256sum -c reports files that changed or went missing, not files
+        # that were added. The allow-list is only meaningful if extras fail too.
+        run: |
+          # sha256sum writes "<64 hex><two spaces><path>"; cut at a fixed
+          # column so a path containing spaces survives intact.
+          listed=$(cut -c67- MANIFEST.sha256 | sort)
+          tracked=$(git ls-files \
+            | grep -v -E '^(EXPORT_STAMP\.txt|MANIFEST\.sha256)$' | sort)
+          extra=$(comm -13 <(echo "$listed") <(echo "$tracked"))
+          if [ -n "$extra" ]; then
+            echo "tracked but not in MANIFEST.sha256:"; echo "$extra"; exit 1
+          fi
+
+      - name: No data files may be committed
+        run: |
+          found=$(git ls-files | grep -E '\.(tsv|csv|csv\.gz|npz|parquet|ckpt)$' || true)
+          if [ -n "$found" ]; then echo "data files committed:"; echo "$found"; exit 1; fi

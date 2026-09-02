@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tabpfn-anchor"
+version = "0.1.0"
+description = "Anchor-conditioned ensemble adaptation of TabPFN for high-dimensional cancer subtype classification"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Hongryul Ahn" }]
+keywords = ["tabpfn", "feature-selection", "transcriptomics", "cancer-subtype", "tabular"]
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+# Upper bounds are deliberate. An open range is not "compatible with the
+# future": scikit-learn 1.8 deprecated LogisticRegression's `penalty` argument
+# and will remove it in 1.10, which the meta-learner here passes, and the
+# TabPFN major version decides whether the pinned checkpoint can be loaded at
+# all (an older package finds the file and then fails inside its own loader).
+# The exact versions the reported results were measured under are in
+# requirements-paper.txt.
+dependencies = [
+    "numpy>=1.24,<3",
+    "pandas>=2.0,<3",
+    "scipy>=1.10,<2",
+    "scikit-learn>=1.5,<1.10",
+    "tabpfn>=8.4,<9",
+    "shapiq>=1.6,<2",
+    "pyyaml>=6.0,<7",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7.0"]
+
+[project.scripts]
+tabpfn-anchor = "tabpfn_anchor.cli:main"
+
+[project.urls]
+Repository = "https://github.com/aipply-ahn/tabpfn-anchor"
+
+[tool.setuptools.packages.find]
+include = ["tabpfn_anchor*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

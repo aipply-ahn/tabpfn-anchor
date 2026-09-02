@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software and the paper."
+title: "TabPFN-Anchor"
+abstract: >-
+  Anchor-conditioned ensemble adaptation of a tabular foundation model for
+  high-dimensional cancer subtype classification. A cascaded supervised ranking
+  produces a reportable 100-gene anchor signature; lower-ranked genes supply
+  ordered additional context to multiple fixed-width TabPFN views combined by a
+  stacked meta-learner.
+type: software
+version: "0.1.0"
+license: MIT
+repository-code: "https://github.com/aipply-ahn/tabpfn-anchor"
+authors:
+  - family-names: "Ahn"
+    given-names: "Hongryul"
+    orcid: "https://orcid.org/0000-0002-5941-9784"
+    affiliation: "Division of AI and Data Science, The University of Suwon"
+preferred-citation:
+  type: article
+  title: >-
+    TabPFN-Anchor: Anchor-Conditioned Ensemble Adaptation of a Tabular
+    Foundation Model for High-Dimensional Cancer Subtype Classification
+  authors:
+    - family-names: "Ahn"
+      given-names: "Hongryul"
+      orcid: "https://orcid.org/0000-0002-5941-9784"
+  year: 2026
+  # Fill in journal, volume, pages and doi once the paper is accepted.

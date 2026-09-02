@@ -1,0 +1,24 @@
+This repository is generated from the research workspace that
+produced the published results, by copying an explicit allow-list
+of files. The export is one-way.
+
+Do not edit the Python here: the next export overwrites it. Send
+changes to the source workspace instead, so that the published code
+and the code that produced the results stay the same code.
+
+The export also checks that this tree contains nothing outside the
+allow-list, so a file dropped from the list cannot survive here.
+
+MANIFEST.sha256 lists the SHA-256 of every file in this tree, so a
+published file can be checked against the snapshot it came from.
+Verify with:  sha256sum -c MANIFEST.sha256
+
+That covers README.md, LICENSE and the other files maintained here
+directly, so re-run the export after editing one of those too: it
+leaves them alone and only rewrites this manifest.
+
+exported_at   : 2026-09-02 23:57:30
+source_commit : (no commit)
+exported_files: 14
+tree_files    : 23
+allow_list    : planning/github_export.txt

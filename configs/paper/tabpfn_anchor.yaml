@@ -1,0 +1,49 @@
+# TabPFN-Anchor, the configuration reported in the paper.
+#
+# Transcribed from the configuration file written by the run that produced the
+# reported results (results/runs/model/F1_rank50_v3_K9), not from any document.
+# Every value below is also the estimator's default, so
+#
+#     TabPFNAnchorClassifier()
+#
+# and this file describe the same model. tests/test_api_contract.py asserts
+# that, so the two cannot drift apart silently.
+#
+# This configuration is slow: roughly 18 minutes per outer split on one GPU for
+# a TCGA-sized cohort, of which about four fifths is the OddSHAP stage.
+
+# Step 1 --- cascaded ranking of the transcriptome
+n_stage1: 2000            # 1.1  ANOVA-F screen keeps this many genes
+stage1_source: anova_f
+n_stage2: 500             # 1.2  Random Forest feature importance keeps this many
+rf_n_estimators: 2000
+n_anchor: 100             # 1.3  OddSHAP attribution selects the anchor set
+anchor_source: shap
+shap_backend: shapiq
+shap_approximator: OddSHAP
+shap_budget: 1024
+shap_max_samples: 32
+shap_class_mode: all
+shap_tabpfn_n_estimators: 8
+
+# Step 2 --- feature views and aggregation
+n_residual: 400           # n_anchor + n_residual must equal n_stage2
+stack_size: 9             # K, the number of views
+view_strategy: anchor_ranked
+residual_source: pool
+aggregation: stack
+oof_meta: true
+oof_folds: 5              # reduced automatically if a class is smaller
+nested_selection: false
+
+# Backbone
+tabpfn_model_path: tabpfn-v3-classifier-v3_20260417_multiclass.ckpt
+tabpfn_n_estimators: 8
+
+# Execution profile. "auto" is what every recorded run used, and it is what the
+# reported results require: mode="anchor" is a strict profile that raises
+# instead of reducing oof_folds, and the reported runs do reduce it (to 4) on
+# the ten outer splits of one cohort whose smallest class has four members.
+mode: auto
+
+random_state: 42

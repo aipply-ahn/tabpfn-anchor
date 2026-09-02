@@ -1,0 +1,30 @@
+# Pinned versions of the environment that produced the reported results.
+#
+# `pyproject.toml` carries loose lower bounds so that the package stays
+# installable; this file is the exact environment, for anyone who wants to run
+# the published configuration under the versions it was measured with.
+#
+#     pip install -r requirements-paper.txt
+#
+# Recorded from the environment log written by the run itself. The benchmark
+# was sharded across two hosts and some baseline libraries differed between
+# them; only the packages this method itself uses are pinned here.
+tabpfn==8.4.0
+shapiq==1.6.0
+scikit-learn==1.8.0
+numpy==2.4.2
+pandas==2.3.3
+torch==2.9.1+cu128
+
+# Backbone checkpoint used for every reported result. It is downloaded by the
+# tabpfn package on first use and is not redistributed here; see
+# THIRD_PARTY_NOTICES.md for the licence and the login step.
+#
+#   file    tabpfn-v3-classifier-v3_20260417_multiclass.ckpt
+#   size    212,804,803 bytes
+#   sha256  517c40ca21e0e1b1fa6629ded4b0412ffb7b2e577eb6cb96e5be5c487fadfb03
+#
+# The name alone does not identify the weights; check the digest if you need to
+# be sure you hold the same file:
+#
+#     sha256sum ~/.cache/tabpfn/tabpfn-v3-classifier-v3_20260417_multiclass.ckpt

@@ -1,0 +1,49 @@
+# ---------------------------------------------------------------------------
+# No data belongs in this repository.
+#
+# Neither the source cohort files nor anything derived from them is
+# redistributed here: not the expression matrices, not the cross-validation
+# splits, not the per-subtype summary statistics, not the synthetic samples
+# built from those statistics. Everything below is produced locally by the
+# user, from a file the user obtained themselves. See DATA.md.
+#
+# NOTE: these rules cover the DEFAULT output location, data/. Pass a different
+# --data-dir and the output lands outside them. Check `git status` before
+# committing, and publish from a fresh repository rather than one whose history
+# might already contain such a directory.
+# ---------------------------------------------------------------------------
+data/
+results/
+demo/generated/
+
+# The release archive and anything taken out of it.
+TMP_v12_*.tar.gz
+TMP_v12_*.tar.gz.part
+*_v12_*.tsv
+*_CVfolds_*.tsv
+
+# Superseded: an earlier release derived synthetic samples from per-subtype
+# summary statistics of a real cohort. That path is gone, but a working tree
+# from before it was removed may still hold the files.
+tcga_summary_statistics*
+tcga_synthetic*
+
+*.tsv
+*.npz
+*.parquet
+
+# Model checkpoints are downloaded by the tabpfn package into its own cache.
+*.ckpt
+
+# Example output
+toy_gene_expression.tsv
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.venv/
+venv/

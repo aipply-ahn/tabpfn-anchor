@@ -1,0 +1,12 @@
+# Superseded defaults, kept only so that older runs can be reproduced.
+#
+# Until 2026-09-02 the estimator's own defaults were the two values below.
+# They were never the published method: every configuration that produced a
+# reported result set both explicitly, so no reported number depends on them.
+# They were changed because an unconfigured `TabPFNAnchorClassifier()` would
+# otherwise run a different algorithm from the one the paper describes.
+#
+# Do not use this file to reproduce the paper. Use configs/paper/.
+
+stack_size: 15                                                  # now 9
+tabpfn_model_path: tabpfn-v2.5-classifier-v2.5_default-2.ckpt    # now the v3 multiclass checkpoint

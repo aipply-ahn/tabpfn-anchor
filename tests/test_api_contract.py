@@ -36,7 +36,10 @@ from tabpfn_anchor.demo.sklearn_toy import make_toy
 # one. These are test settings, not the published configuration.
 FAST = dict(mode="anchor",
             n_stage1=400, n_stage2=60, n_anchor=20, n_residual=40, stack_size=2,
-            rf_n_estimators=50, shap_budget=16, shap_max_samples=2,
+            # shap_max_samples must be at least the number of classes: the
+            # attribution explains at least one sample per class. The demo data
+            # have four, and 2 raises.
+            rf_n_estimators=50, shap_budget=16, shap_max_samples=4,
             shap_class_mode="predicted", oof_folds=2,
             tabpfn_n_estimators=1, shap_tabpfn_n_estimators=1, random_state=0,
             # Name one device. The default "auto" places a context on every

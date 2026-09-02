@@ -57,8 +57,9 @@ view construction is the published one (100 anchors, 400 residual genes per
 view, K = 9, 3,700 distinct genes). `--paper-settings` restores the published
 budgets, which are far slower.
 
-If you only want to check the installation, the Python example below runs on
-synthetic data and needs no download.
+If you only want to check the installation, run
+`python -m tabpfn_anchor.demo.sklearn_toy` instead: it generates synthetic data
+in place and needs no download.
 
 ### The backbone
 
@@ -99,7 +100,7 @@ from sklearn.model_selection import train_test_split
 from tabpfn_anchor import TabPFNAnchorClassifier
 
 X, y = make_classification(
-    n_samples=300, n_features=3_000, n_informative=20, n_redundant=80,
+    n_samples=300, n_features=4_000, n_informative=20, n_redundant=80,
     n_classes=4, n_clusters_per_class=2, weights=[.40, .28, .20, .12],
     class_sep=2.5, flip_y=0.01, random_state=0)
 X = pd.DataFrame(X, columns=[f"feature_{j:05d}" for j in range(X.shape[1])])
@@ -120,10 +121,28 @@ clf.feature_ranking_    # every ranked gene, with the stage it was ranked in
 clf.blocks_             # the gene indices given to each view
 ```
 
-That runs the published configuration, which takes minutes rather than seconds;
-`example/run.py` is the same thing with the budgets cut. Do not read anything
-into the score: the difficulty of `make_classification` output is whatever its
-arguments make it.
+The same code is in `tabpfn_anchor/demo/sklearn_toy.py`, so you can check an
+installation without pasting anything:
+
+```bash
+python -m tabpfn_anchor.demo.sklearn_toy
+```
+
+A test compares that file against this page, so the two cannot drift apart.
+
+**It takes about twelve minutes on one modern GPU** — it runs the published
+configuration, and roughly four fifths of that is the OddSHAP attribution
+stage. It is not hanging. It also needs the backbone checkpoint, which is
+downloaded on first use.
+
+The run prints `views 9   distinct features used 3,700`, which is the published
+view construction: 100 anchors plus nine disjoint blocks of 400. That is why
+the example generates 4,000 features and not fewer — below 3,700 the number of
+views is capped by the data rather than by `stack_size`.
+
+Do not read anything into the score. The difficulty of `make_classification`
+output is whatever its arguments make it, and at these arguments the task is
+easy.
 
 ### Loading your own data
 

@@ -20,7 +20,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
 
       - name: Compile every module
-        run: python -m compileall -q tabpfn_anchor example tests
+        run: python -m compileall -q tabpfn_anchor tests
 
       - name: Build the wheel
         run: |

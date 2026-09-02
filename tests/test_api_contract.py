@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import io
 import tarfile
+import textwrap
 import warnings
 from pathlib import Path
 
@@ -55,11 +56,13 @@ PAPER_YAML = Path(__file__).resolve().parents[1] / "configs/paper/tabpfn_anchor.
 N_INFORMATIVE = 20
 
 
-def synthetic(n_features: int = 3_000):
+def synthetic(n_features: int = 4_000):
     """Synthetic data straight from scikit-learn, no wrapper.
 
-    3,000 features keeps this above the 2,000-feature threshold at which
-    mode="auto" hands the input to TabPFN and builds no ranking.
+    4,000 features is wide enough for two separate reasons: it clears the
+    2,000-feature threshold at which mode="auto" hands the input to TabPFN and
+    builds no ranking, and it leaves 100 + 400 * 9 = 3,700 for the published
+    view construction, so K is not capped below 9 by the data.
     """
     X, y = make_classification(
         n_samples=300, n_features=n_features,
@@ -278,6 +281,37 @@ def test_synthetic_fixture_is_deterministic_and_wide_enough(toy):
     assert X.shape[1] > TabPFNAnchorClassifier.DIRECT_THRESHOLD
     assert set(y) == {"Class_A", "Class_B", "Class_C", "Class_D"}
     assert all(c.startswith("feature_") for c in X.columns)
+
+
+README = Path(__file__).resolve().parents[1] / "README.md"
+TOY = Path(__file__).resolve().parents[1] / "tabpfn_anchor/demo/sklearn_toy.py"
+
+
+def _readme_example() -> str:
+    """The first python block under the pasteable-example heading."""
+    body = README.read_text(encoding="utf-8").split(
+        "### A complete example you can paste and run", 1)[1]
+    return body.split("```python", 1)[1].split("```", 1)[0].strip("\n")
+
+
+def _toy_example() -> str:
+    """The marked region of sklearn_toy.main(), dedented by its indent."""
+    lines = TOY.read_text(encoding="utf-8").splitlines()
+    a = next(i for i, l in enumerate(lines) if "README EXAMPLE BEGIN" in l)
+    b = next(i for i, l in enumerate(lines) if "README EXAMPLE END" in l)
+    return textwrap.dedent("\n".join(lines[a + 1:b])).strip("\n")
+
+
+def test_the_toy_script_is_the_readme_example():
+    """The installation check and the documented example must be one thing.
+
+    Two copies of the same snippet drift, and then the page tells you to run
+    something the file does not do. Comparing them here is what lets the file
+    say "identical to README.md" and mean it.
+    """
+    if not README.is_file():          # installed copy ships no README
+        pytest.skip("README.md is not present next to the package")
+    assert _toy_example() == _readme_example()
 
 
 def test_release_pin_is_the_one_the_paper_used():

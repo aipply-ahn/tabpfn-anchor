@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
-"""Demo data for the three example stages.
+"""Helpers for the real-data example.
 
-    sklearn_toy     fully synthetic, from sklearn.datasets.make_classification.
-                    Two sizes: a quick installation check and a wide p >> n run.
     download_tcga   fetches and verifies the official release archive and takes
                     one cohort out of it. Nothing is redistributed here.
     tcga_example    fits and evaluates on one official cross-validation split of
@@ -12,12 +10,14 @@
 from a real cohort. Everything these modules write goes to a local directory
 that .gitignore excludes. See DATA.md.
 
-An earlier release also derived synthetic samples from per-subtype summary
-statistics of a real cohort. That path is gone: the synthetic stage is now
-plainly synthetic, and the real stage uses the real data, so nothing needs to
-sit in between.
+Earlier releases also carried synthetic demo data: first samples drawn from
+per-subtype summary statistics of a real cohort, later a wrapper around
+``sklearn.datasets.make_classification``. Both are gone. Anyone who wants a
+synthetic matrix can call ``make_classification`` themselves in two lines, and
+a module that only forwards arguments to it earns nothing while implying the
+numbers mean something. README.md shows those two lines.
 """
 
-from . import download_tcga, sklearn_toy, tcga_example
+from . import download_tcga, tcga_example
 
-__all__ = ["download_tcga", "sklearn_toy", "tcga_example"]
+__all__ = ["download_tcga", "tcga_example"]

@@ -12,55 +12,28 @@ this repository stays a code repository.
 
 ---
 
-## Three paths, kept separate
+## What this repository reads, and what it does not
 
-| Path | Data | Needs a download? | Purpose |
-|---|---|---|---|
-| `demo` | synthetic, 300 x 1,000 | no | verify the installation and the API |
-| `demo --wide` | synthetic, 500 x 10,000 | no | the published view construction at `p >> n` |
-| `tcga-example` | one real cohort, one official split | yes, once | the method on the real distribution |
+There is one data path: you obtain the release archive yourself, and it never
+leaves your machine.
 
-None is a substitute for another, and **none reproduces the paper's results**.
-The first two are synthetic; the third is a single outer split of a single
-cohort, whereas the reported numbers are means over twelve cohorts and many
-splits.
+**No synthetic data ships here either.** Two synthetic paths existed and both
+are gone. The first drew samples from per-subtype summary statistics of a real
+cohort; removing it removes the question of whether aggregate statistics of a
+redistributed dataset may themselves be redistributed. The second wrapped
+`sklearn.datasets.make_classification` behind a `make_toy` function and two
+CLI presets; that wrapper earned nothing — it forwarded its arguments and
+implied its chosen numbers meant something. README.md shows the two lines of
+scikit-learn instead, for anyone who wants a synthetic matrix to check the
+installation on.
 
-An earlier release had a fourth path that derived synthetic samples from
-per-subtype summary statistics of a real cohort. **It has been removed.**
-`demo --wide` covers the high-dimensional check without any cohort statistic,
-and `tcga-example` covers the real distribution with the real data, so nothing
-needed to sit in between. Removing it also removes the question of whether
-aggregate statistics of a redistributed dataset may themselves be redistributed:
-now nothing derived from a cohort leaves your machine.
+**Neither path reproduces the paper's results.** Synthetic data obviously does
+not, and the real-data example is a single outer split of a single cohort,
+whereas the reported numbers are means over twelve cohorts and many splits.
 
 ---
 
-## 1 and 2. Synthetic — generated locally, no inputs
-
-```bash
-tabpfn-anchor demo
-tabpfn-anchor demo --wide
-```
-
-`tabpfn_anchor/demo/sklearn_toy.py` is a single call to
-`sklearn.datasets.make_classification` under a fixed seed. It reads no file and
-contains no constant taken from any cohort.
-
-The data contain no patient observations, no gene identifiers, no subtype
-labels, and no statistic derived from any cohort. The columns are named
-`feature_00001` and the values are not on an expression scale. What they
-reproduce is the shape of the task and nothing more:
-
-- far more features than samples
-- a small informative set (20 for `quick`, 100 for `wide`)
-- many features that are random linear combinations of those, so that a
-  marginal screen cannot separate an informative feature from its copies
-- imbalanced classes
-
-`wide` is sized so that the published view construction fits: 100 anchors plus
-nine disjoint blocks of 400 is 3,700 distinct features out of 10,000.
-
-## 3. One official split of one real cohort
+## One official split of one real cohort
 
 ### Getting the source file
 

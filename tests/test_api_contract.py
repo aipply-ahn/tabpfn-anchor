@@ -26,9 +26,10 @@ import pandas as pd
 import pytest
 from sklearn.base import BaseEstimator, ClassifierMixin, clone
 
+from sklearn.datasets import make_classification
+
 from tabpfn_anchor import TabPFNAnchorClassifier
 from tabpfn_anchor.cli import _pick_device
-from tabpfn_anchor.demo.sklearn_toy import make_toy
 
 # Cut down hard so the fitting tests stay usable. Almost all of the cost is the
 # OddSHAP stage, whose price is (explained samples) x (classes explained) x
@@ -49,9 +50,30 @@ FAST = dict(mode="anchor",
 PAPER_YAML = Path(__file__).resolve().parents[1] / "configs/paper/tabpfn_anchor.yaml"
 
 
+#: How many of the 3,000 columns carry the class signal. shuffle=False leaves
+#: the informative block first, so the planted columns are known by name.
+N_INFORMATIVE = 20
+
+
+def synthetic(n_features: int = 3_000):
+    """Synthetic data straight from scikit-learn, no wrapper.
+
+    3,000 features keeps this above the 2,000-feature threshold at which
+    mode="auto" hands the input to TabPFN and builds no ranking.
+    """
+    X, y = make_classification(
+        n_samples=300, n_features=n_features,
+        n_informative=N_INFORMATIVE, n_redundant=80, n_repeated=0,
+        n_classes=4, n_clusters_per_class=2, weights=[.40, .28, .20, .12],
+        class_sep=2.5, flip_y=0.01, shuffle=False, random_state=20260902)
+    names = [f"feature_{j + 1:05d}" for j in range(n_features)]
+    return (pd.DataFrame(X, columns=names),
+            pd.Series([f"Class_{chr(65 + c)}" for c in y], name="subtype"))
+
+
 @pytest.fixture(scope="module")
 def toy():
-    return make_toy("quick")
+    return synthetic()
 
 
 # --------------------------------------------------------------- no fitting
@@ -247,23 +269,15 @@ def test_reordered_columns_are_rejected_and_bare_arrays_warn():
     assert any("column order cannot be checked" in str(w.message) for w in caught)
 
 
-# ------------------------------------------------------------ demo data
-def test_toy_generator_is_deterministic_and_carries_no_real_names(toy):
-    X, y, signal = toy
-    X2, y2, signal2 = make_toy("quick")
-    assert X.equals(X2) and y.equals(y2) and signal == signal2
-    assert all(c.startswith("feature_") for c in X.columns)
+# ------------------------------------------------------------ real-data example
+def test_synthetic_fixture_is_deterministic_and_wide_enough(toy):
+    """The fitting tests need a ranking, so the input must clear the threshold."""
+    X, y = toy
+    X2, y2 = synthetic()
+    assert X.equals(X2) and y.equals(y2)
+    assert X.shape[1] > TabPFNAnchorClassifier.DIRECT_THRESHOLD
     assert set(y) == {"Class_A", "Class_B", "Class_C", "Class_D"}
-    assert X.shape == (300, 1_000)
-
-
-def test_wide_toy_is_large_enough_for_the_published_view_construction():
-    """`demo --wide` must be able to run 100 anchors + 9 blocks of 400."""
-    X, y, signal = make_toy("wide")
-    assert X.shape == (500, 10_000)
-    assert X.shape[1] >= 100 + 400 * 9
-    assert len(signal["informative"]) == 50 and len(signal["redundant"]) == 450
-    assert not set(signal["informative"]) & set(signal["redundant"])
+    assert all(c.startswith("feature_") for c in X.columns)
 
 
 def test_release_pin_is_the_one_the_paper_used():
@@ -370,7 +384,7 @@ requires_backbone = pytest.mark.skipif(
 
 @requires_backbone
 def test_fit_predict_contract(toy):
-    X, y, _ = toy
+    X, y = toy
     clf = TabPFNAnchorClassifier(**FAST).fit(X, y)
 
     assert list(clf.classes_) == sorted(y.unique())
@@ -386,7 +400,7 @@ def test_fit_predict_contract(toy):
 
 @requires_backbone
 def test_fitted_selection_attributes(toy):
-    X, y, _ = toy
+    X, y = toy
     clf = TabPFNAnchorClassifier(**FAST).fit(X, y)
 
     anchors = clf.anchor_features_
@@ -406,7 +420,7 @@ def test_fitted_selection_attributes(toy):
 @requires_backbone
 def test_meta_C_override_changes_the_fitted_meta_learner(toy):
     """The override must reach the model, not only the recorded configuration."""
-    X, y, _ = toy
+    X, y = toy
     a = TabPFNAnchorClassifier(**FAST).fit(X, y)
     b = TabPFNAnchorClassifier(**dict(FAST, meta_kwargs={"C": 0.01})).fit(X, y)
     assert a.meta_.C == 1.0 and b.meta_.C == 0.01

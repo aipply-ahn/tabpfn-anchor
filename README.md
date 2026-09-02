@@ -28,42 +28,7 @@ pip install -e .
 A GPU is strongly recommended. The TabPFN backbone checkpoint is downloaded by
 the `tabpfn` package on first use.
 
-## Three examples
-
-The three run in increasing order of realism. **None of them reproduces the
-reported results**: the first two use synthetic data, and the third is a single
-outer split, whereas the paper reports means over twelve cohorts and many
-splits with a paired test across them.
-
-| | Command | Data | What it shows |
-|---|---|---|---|
-| 1 | `tabpfn-anchor demo` | synthetic, 300 x 1,000 | the install and the API work |
-| 2 | `tabpfn-anchor demo --wide` | synthetic, 500 x 10,000 | the published view construction runs at `p >> n` |
-| 3 | `tabpfn-anchor tcga-example` | one real cohort, one official split | the method on the real distribution |
-
-### 1 and 2 — synthetic
-
-```bash
-tabpfn-anchor demo            # 300 x 1,000,  K = 3
-tabpfn-anchor demo --wide     # 500 x 10,000, K = 9, 100 anchors + 400 per view
-```
-
-Both datasets come from a single call to `sklearn.datasets.make_classification`
-under a fixed seed. **They contain no patient observations, no gene
-identifiers, and no statistic derived from any cohort**; the columns are named
-`feature_00001` and the values are not on an expression scale. What they
-reproduce is the shape of the task — far more features than samples, a few
-informative features, many correlated near-duplicates of them, and imbalanced
-classes — and nothing else. Anything read into them beyond that is read in by
-the reader.
-
-`--wide` uses the same view construction as the paper (100 anchors, 400
-residual features per view, K = 9, 3,700 distinct features) with the
-attribution and backbone budgets cut, so the structure is the published one and
-the compute is not. `--paper-settings` restores the published budgets, which
-are far slower.
-
-### 3 — one official split of one real cohort
+## Running it on real data
 
 ```bash
 tabpfn-anchor download-tcga --cohort UCEC --data-dir ./data
@@ -81,25 +46,32 @@ not ours and another method can be run on the same column. Selection is fitted
 on the training partition alone. It writes the anchor set, the full ranking,
 the metrics and the resolved configuration to `results/`.
 
-One split has a standard error wide enough that comparing its macro-F1 against
-a number in the paper says nothing. Treat it as a demonstration that the method
-runs end to end on real data, not as a result.
+**This is one split, not the paper.** The reported numbers are means over
+twelve cohorts and many splits with a paired test across them. A single split
+has a standard error wide enough that comparing its macro-F1 against a number
+in the paper says nothing. Treat it as a demonstration that the method runs end
+to end on real data.
 
-### The backbone, in all three
+The example preset cuts the attribution budget so the command finishes; the
+view construction is the published one (100 anchors, 400 residual genes per
+view, K = 9, 3,700 distinct genes). `--paper-settings` restores the published
+budgets, which are far slower.
 
-The demo data are generated offline, but the model is not. On first use the
-`tabpfn` package needs network access, opens a browser to log in with Prior
-Labs, requires you to accept the model licence, and downloads a checkpoint of
-about 203 MB. On a headless machine, accept the licence through the web
+If you only want to check the installation, the Python example below runs on
+synthetic data and needs no download.
+
+### The backbone
+
+The `tabpfn` package downloads the checkpoint on first use: it opens a browser
+to log in with Prior Labs, requires you to accept the model licence, and
+fetches about 203 MB. On a headless machine, accept the licence through the web
 interface and set `TABPFN_TOKEN` first. **The TabPFN-3 weights are under a
 non-commercial licence** — see
 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 Almost all of the runtime is the OddSHAP attribution stage; the screen and the
 Random Forest refinement together take under a second even at transcriptome
-scale. That is why the demo presets cut the attribution budget hard and explain
-only each sample's predicted class rather than every class: they run a cheaper
-variant of the method.
+scale.
 
 **Name a single device.** With several GPUs visible, the backbone's `auto`
 setting was measured about fifty times slower than naming one device (68 s
@@ -112,16 +84,26 @@ itself and tells you so; override with `--device`. In Python, pass
 
 ### A complete example you can paste and run
 
+The data are synthetic, straight from scikit-learn. They contain nothing from
+any cohort; the values are not on an expression scale and the columns are not
+genes. What they reproduce is the shape of the task — far more features than
+samples, a few informative features, many correlated with those, imbalanced
+classes.
+
 ```python
+import pandas as pd
+from sklearn.datasets import make_classification
 from sklearn.metrics import f1_score
 from sklearn.model_selection import train_test_split
 
 from tabpfn_anchor import TabPFNAnchorClassifier
-from tabpfn_anchor.demo.sklearn_toy import make_toy
 
-# 500 samples x 10,000 features, fully synthetic, generated offline.
-# X is a DataFrame of feature columns; y is a Series of class labels.
-X, y, _ = make_toy("wide")
+X, y = make_classification(
+    n_samples=300, n_features=3_000, n_informative=20, n_redundant=80,
+    n_classes=4, n_clusters_per_class=2, weights=[.40, .28, .20, .12],
+    class_sep=2.5, flip_y=0.01, random_state=0)
+X = pd.DataFrame(X, columns=[f"feature_{j:05d}" for j in range(X.shape[1])])
+y = pd.Series([f"Class_{chr(65 + c)}" for c in y])
 
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.3, stratify=y, random_state=42)
@@ -138,9 +120,10 @@ clf.feature_ranking_    # every ranked gene, with the stage it was ranked in
 clf.blocks_             # the gene indices given to each view
 ```
 
-That runs the published configuration, which takes minutes rather than seconds.
-`tabpfn-anchor demo --wide` does the same thing with the attribution budget cut,
-and `example/run.py` is a smaller runnable script.
+That runs the published configuration, which takes minutes rather than seconds;
+`example/run.py` is the same thing with the budgets cut. Do not read anything
+into the score: the difficulty of `make_classification` output is whatever its
+arguments make it.
 
 ### Loading your own data
 
@@ -182,7 +165,7 @@ is the right default for a transcriptome, but it surprises people testing on a
 small table:
 
 ```python
-X, y, _ = make_toy("quick")             # only 1,000 features
+X, y = make_classification(n_samples=300, n_features=1_000, n_informative=20)
 clf = TabPFNAnchorClassifier().fit(X, y)
 clf.anchor_features_                    # AttributeError: no ranking was built
 ```

@@ -110,24 +110,85 @@ itself and tells you so; override with `--device`. In Python, pass
 
 ## Python API
 
+### A complete example you can paste and run
+
 ```python
+from sklearn.metrics import f1_score
 from sklearn.model_selection import train_test_split
+
 from tabpfn_anchor import TabPFNAnchorClassifier
+from tabpfn_anchor.demo.sklearn_toy import make_toy
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=y)
+# 500 samples x 10,000 features, fully synthetic, generated offline.
+# X is a DataFrame of feature columns; y is a Series of class labels.
+X, y, _ = make_toy("wide")
 
-clf = TabPFNAnchorClassifier()          # defaults are the published configuration
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.3, stratify=y, random_state=42)
+
+clf = TabPFNAnchorClassifier(device="cuda:0")   # defaults = published configuration
 clf.fit(X_train, y_train)
 
-clf.predict(X_test)
-clf.predict_proba(X_test)
+pred = clf.predict(X_test)
+proba = clf.predict_proba(X_test)
+print(f1_score(y_test, pred, average="macro"))
 
 clf.anchor_features_    # the 100 anchor genes, with attribution rank
 clf.feature_ranking_    # every ranked gene, with the stage it was ranked in
 clf.blocks_             # the gene indices given to each view
 ```
 
-`example/run.py` is the same thing as a runnable script.
+That runs the published configuration, which takes minutes rather than seconds.
+`tabpfn-anchor demo --wide` does the same thing with the attribution budget cut,
+and `example/run.py` is a smaller runnable script.
+
+### Loading your own data
+
+`fit` takes anything scikit-learn takes. A DataFrame is worth preferring: the
+classifier slices features by position, remembers the column names, and refuses
+a differently ordered frame at predict time — with a bare array it cannot check.
+
+```python
+import numpy as np
+import pandas as pd
+
+# Rows are samples, columns are genes, plus one column holding the label.
+df = pd.read_csv("expression.tsv", sep="\t", index_col=0)
+
+y = df["subtype"]                       # whatever your label column is called
+X = df.drop(columns=["subtype"])
+
+# RNA-seq counts need a log scale; skip this if your matrix is already logged
+# (microarray usually is, and it may contain negative values).
+if X.to_numpy().min() >= 0 and X.to_numpy().max() >= 50:
+    X = np.log2(X + 1.0)
+```
+
+Requirements, all of which raise a clear error rather than failing quietly:
+
+| | |
+|---|---|
+| `X` | numeric, no missing values, unique column names |
+| `y` | one label per row, at least two classes |
+| class sizes | the smallest class needs at least two members for the stacking folds |
+| features | see the note below on how many |
+
+### How many features you need
+
+The default `mode="auto"` skips the whole anchor construction when the input
+has **2,000 features or fewer** and calls TabPFN directly, because building
+nine 500-gene views out of 1,000 genes is not a meaningful decomposition. That
+is the right default for a transcriptome, but it surprises people testing on a
+small table:
+
+```python
+X, y, _ = make_toy("quick")             # only 1,000 features
+clf = TabPFNAnchorClassifier().fit(X, y)
+clf.anchor_features_                    # AttributeError: no ranking was built
+```
+
+Pass `mode="anchor"` to force the full cascade on a narrow input, or use data
+with more than 2,000 features. The error message says which case you are in.
 
 ## Method
 

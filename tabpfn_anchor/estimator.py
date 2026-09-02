@@ -1181,6 +1181,35 @@ class TabPFNAnchorClassifier(ClassifierMixin, BaseEstimator):
             "source_stage": [stage[i] for i in a],
         })
 
+    #: Set only when a cascaded ranking was actually built. `mode="auto"` on a
+    #: narrow input calls TabPFN directly instead, and then there is no ranking
+    #: to report -- see __getattr__.
+    _RANKING_ATTRS = ("feature_ranking_", "anchor_features_", "anchor_idx_")
+
+    def __getattr__(self, name):
+        """Explain the two attributes that a direct fit does not produce.
+
+        Python calls this only when normal lookup has already failed, so it
+        cannot shadow anything that exists. Without it, `mode="auto"` on an
+        input of 2,000 features or fewer takes the direct route and then
+        `clf.anchor_features_` raises a bare AttributeError that says nothing
+        about why -- the commonest way to be confused by this estimator.
+        """
+        if name.startswith("__") or name not in self._RANKING_ATTRS:
+            raise AttributeError(name)
+        plan = self.__dict__.get("execution_plan_")
+        if plan is None:
+            raise AttributeError(
+                f"{name} is available after fit(); this estimator is not fitted.")
+        if plan.get("route") == "direct_tabpfn":
+            raise AttributeError(
+                f"{name} is not available: this fit passed the input straight "
+                f"to TabPFN without building a ranking, because mode='auto' "
+                f"does that at or below {self.DIRECT_THRESHOLD} features and "
+                f"this input had {plan.get('n_features')}. Pass mode='anchor' "
+                "to force the full cascade, or fit on a wider input.")
+        raise AttributeError(name)
+
     def anchor_features(self, feature_names=None):
         """Return the anchor genes in SHAP-ranking order.
 

@@ -174,6 +174,32 @@ def test_meta_kwargs_reach_the_meta_learner():
     assert clf.meta_C == 1.0, "the constructor argument itself must not change"
 
 
+def test_missing_ranking_attributes_explain_themselves():
+    """A bare AttributeError here is the commonest way to be confused.
+
+    `mode="auto"` hands a narrow input straight to TabPFN and builds no
+    ranking, so `anchor_features_` genuinely does not exist. The message has to
+    say that, and `hasattr` must still answer False rather than raise.
+    """
+    clf = TabPFNAnchorClassifier()
+    assert not hasattr(clf, "anchor_features_")
+    with pytest.raises(AttributeError, match="not fitted"):
+        clf.anchor_features_
+
+    # A direct fit is recorded in execution_plan_; no backbone needed to check
+    # that the guard reads it.
+    clf.execution_plan_ = {"route": "direct_tabpfn", "n_features": 1_000}
+    with pytest.raises(AttributeError, match="mode='anchor'"):
+        clf.anchor_features_
+    with pytest.raises(AttributeError, match="mode='anchor'"):
+        clf.feature_ranking_
+
+    # The guard must not swallow ordinary missing attributes, nor break clone.
+    with pytest.raises(AttributeError):
+        clf.no_such_attribute_
+    assert clone(TabPFNAnchorClassifier()).get_params()
+
+
 def test_view_blocks_keep_the_budget_and_share_the_anchors():
     """The two invariants of Step 2.1, checked without a backbone.
 

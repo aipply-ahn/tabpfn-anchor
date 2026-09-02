@@ -40,7 +40,7 @@ def main() -> None:
     from tabpfn_anchor import TabPFNAnchorClassifier
 
     X, y = make_classification(
-        n_samples=300, n_features=4_000, n_informative=20, n_redundant=80,
+        n_samples=300, n_features=4000, n_informative=20, n_redundant=80,
         n_classes=3, random_state=0)
     X = pd.DataFrame(X, columns=[f"feature_{j:05d}" for j in range(X.shape[1])])
     y = pd.Series([f"Class_{chr(65 + c)}" for c in y])

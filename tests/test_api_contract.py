@@ -50,7 +50,7 @@ FAST = dict(mode="anchor",
 PAPER_YAML = Path(__file__).resolve().parents[1] / "configs/paper/tabpfn_anchor.yaml"
 
 
-def synthetic(n_features: int = 4_000):
+def synthetic(n_features: int = 4000):
     """The same call as the README example, straight from scikit-learn.
 
     4,000 features is wide enough for two separate reasons: it clears the
@@ -209,7 +209,7 @@ def test_missing_ranking_attributes_explain_themselves():
 
     # A direct fit is recorded in execution_plan_; no backbone needed to check
     # that the guard reads it.
-    clf.execution_plan_ = {"route": "direct_tabpfn", "n_features": 1_000}
+    clf.execution_plan_ = {"route": "direct_tabpfn", "n_features": 1000}
     with pytest.raises(AttributeError, match="mode='anchor'"):
         clf.anchor_features_
     with pytest.raises(AttributeError, match="mode='anchor'"):
@@ -229,7 +229,7 @@ def test_view_blocks_keep_the_budget_and_share_the_anchors():
     the residual block rather than to an unequal budget.
     """
     from tabpfn_anchor.stacking import build_blocks
-    rank_pool = np.arange(5_000)
+    rank_pool = np.arange(5000)
     anchor = np.arange(100)
     blocks = build_blocks(rank_pool, anchor, n_stage2=500, n_residual=400, k=9)
 
@@ -243,7 +243,7 @@ def test_view_blocks_keep_the_budget_and_share_the_anchors():
         shared &= set(b)
     assert shared == set(anchor)
     used = len(np.unique(np.concatenate(blocks)))
-    assert used == 100 + 400 * 9 == 3_700
+    assert used == 100 + 400 * 9 == 3700
 
 
 def test_duplicate_feature_names_are_rejected():

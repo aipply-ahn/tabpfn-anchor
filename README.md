@@ -101,8 +101,7 @@ from tabpfn_anchor import TabPFNAnchorClassifier
 
 X, y = make_classification(
     n_samples=300, n_features=4_000, n_informative=20, n_redundant=80,
-    n_classes=4, n_clusters_per_class=2, weights=[.40, .28, .20, .12],
-    class_sep=2.5, flip_y=0.01, random_state=0)
+    n_classes=3, random_state=0)
 X = pd.DataFrame(X, columns=[f"feature_{j:05d}" for j in range(X.shape[1])])
 y = pd.Series([f"Class_{chr(65 + c)}" for c in y])
 
@@ -130,9 +129,10 @@ python -m tabpfn_anchor.demo.sklearn_toy
 
 A test compares that file against this page, so the two cannot drift apart.
 
-**It takes about twelve minutes on one modern GPU** — it runs the published
+**It takes about nine minutes on one modern GPU** — it runs the published
 configuration, and roughly four fifths of that is the OddSHAP attribution
-stage. It is not hanging. It also needs the backbone checkpoint, which is
+stage, whose cost is (explained samples) x (classes explained) x (coalition
+budget). It is not hanging. It also needs the backbone checkpoint, which is
 downloaded on first use.
 
 The run prints `views 9   distinct features used 3,700`, which is the published

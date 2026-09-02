@@ -39,9 +39,8 @@ from tabpfn_anchor.cli import _pick_device
 FAST = dict(mode="anchor",
             n_stage1=400, n_stage2=60, n_anchor=20, n_residual=40, stack_size=2,
             # shap_max_samples must be at least the number of classes: the
-            # attribution explains at least one sample per class. The demo data
-            # have four, and 2 raises.
-            rf_n_estimators=50, shap_budget=16, shap_max_samples=4,
+            # attribution explains at least one sample per class.
+            rf_n_estimators=50, shap_budget=16, shap_max_samples=3,
             shap_class_mode="predicted", oof_folds=2,
             tabpfn_n_estimators=1, shap_tabpfn_n_estimators=1, random_state=0,
             # Name one device. The default "auto" places a context on every
@@ -51,24 +50,21 @@ FAST = dict(mode="anchor",
 PAPER_YAML = Path(__file__).resolve().parents[1] / "configs/paper/tabpfn_anchor.yaml"
 
 
-#: How many of the 3,000 columns carry the class signal. shuffle=False leaves
-#: the informative block first, so the planted columns are known by name.
-N_INFORMATIVE = 20
-
-
 def synthetic(n_features: int = 4_000):
-    """Synthetic data straight from scikit-learn, no wrapper.
+    """The same call as the README example, straight from scikit-learn.
 
     4,000 features is wide enough for two separate reasons: it clears the
     2,000-feature threshold at which mode="auto" hands the input to TabPFN and
     builds no ranking, and it leaves 100 + 400 * 9 = 3,700 for the published
     view construction, so K is not capped below 9 by the data.
+
+    Everything not named here is left at its scikit-learn default. The
+    informative and redundant counts are named because the defaults are two of
+    each, which would be a trivial signal in this many columns.
     """
     X, y = make_classification(
-        n_samples=300, n_features=n_features,
-        n_informative=N_INFORMATIVE, n_redundant=80, n_repeated=0,
-        n_classes=4, n_clusters_per_class=2, weights=[.40, .28, .20, .12],
-        class_sep=2.5, flip_y=0.01, shuffle=False, random_state=20260902)
+        n_samples=300, n_features=n_features, n_informative=20, n_redundant=80,
+        n_classes=3, random_state=0)
     names = [f"feature_{j + 1:05d}" for j in range(n_features)]
     return (pd.DataFrame(X, columns=names),
             pd.Series([f"Class_{chr(65 + c)}" for c in y], name="subtype"))
@@ -279,7 +275,7 @@ def test_synthetic_fixture_is_deterministic_and_wide_enough(toy):
     X2, y2 = synthetic()
     assert X.equals(X2) and y.equals(y2)
     assert X.shape[1] > TabPFNAnchorClassifier.DIRECT_THRESHOLD
-    assert set(y) == {"Class_A", "Class_B", "Class_C", "Class_D"}
+    assert set(y) == {"Class_A", "Class_B", "Class_C"}
     assert all(c.startswith("feature_") for c in X.columns)
 
 

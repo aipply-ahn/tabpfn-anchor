@@ -17,19 +17,21 @@ this repository stays a code repository.
 There is one data path: you obtain the release archive yourself, and it never
 leaves your machine.
 
-**No synthetic data ships here either.** Two synthetic paths existed and both
-are gone. The first drew samples from per-subtype summary statistics of a real
-cohort; removing it removes the question of whether aggregate statistics of a
-redistributed dataset may themselves be redistributed. The second wrapped
-`sklearn.datasets.make_classification` behind a `make_toy` function and two
-CLI presets; that wrapper earned nothing — it forwarded its arguments and
-implied its chosen numbers meant something. README.md shows the two lines of
-scikit-learn instead, for anyone who wants a synthetic matrix to check the
-installation on.
+**No synthetic data file ships here either.** The installation check
+(`python -m tabpfn_anchor.demo.sklearn_toy`) generates its matrix in place with
+one `sklearn.datasets.make_classification` call whose arguments are in plain
+sight, and it is the same code as the example in README.md — a test compares
+the two. That data contains nothing from any cohort: the values are not on an
+expression scale and the columns are not genes.
 
-**Neither path reproduces the paper's results.** Synthetic data obviously does
-not, and the real-data example is a single outer split of a single cohort,
-whereas the reported numbers are means over twelve cohorts and many splits.
+An earlier release drew synthetic samples from per-subtype summary statistics
+of a real cohort. **That is gone**, which removes the question of whether
+aggregate statistics of a redistributed dataset may themselves be
+redistributed. Nothing derived from a cohort leaves your machine now.
+
+**Neither reproduces the paper's results.** Synthetic data obviously does not,
+and the real-data example is a single outer split of a single cohort, whereas
+the reported numbers are means over twelve cohorts and many splits.
 
 ---
 

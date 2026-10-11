@@ -17,8 +17,8 @@ That covers README.md, LICENSE and the other files maintained here
 directly, so re-run the export after editing one of those too: it
 leaves them alone and only rewrites this manifest.
 
-exported_at   : 2026-09-03 02:20:53
+exported_at   : 2026-10-11 21:26:34
 source_commit : (no commit)
-exported_files: 13
-tree_files    : 22
+exported_files: 17
+tree_files    : 26
 allow_list    : planning/github_export.txt

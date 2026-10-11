@@ -15,8 +15,9 @@ jobs:
       # version cancels the other and hides whether it would have passed.
       fail-fast: false
       matrix:
-        # shapiq >= 1.6, which the attribution stage needs, requires Python 3.11.
-        python-version: ["3.11", "3.12"]
+        # shapiq >= 1.6, which the attribution stage needs, requires Python 3.12.
+        # 3.14 is the version the reported results were produced under.
+        python-version: ["3.12", "3.14"]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

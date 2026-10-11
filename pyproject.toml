@@ -7,8 +7,8 @@ name = "tabpfn-anchor"
 version = "0.1.0"
 description = "Anchor-conditioned ensemble adaptation of TabPFN for high-dimensional cancer subtype classification"
 readme = "README.md"
-# shapiq >= 1.6 requires Python 3.11.
-requires-python = ">=3.11"
+# shapiq >= 1.6 requires Python 3.12.
+requires-python = ">=3.12"
 license = { file = "LICENSE" }
 authors = [{ name = "Hongryul Ahn" }]
 keywords = ["tabpfn", "feature-selection", "transcriptomics", "cancer-subtype", "tabular"]

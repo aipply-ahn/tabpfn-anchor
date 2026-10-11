@@ -51,5 +51,8 @@ jobs:
 
       - name: No data files may be committed
         run: |
-          found=$(git ls-files | grep -E '\.(tsv|csv|csv\.gz|npz|parquet|ckpt)$' || true)
+          # paper_results/ holds reported macro-F1 values and their summary,
+          # not data: no expression value, sample identifier or split assignment.
+          found=$(git ls-files | grep -v -E '^paper_results/' \
+            | grep -E '\.(tsv|csv|csv\.gz|npz|parquet|ckpt)$' || true)
           if [ -n "$found" ]; then echo "data files committed:"; echo "$found"; exit 1; fi

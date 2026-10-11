@@ -215,10 +215,10 @@ confusion about which one produced the results.
 
 **This is a reference implementation of the method, not the benchmark harness.**
 It does not ship the code that ran twelve cohorts across repeated
-cross-validation, aggregated macro-F1, applied the multiple-comparison
-correction, or generated the paper's tables and figures. There is no single
-command here that reproduces the reported numbers, and you should not expect
-one.
+cross-validation or generated the paper's tables and figures. There is no
+single command here that re-runs the experiments, and you should not expect
+one. The reported macro-F1 values themselves, and the script that derives the
+reported statistics from them, are in [`paper_results/`](paper_results/).
 
 What this repository does give you is the method itself, the exact
 configuration it was run under, and the provenance of the data:
@@ -233,6 +233,13 @@ configuration it was run under, and the provenance of the data:
   the cross-validation splits distributed with it. Those splits are not ours;
   the paper uses the first three repeats for its 15-split analyses and the
   first ten for its 50-split analyses.
+- `paper_results/split_level_macroF1.csv` holds the macro-F1 of every method
+  in every predictive comparison of the paper, one row per method, cohort and
+  outer split. `paper_results/aggregate_stats.py` averages the splits of each
+  cohort and reproduces every reported paired difference, bootstrap interval,
+  exact Wilcoxon signed-rank test and Holm correction, with the cohort as the
+  unit of inference (`cohort_level_statistics.csv`). These files contain
+  results only: no expression value, sample identifier or split assignment.
 - `configs/legacy/` records defaults that were superseded on 2026-09-02. They
   were never the published method: every configuration that produced a reported
   result set those values explicitly, so no reported number depends on them.

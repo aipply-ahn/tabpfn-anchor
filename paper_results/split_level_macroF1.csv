@@ -6599,6 +6599,546 @@ F3_same_stack,comparator,Elastic-net LR view model,UCEC,R3:F2,0.8131138975966562
 F3_same_stack,comparator,Elastic-net LR view model,UCEC,R3:F3,0.8272314986600702
 F3_same_stack,comparator,Elastic-net LR view model,UCEC,R3:F4,0.8228987769971375
 F3_same_stack,comparator,Elastic-net LR view model,UCEC,R3:F5,0.7843191540181964
+F3_same_stack,comparator,Logistic regression (L2) view model,BLCA,R1:F1,0.8488821454507729
+F3_same_stack,comparator,Logistic regression (L2) view model,BLCA,R1:F2,0.8441713433085306
+F3_same_stack,comparator,Logistic regression (L2) view model,BLCA,R1:F3,0.8625111940789907
+F3_same_stack,comparator,Logistic regression (L2) view model,BLCA,R1:F4,0.9047402029979162
+F3_same_stack,comparator,Logistic regression (L2) view model,BLCA,R1:F5,0.6880889578258
+F3_same_stack,comparator,Logistic regression (L2) view model,BLCA,R2:F1,0.8039793565740269
+F3_same_stack,comparator,Logistic regression (L2) view model,BLCA,R2:F2,0.7752269359406497
+F3_same_stack,comparator,Logistic regression (L2) view model,BLCA,R2:F3,0.7573822324628776
+F3_same_stack,comparator,Logistic regression (L2) view model,BLCA,R2:F4,0.9210775015806462
+F3_same_stack,comparator,Logistic regression (L2) view model,BLCA,R2:F5,0.6425629819137973
+F3_same_stack,comparator,Logistic regression (L2) view model,BLCA,R3:F1,0.7447528332269924
+F3_same_stack,comparator,Logistic regression (L2) view model,BLCA,R3:F2,0.9244867357371948
+F3_same_stack,comparator,Logistic regression (L2) view model,BLCA,R3:F3,0.8490382403425882
+F3_same_stack,comparator,Logistic regression (L2) view model,BLCA,R3:F4,0.722140522875817
+F3_same_stack,comparator,Logistic regression (L2) view model,BLCA,R3:F5,0.907418139669661
+F3_same_stack,comparator,Logistic regression (L2) view model,BRCA,R1:F1,0.9303461356092936
+F3_same_stack,comparator,Logistic regression (L2) view model,BRCA,R1:F2,0.9381909329370024
+F3_same_stack,comparator,Logistic regression (L2) view model,BRCA,R1:F3,0.9241738904370844
+F3_same_stack,comparator,Logistic regression (L2) view model,BRCA,R1:F4,0.8806063772094119
+F3_same_stack,comparator,Logistic regression (L2) view model,BRCA,R1:F5,0.9316234561032604
+F3_same_stack,comparator,Logistic regression (L2) view model,BRCA,R2:F1,0.9089766466325117
+F3_same_stack,comparator,Logistic regression (L2) view model,BRCA,R2:F2,0.9221647538508004
+F3_same_stack,comparator,Logistic regression (L2) view model,BRCA,R2:F3,0.8676634552721048
+F3_same_stack,comparator,Logistic regression (L2) view model,BRCA,R2:F4,0.8441105087981726
+F3_same_stack,comparator,Logistic regression (L2) view model,BRCA,R2:F5,0.9216953234558868
+F3_same_stack,comparator,Logistic regression (L2) view model,BRCA,R3:F1,0.8567387301684071
+F3_same_stack,comparator,Logistic regression (L2) view model,BRCA,R3:F2,0.9063625941696692
+F3_same_stack,comparator,Logistic regression (L2) view model,BRCA,R3:F3,0.918010752688172
+F3_same_stack,comparator,Logistic regression (L2) view model,BRCA,R3:F4,0.9240419783379684
+F3_same_stack,comparator,Logistic regression (L2) view model,BRCA,R3:F5,0.8932685441053188
+F3_same_stack,comparator,Logistic regression (L2) view model,COADREAD,R1:F1,0.7486547387442529
+F3_same_stack,comparator,Logistic regression (L2) view model,COADREAD,R1:F2,0.721530695611578
+F3_same_stack,comparator,Logistic regression (L2) view model,COADREAD,R1:F3,0.7912438938491216
+F3_same_stack,comparator,Logistic regression (L2) view model,COADREAD,R1:F4,0.7684350118312383
+F3_same_stack,comparator,Logistic regression (L2) view model,COADREAD,R1:F5,0.7188099515857918
+F3_same_stack,comparator,Logistic regression (L2) view model,COADREAD,R2:F1,0.7173926625681012
+F3_same_stack,comparator,Logistic regression (L2) view model,COADREAD,R2:F2,0.7514198808884799
+F3_same_stack,comparator,Logistic regression (L2) view model,COADREAD,R2:F3,0.688582388668201
+F3_same_stack,comparator,Logistic regression (L2) view model,COADREAD,R2:F4,0.7979012345679012
+F3_same_stack,comparator,Logistic regression (L2) view model,COADREAD,R2:F5,0.6059687560058205
+F3_same_stack,comparator,Logistic regression (L2) view model,COADREAD,R3:F1,0.809462239001881
+F3_same_stack,comparator,Logistic regression (L2) view model,COADREAD,R3:F2,0.7187679688821241
+F3_same_stack,comparator,Logistic regression (L2) view model,COADREAD,R3:F3,0.7878719335025194
+F3_same_stack,comparator,Logistic regression (L2) view model,COADREAD,R3:F4,0.8544402012487119
+F3_same_stack,comparator,Logistic regression (L2) view model,COADREAD,R3:F5,0.7230565151617784
+F3_same_stack,comparator,Logistic regression (L2) view model,GEA,R1:F1,0.5731946766619304
+F3_same_stack,comparator,Logistic regression (L2) view model,GEA,R1:F2,0.599325408858472
+F3_same_stack,comparator,Logistic regression (L2) view model,GEA,R1:F3,0.7295134972554328
+F3_same_stack,comparator,Logistic regression (L2) view model,GEA,R1:F4,0.7933527706727309
+F3_same_stack,comparator,Logistic regression (L2) view model,GEA,R1:F5,0.7272881880024737
+F3_same_stack,comparator,Logistic regression (L2) view model,GEA,R2:F1,0.751879767936742
+F3_same_stack,comparator,Logistic regression (L2) view model,GEA,R2:F2,0.5902288188002475
+F3_same_stack,comparator,Logistic regression (L2) view model,GEA,R2:F3,0.6603256392730078
+F3_same_stack,comparator,Logistic regression (L2) view model,GEA,R2:F4,0.6079563138386668
+F3_same_stack,comparator,Logistic regression (L2) view model,GEA,R2:F5,0.6767573696145125
+F3_same_stack,comparator,Logistic regression (L2) view model,GEA,R3:F1,0.6468730241831951
+F3_same_stack,comparator,Logistic regression (L2) view model,GEA,R3:F2,0.5447203417442107
+F3_same_stack,comparator,Logistic regression (L2) view model,GEA,R3:F3,0.6680854159845756
+F3_same_stack,comparator,Logistic regression (L2) view model,GEA,R3:F4,0.7816326530612245
+F3_same_stack,comparator,Logistic regression (L2) view model,GEA,R3:F5,0.7192040643268423
+F3_same_stack,comparator,Logistic regression (L2) view model,HNSC,R1:F1,0.9214645410437344
+F3_same_stack,comparator,Logistic regression (L2) view model,HNSC,R1:F2,0.8717789921349433
+F3_same_stack,comparator,Logistic regression (L2) view model,HNSC,R1:F3,0.9022309912132424
+F3_same_stack,comparator,Logistic regression (L2) view model,HNSC,R1:F4,0.938445545682388
+F3_same_stack,comparator,Logistic regression (L2) view model,HNSC,R1:F5,0.9206326710483242
+F3_same_stack,comparator,Logistic regression (L2) view model,HNSC,R2:F1,0.8995028816124151
+F3_same_stack,comparator,Logistic regression (L2) view model,HNSC,R2:F2,0.9527673138220806
+F3_same_stack,comparator,Logistic regression (L2) view model,HNSC,R2:F3,0.8842182473825474
+F3_same_stack,comparator,Logistic regression (L2) view model,HNSC,R2:F4,0.89949644675811
+F3_same_stack,comparator,Logistic regression (L2) view model,HNSC,R2:F5,0.914529459795978
+F3_same_stack,comparator,Logistic regression (L2) view model,HNSC,R3:F1,0.9134656741108356
+F3_same_stack,comparator,Logistic regression (L2) view model,HNSC,R3:F2,0.9496631057114928
+F3_same_stack,comparator,Logistic regression (L2) view model,HNSC,R3:F3,0.900609665517122
+F3_same_stack,comparator,Logistic regression (L2) view model,HNSC,R3:F4,0.8460279638537965
+F3_same_stack,comparator,Logistic regression (L2) view model,HNSC,R3:F5,0.9303603866821109
+F3_same_stack,comparator,Logistic regression (L2) view model,KIRCKICH,R1:F1,0.8775510204081632
+F3_same_stack,comparator,Logistic regression (L2) view model,KIRCKICH,R1:F2,0.9789173789173788
+F3_same_stack,comparator,Logistic regression (L2) view model,KIRCKICH,R1:F3,0.956436420722135
+F3_same_stack,comparator,Logistic regression (L2) view model,KIRCKICH,R1:F4,0.9532828282828284
+F3_same_stack,comparator,Logistic regression (L2) view model,KIRCKICH,R1:F5,0.956436420722135
+F3_same_stack,comparator,Logistic regression (L2) view model,KIRCKICH,R2:F1,0.9774874371859296
+F3_same_stack,comparator,Logistic regression (L2) view model,KIRCKICH,R2:F2,0.91287284144427
+F3_same_stack,comparator,Logistic regression (L2) view model,KIRCKICH,R2:F3,0.9789173789173788
+F3_same_stack,comparator,Logistic regression (L2) view model,KIRCKICH,R2:F4,1.0
+F3_same_stack,comparator,Logistic regression (L2) view model,KIRCKICH,R2:F5,0.9405038413435768
+F3_same_stack,comparator,Logistic regression (L2) view model,KIRCKICH,R3:F1,0.9591836734693876
+F3_same_stack,comparator,Logistic regression (L2) view model,KIRCKICH,R3:F2,0.9789173789173788
+F3_same_stack,comparator,Logistic regression (L2) view model,KIRCKICH,R3:F3,0.97746192893401
+F3_same_stack,comparator,Logistic regression (L2) view model,KIRCKICH,R3:F4,1.0
+F3_same_stack,comparator,Logistic regression (L2) view model,KIRCKICH,R3:F5,0.91287284144427
+F3_same_stack,comparator,Logistic regression (L2) view model,LGGGBM,R1:F1,0.7909585536719359
+F3_same_stack,comparator,Logistic regression (L2) view model,LGGGBM,R1:F2,0.761213068621948
+F3_same_stack,comparator,Logistic regression (L2) view model,LGGGBM,R1:F3,0.7007092198581562
+F3_same_stack,comparator,Logistic regression (L2) view model,LGGGBM,R1:F4,0.8073616231739312
+F3_same_stack,comparator,Logistic regression (L2) view model,LGGGBM,R1:F5,0.7439153322213193
+F3_same_stack,comparator,Logistic regression (L2) view model,LGGGBM,R2:F1,0.7652493508288656
+F3_same_stack,comparator,Logistic regression (L2) view model,LGGGBM,R2:F2,0.7824466474292259
+F3_same_stack,comparator,Logistic regression (L2) view model,LGGGBM,R2:F3,0.7524475524475525
+F3_same_stack,comparator,Logistic regression (L2) view model,LGGGBM,R2:F4,0.6492424882430796
+F3_same_stack,comparator,Logistic regression (L2) view model,LGGGBM,R2:F5,0.8294361595808251
+F3_same_stack,comparator,Logistic regression (L2) view model,LGGGBM,R3:F1,0.7666640915814743
+F3_same_stack,comparator,Logistic regression (L2) view model,LGGGBM,R3:F2,0.7988267409329451
+F3_same_stack,comparator,Logistic regression (L2) view model,LGGGBM,R3:F3,0.7461495437090164
+F3_same_stack,comparator,Logistic regression (L2) view model,LGGGBM,R3:F4,0.6776834108141099
+F3_same_stack,comparator,Logistic regression (L2) view model,LGGGBM,R3:F5,0.7202462380300958
+F3_same_stack,comparator,Logistic regression (L2) view model,LUAD,R1:F1,0.8611534870358402
+F3_same_stack,comparator,Logistic regression (L2) view model,LUAD,R1:F2,0.7958162037109406
+F3_same_stack,comparator,Logistic regression (L2) view model,LUAD,R1:F3,0.8530719730719731
+F3_same_stack,comparator,Logistic regression (L2) view model,LUAD,R1:F4,0.8679517867753163
+F3_same_stack,comparator,Logistic regression (L2) view model,LUAD,R1:F5,0.8350207359831805
+F3_same_stack,comparator,Logistic regression (L2) view model,LUAD,R2:F1,0.7540116159458132
+F3_same_stack,comparator,Logistic regression (L2) view model,LUAD,R2:F2,0.8221102947685225
+F3_same_stack,comparator,Logistic regression (L2) view model,LUAD,R2:F3,0.865599744076205
+F3_same_stack,comparator,Logistic regression (L2) view model,LUAD,R2:F4,0.9046044449226824
+F3_same_stack,comparator,Logistic regression (L2) view model,LUAD,R2:F5,0.9152593440122044
+F3_same_stack,comparator,Logistic regression (L2) view model,LUAD,R3:F1,0.8079759257298175
+F3_same_stack,comparator,Logistic regression (L2) view model,LUAD,R3:F2,0.8376068878281149
+F3_same_stack,comparator,Logistic regression (L2) view model,LUAD,R3:F3,0.8241461590053138
+F3_same_stack,comparator,Logistic regression (L2) view model,LUAD,R3:F4,0.9313258758522966
+F3_same_stack,comparator,Logistic regression (L2) view model,LUAD,R3:F5,0.9192007992007992
+F3_same_stack,comparator,Logistic regression (L2) view model,LUSC,R1:F1,0.879546588323184
+F3_same_stack,comparator,Logistic regression (L2) view model,LUSC,R1:F2,0.8353374856034431
+F3_same_stack,comparator,Logistic regression (L2) view model,LUSC,R1:F3,0.8568893267035681
+F3_same_stack,comparator,Logistic regression (L2) view model,LUSC,R1:F4,0.7109818286288875
+F3_same_stack,comparator,Logistic regression (L2) view model,LUSC,R1:F5,0.8638459785828206
+F3_same_stack,comparator,Logistic regression (L2) view model,LUSC,R2:F1,0.8266216785995653
+F3_same_stack,comparator,Logistic regression (L2) view model,LUSC,R2:F2,0.9087988996768298
+F3_same_stack,comparator,Logistic regression (L2) view model,LUSC,R2:F3,0.8452956061651714
+F3_same_stack,comparator,Logistic regression (L2) view model,LUSC,R2:F4,0.9180000935570684
+F3_same_stack,comparator,Logistic regression (L2) view model,LUSC,R2:F5,0.7799059110823817
+F3_same_stack,comparator,Logistic regression (L2) view model,LUSC,R3:F1,0.7654191353881757
+F3_same_stack,comparator,Logistic regression (L2) view model,LUSC,R3:F2,0.8090993509414562
+F3_same_stack,comparator,Logistic regression (L2) view model,LUSC,R3:F3,0.8062532002048131
+F3_same_stack,comparator,Logistic regression (L2) view model,LUSC,R3:F4,0.8729731706202294
+F3_same_stack,comparator,Logistic regression (L2) view model,LUSC,R3:F5,0.9054937192268212
+F3_same_stack,comparator,Logistic regression (L2) view model,SKCM,R1:F1,0.6495881782945736
+F3_same_stack,comparator,Logistic regression (L2) view model,SKCM,R1:F2,0.6185866013071896
+F3_same_stack,comparator,Logistic regression (L2) view model,SKCM,R1:F3,0.66277073787543
+F3_same_stack,comparator,Logistic regression (L2) view model,SKCM,R1:F4,0.5280982905982906
+F3_same_stack,comparator,Logistic regression (L2) view model,SKCM,R1:F5,0.6422251837044441
+F3_same_stack,comparator,Logistic regression (L2) view model,SKCM,R2:F1,0.604935618403081
+F3_same_stack,comparator,Logistic regression (L2) view model,SKCM,R2:F2,0.5706550659855257
+F3_same_stack,comparator,Logistic regression (L2) view model,SKCM,R2:F3,0.7247023809523809
+F3_same_stack,comparator,Logistic regression (L2) view model,SKCM,R2:F4,0.6854928017718714
+F3_same_stack,comparator,Logistic regression (L2) view model,SKCM,R2:F5,0.6631831983805667
+F3_same_stack,comparator,Logistic regression (L2) view model,SKCM,R3:F1,0.6243892828999211
+F3_same_stack,comparator,Logistic regression (L2) view model,SKCM,R3:F2,0.6927637198842439
+F3_same_stack,comparator,Logistic regression (L2) view model,SKCM,R3:F3,0.6534978488376988
+F3_same_stack,comparator,Logistic regression (L2) view model,SKCM,R3:F4,0.5575394017537515
+F3_same_stack,comparator,Logistic regression (L2) view model,SKCM,R3:F5,0.6046405145242355
+F3_same_stack,comparator,Logistic regression (L2) view model,THCA,R1:F1,0.7755287622295296
+F3_same_stack,comparator,Logistic regression (L2) view model,THCA,R1:F2,0.7586979831031742
+F3_same_stack,comparator,Logistic regression (L2) view model,THCA,R1:F3,0.7679972346628995
+F3_same_stack,comparator,Logistic regression (L2) view model,THCA,R1:F4,0.7709989258861439
+F3_same_stack,comparator,Logistic regression (L2) view model,THCA,R1:F5,0.7604276441389843
+F3_same_stack,comparator,Logistic regression (L2) view model,THCA,R2:F1,0.6826210826210826
+F3_same_stack,comparator,Logistic regression (L2) view model,THCA,R2:F2,0.7373588610702013
+F3_same_stack,comparator,Logistic regression (L2) view model,THCA,R2:F3,0.7969428521799548
+F3_same_stack,comparator,Logistic regression (L2) view model,THCA,R2:F4,0.6773856209150327
+F3_same_stack,comparator,Logistic regression (L2) view model,THCA,R2:F5,0.72823023290313
+F3_same_stack,comparator,Logistic regression (L2) view model,THCA,R3:F1,0.7501224129076948
+F3_same_stack,comparator,Logistic regression (L2) view model,THCA,R3:F2,0.8173382173382174
+F3_same_stack,comparator,Logistic regression (L2) view model,THCA,R3:F3,0.687982740021575
+F3_same_stack,comparator,Logistic regression (L2) view model,THCA,R3:F4,0.8226844196080667
+F3_same_stack,comparator,Logistic regression (L2) view model,THCA,R3:F5,0.6588842426656046
+F3_same_stack,comparator,Logistic regression (L2) view model,UCEC,R1:F1,0.7398582441197926
+F3_same_stack,comparator,Logistic regression (L2) view model,UCEC,R1:F2,0.8084371269730303
+F3_same_stack,comparator,Logistic regression (L2) view model,UCEC,R1:F3,0.787662191313307
+F3_same_stack,comparator,Logistic regression (L2) view model,UCEC,R1:F4,0.8002330383821138
+F3_same_stack,comparator,Logistic regression (L2) view model,UCEC,R1:F5,0.8311899063792321
+F3_same_stack,comparator,Logistic regression (L2) view model,UCEC,R2:F1,0.8603589905772069
+F3_same_stack,comparator,Logistic regression (L2) view model,UCEC,R2:F2,0.7943967461536586
+F3_same_stack,comparator,Logistic regression (L2) view model,UCEC,R2:F3,0.86610577459524
+F3_same_stack,comparator,Logistic regression (L2) view model,UCEC,R2:F4,0.7651591240300918
+F3_same_stack,comparator,Logistic regression (L2) view model,UCEC,R2:F5,0.7730932513541209
+F3_same_stack,comparator,Logistic regression (L2) view model,UCEC,R3:F1,0.8285159402744148
+F3_same_stack,comparator,Logistic regression (L2) view model,UCEC,R3:F2,0.8040738576098014
+F3_same_stack,comparator,Logistic regression (L2) view model,UCEC,R3:F3,0.7810055441634388
+F3_same_stack,comparator,Logistic regression (L2) view model,UCEC,R3:F4,0.8059294871794872
+F3_same_stack,comparator,Logistic regression (L2) view model,UCEC,R3:F5,0.7848513986081659
+F3_same_stack,comparator,SVM (RBF) view model,BLCA,R1:F1,0.8376076356468514
+F3_same_stack,comparator,SVM (RBF) view model,BLCA,R1:F2,0.7783850652271705
+F3_same_stack,comparator,SVM (RBF) view model,BLCA,R1:F3,0.8494333370113637
+F3_same_stack,comparator,SVM (RBF) view model,BLCA,R1:F4,0.7983442833891488
+F3_same_stack,comparator,SVM (RBF) view model,BLCA,R1:F5,0.8680377414123545
+F3_same_stack,comparator,SVM (RBF) view model,BLCA,R2:F1,0.7819720897551087
+F3_same_stack,comparator,SVM (RBF) view model,BLCA,R2:F2,0.7355704779553776
+F3_same_stack,comparator,SVM (RBF) view model,BLCA,R2:F3,0.7738104514051217
+F3_same_stack,comparator,SVM (RBF) view model,BLCA,R2:F4,0.9196661687889756
+F3_same_stack,comparator,SVM (RBF) view model,BLCA,R2:F5,0.7322312190733243
+F3_same_stack,comparator,SVM (RBF) view model,BLCA,R3:F1,0.8003905451273873
+F3_same_stack,comparator,SVM (RBF) view model,BLCA,R3:F2,0.8733541725869092
+F3_same_stack,comparator,SVM (RBF) view model,BLCA,R3:F3,0.8180657305657305
+F3_same_stack,comparator,SVM (RBF) view model,BLCA,R3:F4,0.678824753945294
+F3_same_stack,comparator,SVM (RBF) view model,BLCA,R3:F5,0.7787002227791703
+F3_same_stack,comparator,SVM (RBF) view model,BRCA,R1:F1,0.89493006993007
+F3_same_stack,comparator,SVM (RBF) view model,BRCA,R1:F2,0.9020509761954892
+F3_same_stack,comparator,SVM (RBF) view model,BRCA,R1:F3,0.9149540005342952
+F3_same_stack,comparator,SVM (RBF) view model,BRCA,R1:F4,0.875845490065185
+F3_same_stack,comparator,SVM (RBF) view model,BRCA,R1:F5,0.9424854557207498
+F3_same_stack,comparator,SVM (RBF) view model,BRCA,R2:F1,0.9494101840428588
+F3_same_stack,comparator,SVM (RBF) view model,BRCA,R2:F2,0.9430964870093697
+F3_same_stack,comparator,SVM (RBF) view model,BRCA,R2:F3,0.8846590585960455
+F3_same_stack,comparator,SVM (RBF) view model,BRCA,R2:F4,0.8467840158222131
+F3_same_stack,comparator,SVM (RBF) view model,BRCA,R2:F5,0.9270191578743676
+F3_same_stack,comparator,SVM (RBF) view model,BRCA,R3:F1,0.8939509644957147
+F3_same_stack,comparator,SVM (RBF) view model,BRCA,R3:F2,0.906726077897744
+F3_same_stack,comparator,SVM (RBF) view model,BRCA,R3:F3,0.9252225189141076
+F3_same_stack,comparator,SVM (RBF) view model,BRCA,R3:F4,0.8918386044631006
+F3_same_stack,comparator,SVM (RBF) view model,BRCA,R3:F5,0.9004760059777495
+F3_same_stack,comparator,SVM (RBF) view model,COADREAD,R1:F1,0.7726168985567482
+F3_same_stack,comparator,SVM (RBF) view model,COADREAD,R1:F2,0.7534662520578014
+F3_same_stack,comparator,SVM (RBF) view model,COADREAD,R1:F3,0.7507179990462993
+F3_same_stack,comparator,SVM (RBF) view model,COADREAD,R1:F4,0.7220238095238095
+F3_same_stack,comparator,SVM (RBF) view model,COADREAD,R1:F5,0.6853369125427949
+F3_same_stack,comparator,SVM (RBF) view model,COADREAD,R2:F1,0.7286798862671243
+F3_same_stack,comparator,SVM (RBF) view model,COADREAD,R2:F2,0.7329307568438003
+F3_same_stack,comparator,SVM (RBF) view model,COADREAD,R2:F3,0.7160745384883317
+F3_same_stack,comparator,SVM (RBF) view model,COADREAD,R2:F4,0.7262844134689844
+F3_same_stack,comparator,SVM (RBF) view model,COADREAD,R2:F5,0.6440263061746437
+F3_same_stack,comparator,SVM (RBF) view model,COADREAD,R3:F1,0.7347231984519927
+F3_same_stack,comparator,SVM (RBF) view model,COADREAD,R3:F2,0.6973905723905723
+F3_same_stack,comparator,SVM (RBF) view model,COADREAD,R3:F3,0.7438872904208017
+F3_same_stack,comparator,SVM (RBF) view model,COADREAD,R3:F4,0.7933201058201057
+F3_same_stack,comparator,SVM (RBF) view model,COADREAD,R3:F5,0.6744201638037254
+F3_same_stack,comparator,SVM (RBF) view model,GEA,R1:F1,0.6330414781542603
+F3_same_stack,comparator,SVM (RBF) view model,GEA,R1:F2,0.6700471318916165
+F3_same_stack,comparator,SVM (RBF) view model,GEA,R1:F3,0.7190117072470014
+F3_same_stack,comparator,SVM (RBF) view model,GEA,R1:F4,0.7588531625887949
+F3_same_stack,comparator,SVM (RBF) view model,GEA,R1:F5,0.6866472135459477
+F3_same_stack,comparator,SVM (RBF) view model,GEA,R2:F1,0.7700338809987933
+F3_same_stack,comparator,SVM (RBF) view model,GEA,R2:F2,0.6480315203004279
+F3_same_stack,comparator,SVM (RBF) view model,GEA,R2:F3,0.6530423493557135
+F3_same_stack,comparator,SVM (RBF) view model,GEA,R2:F4,0.7203236850295675
+F3_same_stack,comparator,SVM (RBF) view model,GEA,R2:F5,0.6888620756134368
+F3_same_stack,comparator,SVM (RBF) view model,GEA,R3:F1,0.6423812557352929
+F3_same_stack,comparator,SVM (RBF) view model,GEA,R3:F2,0.5810207336523125
+F3_same_stack,comparator,SVM (RBF) view model,GEA,R3:F3,0.751795035648657
+F3_same_stack,comparator,SVM (RBF) view model,GEA,R3:F4,0.7047475616752725
+F3_same_stack,comparator,SVM (RBF) view model,GEA,R3:F5,0.7385082238023415
+F3_same_stack,comparator,SVM (RBF) view model,HNSC,R1:F1,0.9114584170396044
+F3_same_stack,comparator,SVM (RBF) view model,HNSC,R1:F2,0.8827770801807313
+F3_same_stack,comparator,SVM (RBF) view model,HNSC,R1:F3,0.9099216533078948
+F3_same_stack,comparator,SVM (RBF) view model,HNSC,R1:F4,0.9271324143692564
+F3_same_stack,comparator,SVM (RBF) view model,HNSC,R1:F5,0.9287562379175472
+F3_same_stack,comparator,SVM (RBF) view model,HNSC,R2:F1,0.885998445998446
+F3_same_stack,comparator,SVM (RBF) view model,HNSC,R2:F2,0.92114577631819
+F3_same_stack,comparator,SVM (RBF) view model,HNSC,R2:F3,0.9242690058479532
+F3_same_stack,comparator,SVM (RBF) view model,HNSC,R2:F4,0.8655324146984988
+F3_same_stack,comparator,SVM (RBF) view model,HNSC,R2:F5,0.9085765453722472
+F3_same_stack,comparator,SVM (RBF) view model,HNSC,R3:F1,0.9448746575590636
+F3_same_stack,comparator,SVM (RBF) view model,HNSC,R3:F2,0.962539281260082
+F3_same_stack,comparator,SVM (RBF) view model,HNSC,R3:F3,0.8718508418282301
+F3_same_stack,comparator,SVM (RBF) view model,HNSC,R3:F4,0.8627723856753237
+F3_same_stack,comparator,SVM (RBF) view model,HNSC,R3:F5,0.8871850058290736
+F3_same_stack,comparator,SVM (RBF) view model,KIRCKICH,R1:F1,0.8874371859296483
+F3_same_stack,comparator,SVM (RBF) view model,KIRCKICH,R1:F2,0.9789173789173788
+F3_same_stack,comparator,SVM (RBF) view model,KIRCKICH,R1:F3,0.956436420722135
+F3_same_stack,comparator,SVM (RBF) view model,KIRCKICH,R1:F4,0.8351485148514851
+F3_same_stack,comparator,SVM (RBF) view model,KIRCKICH,R1:F5,0.956436420722135
+F3_same_stack,comparator,SVM (RBF) view model,KIRCKICH,R2:F1,0.927319922128488
+F3_same_stack,comparator,SVM (RBF) view model,KIRCKICH,R2:F2,0.91287284144427
+F3_same_stack,comparator,SVM (RBF) view model,KIRCKICH,R2:F3,0.956436420722135
+F3_same_stack,comparator,SVM (RBF) view model,KIRCKICH,R2:F4,0.97746192893401
+F3_same_stack,comparator,SVM (RBF) view model,KIRCKICH,R2:F5,0.9405038413435768
+F3_same_stack,comparator,SVM (RBF) view model,KIRCKICH,R3:F1,0.9591836734693876
+F3_same_stack,comparator,SVM (RBF) view model,KIRCKICH,R3:F2,0.956436420722135
+F3_same_stack,comparator,SVM (RBF) view model,KIRCKICH,R3:F3,0.8685145700071073
+F3_same_stack,comparator,SVM (RBF) view model,KIRCKICH,R3:F4,1.0
+F3_same_stack,comparator,SVM (RBF) view model,KIRCKICH,R3:F5,0.8873096446700508
+F3_same_stack,comparator,SVM (RBF) view model,LGGGBM,R1:F1,0.7404827375783617
+F3_same_stack,comparator,SVM (RBF) view model,LGGGBM,R1:F2,0.7656286153004775
+F3_same_stack,comparator,SVM (RBF) view model,LGGGBM,R1:F3,0.6600746965452847
+F3_same_stack,comparator,SVM (RBF) view model,LGGGBM,R1:F4,0.7403529291665581
+F3_same_stack,comparator,SVM (RBF) view model,LGGGBM,R1:F5,0.752275129638791
+F3_same_stack,comparator,SVM (RBF) view model,LGGGBM,R2:F1,0.7088270071166377
+F3_same_stack,comparator,SVM (RBF) view model,LGGGBM,R2:F2,0.7095938768035207
+F3_same_stack,comparator,SVM (RBF) view model,LGGGBM,R2:F3,0.5888392329137451
+F3_same_stack,comparator,SVM (RBF) view model,LGGGBM,R2:F4,0.6995676413698941
+F3_same_stack,comparator,SVM (RBF) view model,LGGGBM,R2:F5,0.7555062405346781
+F3_same_stack,comparator,SVM (RBF) view model,LGGGBM,R3:F1,0.7448959309424426
+F3_same_stack,comparator,SVM (RBF) view model,LGGGBM,R3:F2,0.783900559043699
+F3_same_stack,comparator,SVM (RBF) view model,LGGGBM,R3:F3,0.6870028542580023
+F3_same_stack,comparator,SVM (RBF) view model,LGGGBM,R3:F4,0.5806639527820089
+F3_same_stack,comparator,SVM (RBF) view model,LGGGBM,R3:F5,0.6770289511153298
+F3_same_stack,comparator,SVM (RBF) view model,LUAD,R1:F1,0.9451520846365206
+F3_same_stack,comparator,SVM (RBF) view model,LUAD,R1:F2,0.8056411823840761
+F3_same_stack,comparator,SVM (RBF) view model,LUAD,R1:F3,0.8155723693428613
+F3_same_stack,comparator,SVM (RBF) view model,LUAD,R1:F4,0.8989056476460769
+F3_same_stack,comparator,SVM (RBF) view model,LUAD,R1:F5,0.8605902306648575
+F3_same_stack,comparator,SVM (RBF) view model,LUAD,R2:F1,0.8028600095766432
+F3_same_stack,comparator,SVM (RBF) view model,LUAD,R2:F2,0.7971095571095571
+F3_same_stack,comparator,SVM (RBF) view model,LUAD,R2:F3,0.9023272540678388
+F3_same_stack,comparator,SVM (RBF) view model,LUAD,R2:F4,0.8905512517390545
+F3_same_stack,comparator,SVM (RBF) view model,LUAD,R2:F5,0.9070143129587178
+F3_same_stack,comparator,SVM (RBF) view model,LUAD,R3:F1,0.8034955713287502
+F3_same_stack,comparator,SVM (RBF) view model,LUAD,R3:F2,0.8538698194762269
+F3_same_stack,comparator,SVM (RBF) view model,LUAD,R3:F3,0.7727548830758251
+F3_same_stack,comparator,SVM (RBF) view model,LUAD,R3:F4,0.9367232183021656
+F3_same_stack,comparator,SVM (RBF) view model,LUAD,R3:F5,0.8458478776125835
+F3_same_stack,comparator,SVM (RBF) view model,LUSC,R1:F1,0.8764449301988001
+F3_same_stack,comparator,SVM (RBF) view model,LUSC,R1:F2,0.8770273941354568
+F3_same_stack,comparator,SVM (RBF) view model,LUSC,R1:F3,0.8594133017148629
+F3_same_stack,comparator,SVM (RBF) view model,LUSC,R1:F4,0.7538777089783282
+F3_same_stack,comparator,SVM (RBF) view model,LUSC,R1:F5,0.8549896199614597
+F3_same_stack,comparator,SVM (RBF) view model,LUSC,R2:F1,0.8660719543072485
+F3_same_stack,comparator,SVM (RBF) view model,LUSC,R2:F2,0.8665490487693054
+F3_same_stack,comparator,SVM (RBF) view model,LUSC,R2:F3,0.8737743406541361
+F3_same_stack,comparator,SVM (RBF) view model,LUSC,R2:F4,0.9060324422166528
+F3_same_stack,comparator,SVM (RBF) view model,LUSC,R2:F5,0.761366782552634
+F3_same_stack,comparator,SVM (RBF) view model,LUSC,R3:F1,0.8345821448237415
+F3_same_stack,comparator,SVM (RBF) view model,LUSC,R3:F2,0.8712667478147353
+F3_same_stack,comparator,SVM (RBF) view model,LUSC,R3:F3,0.8289219576719576
+F3_same_stack,comparator,SVM (RBF) view model,LUSC,R3:F4,0.8503056642711284
+F3_same_stack,comparator,SVM (RBF) view model,LUSC,R3:F5,0.8880810970422984
+F3_same_stack,comparator,SVM (RBF) view model,SKCM,R1:F1,0.5019873743277998
+F3_same_stack,comparator,SVM (RBF) view model,SKCM,R1:F2,0.5682776036224312
+F3_same_stack,comparator,SVM (RBF) view model,SKCM,R1:F3,0.6627948045208165
+F3_same_stack,comparator,SVM (RBF) view model,SKCM,R1:F4,0.6466343277122761
+F3_same_stack,comparator,SVM (RBF) view model,SKCM,R1:F5,0.6389449414048957
+F3_same_stack,comparator,SVM (RBF) view model,SKCM,R2:F1,0.4681990025740025
+F3_same_stack,comparator,SVM (RBF) view model,SKCM,R2:F2,0.5586990314734032
+F3_same_stack,comparator,SVM (RBF) view model,SKCM,R2:F3,0.680737756121939
+F3_same_stack,comparator,SVM (RBF) view model,SKCM,R2:F4,0.5555830027676383
+F3_same_stack,comparator,SVM (RBF) view model,SKCM,R2:F5,0.5880710368392339
+F3_same_stack,comparator,SVM (RBF) view model,SKCM,R3:F1,0.5899782135076254
+F3_same_stack,comparator,SVM (RBF) view model,SKCM,R3:F2,0.5965648279262222
+F3_same_stack,comparator,SVM (RBF) view model,SKCM,R3:F3,0.558764367816092
+F3_same_stack,comparator,SVM (RBF) view model,SKCM,R3:F4,0.5232292438444685
+F3_same_stack,comparator,SVM (RBF) view model,SKCM,R3:F5,0.6587986282284857
+F3_same_stack,comparator,SVM (RBF) view model,THCA,R1:F1,0.8215488215488215
+F3_same_stack,comparator,SVM (RBF) view model,THCA,R1:F2,0.7094943240454077
+F3_same_stack,comparator,SVM (RBF) view model,THCA,R1:F3,0.7425442248971662
+F3_same_stack,comparator,SVM (RBF) view model,THCA,R1:F4,0.75987525987526
+F3_same_stack,comparator,SVM (RBF) view model,THCA,R1:F5,0.7546897546897546
+F3_same_stack,comparator,SVM (RBF) view model,THCA,R2:F1,0.778924584187742
+F3_same_stack,comparator,SVM (RBF) view model,THCA,R2:F2,0.7072649572649573
+F3_same_stack,comparator,SVM (RBF) view model,THCA,R2:F3,0.8035435122459614
+F3_same_stack,comparator,SVM (RBF) view model,THCA,R2:F4,0.6730914528979278
+F3_same_stack,comparator,SVM (RBF) view model,THCA,R2:F5,0.8274007038712922
+F3_same_stack,comparator,SVM (RBF) view model,THCA,R3:F1,0.7651651651651651
+F3_same_stack,comparator,SVM (RBF) view model,THCA,R3:F2,0.7488820089439284
+F3_same_stack,comparator,SVM (RBF) view model,THCA,R3:F3,0.7004516241097795
+F3_same_stack,comparator,SVM (RBF) view model,THCA,R3:F4,0.7868131868131868
+F3_same_stack,comparator,SVM (RBF) view model,THCA,R3:F5,0.7020707070707072
+F3_same_stack,comparator,SVM (RBF) view model,UCEC,R1:F1,0.7491754514142575
+F3_same_stack,comparator,SVM (RBF) view model,UCEC,R1:F2,0.7902217318200925
+F3_same_stack,comparator,SVM (RBF) view model,UCEC,R1:F3,0.7889705882352942
+F3_same_stack,comparator,SVM (RBF) view model,UCEC,R1:F4,0.7822370451084896
+F3_same_stack,comparator,SVM (RBF) view model,UCEC,R1:F5,0.8471561969439729
+F3_same_stack,comparator,SVM (RBF) view model,UCEC,R2:F1,0.8962392392714331
+F3_same_stack,comparator,SVM (RBF) view model,UCEC,R2:F2,0.7234653346172364
+F3_same_stack,comparator,SVM (RBF) view model,UCEC,R2:F3,0.8014633697281969
+F3_same_stack,comparator,SVM (RBF) view model,UCEC,R2:F4,0.7840847242380261
+F3_same_stack,comparator,SVM (RBF) view model,UCEC,R2:F5,0.7262341824841825
+F3_same_stack,comparator,SVM (RBF) view model,UCEC,R3:F1,0.834927140255009
+F3_same_stack,comparator,SVM (RBF) view model,UCEC,R3:F2,0.8261501210653752
+F3_same_stack,comparator,SVM (RBF) view model,UCEC,R3:F3,0.7902082776083739
+F3_same_stack,comparator,SVM (RBF) view model,UCEC,R3:F4,0.7523585609792506
+F3_same_stack,comparator,SVM (RBF) view model,UCEC,R3:F5,0.7519323671497584
+F3_same_stack,comparator,Random Forest view model,BLCA,R1:F1,0.6619633749491536
+F3_same_stack,comparator,Random Forest view model,BLCA,R1:F2,0.8432398545301772
+F3_same_stack,comparator,Random Forest view model,BLCA,R1:F3,0.8314483369105218
+F3_same_stack,comparator,Random Forest view model,BLCA,R1:F4,0.8198809682385271
+F3_same_stack,comparator,Random Forest view model,BLCA,R1:F5,0.6748929797907864
+F3_same_stack,comparator,Random Forest view model,BLCA,R2:F1,0.7801764273462387
+F3_same_stack,comparator,Random Forest view model,BLCA,R2:F2,0.835380936000131
+F3_same_stack,comparator,Random Forest view model,BLCA,R2:F3,0.770967611088151
+F3_same_stack,comparator,Random Forest view model,BLCA,R2:F4,0.733748512695881
+F3_same_stack,comparator,Random Forest view model,BLCA,R2:F5,0.5634519443618462
+F3_same_stack,comparator,Random Forest view model,BLCA,R3:F1,0.6929125354931807
+F3_same_stack,comparator,Random Forest view model,BLCA,R3:F2,0.8645347027699968
+F3_same_stack,comparator,Random Forest view model,BLCA,R3:F3,0.7467767295597484
+F3_same_stack,comparator,Random Forest view model,BLCA,R3:F4,0.6387667887667888
+F3_same_stack,comparator,Random Forest view model,BLCA,R3:F5,0.8629500465744228
+F3_same_stack,comparator,Random Forest view model,BRCA,R1:F1,0.8724667489373372
+F3_same_stack,comparator,Random Forest view model,BRCA,R1:F2,0.921467656830174
+F3_same_stack,comparator,Random Forest view model,BRCA,R1:F3,0.9285856168075544
+F3_same_stack,comparator,Random Forest view model,BRCA,R1:F4,0.896968740289192
+F3_same_stack,comparator,Random Forest view model,BRCA,R1:F5,0.925054089597828
+F3_same_stack,comparator,Random Forest view model,BRCA,R2:F1,0.9198216623314162
+F3_same_stack,comparator,Random Forest view model,BRCA,R2:F2,0.9334282779461386
+F3_same_stack,comparator,Random Forest view model,BRCA,R2:F3,0.8827535665428963
+F3_same_stack,comparator,Random Forest view model,BRCA,R2:F4,0.8499920723006185
+F3_same_stack,comparator,Random Forest view model,BRCA,R2:F5,0.9216489143656624
+F3_same_stack,comparator,Random Forest view model,BRCA,R3:F1,0.8878926472241139
+F3_same_stack,comparator,Random Forest view model,BRCA,R3:F2,0.916867523415568
+F3_same_stack,comparator,Random Forest view model,BRCA,R3:F3,0.9256329476457784
+F3_same_stack,comparator,Random Forest view model,BRCA,R3:F4,0.8998647609537119
+F3_same_stack,comparator,Random Forest view model,BRCA,R3:F5,0.8936694944212512
+F3_same_stack,comparator,Random Forest view model,COADREAD,R1:F1,0.7610959315758006
+F3_same_stack,comparator,Random Forest view model,COADREAD,R1:F2,0.6748294346978557
+F3_same_stack,comparator,Random Forest view model,COADREAD,R1:F3,0.6576558857808857
+F3_same_stack,comparator,Random Forest view model,COADREAD,R1:F4,0.6981377053745473
+F3_same_stack,comparator,Random Forest view model,COADREAD,R1:F5,0.7277215474583896
+F3_same_stack,comparator,Random Forest view model,COADREAD,R2:F1,0.7120295497653989
+F3_same_stack,comparator,Random Forest view model,COADREAD,R2:F2,0.6647387479562256
+F3_same_stack,comparator,Random Forest view model,COADREAD,R2:F3,0.703825136612022
+F3_same_stack,comparator,Random Forest view model,COADREAD,R2:F4,0.6776654474022896
+F3_same_stack,comparator,Random Forest view model,COADREAD,R2:F5,0.6658011272141707
+F3_same_stack,comparator,Random Forest view model,COADREAD,R3:F1,0.6660918969577881
+F3_same_stack,comparator,Random Forest view model,COADREAD,R3:F2,0.6668373662604493
+F3_same_stack,comparator,Random Forest view model,COADREAD,R3:F3,0.6764447695738331
+F3_same_stack,comparator,Random Forest view model,COADREAD,R3:F4,0.6583465462868324
+F3_same_stack,comparator,Random Forest view model,COADREAD,R3:F5,0.6360068943402276
+F3_same_stack,comparator,Random Forest view model,GEA,R1:F1,0.684010003109382
+F3_same_stack,comparator,Random Forest view model,GEA,R1:F2,0.6107343805619667
+F3_same_stack,comparator,Random Forest view model,GEA,R1:F3,0.6725821399609685
+F3_same_stack,comparator,Random Forest view model,GEA,R1:F4,0.6982332426609535
+F3_same_stack,comparator,Random Forest view model,GEA,R1:F5,0.6445810109160559
+F3_same_stack,comparator,Random Forest view model,GEA,R2:F1,0.7507869941373054
+F3_same_stack,comparator,Random Forest view model,GEA,R2:F2,0.6537833668663114
+F3_same_stack,comparator,Random Forest view model,GEA,R2:F3,0.7026020974515081
+F3_same_stack,comparator,Random Forest view model,GEA,R2:F4,0.5741841452027966
+F3_same_stack,comparator,Random Forest view model,GEA,R2:F5,0.7057470516117134
+F3_same_stack,comparator,Random Forest view model,GEA,R3:F1,0.6121540755081128
+F3_same_stack,comparator,Random Forest view model,GEA,R3:F2,0.5427524856096284
+F3_same_stack,comparator,Random Forest view model,GEA,R3:F3,0.6712636569779428
+F3_same_stack,comparator,Random Forest view model,GEA,R3:F4,0.7576023391812866
+F3_same_stack,comparator,Random Forest view model,GEA,R3:F5,0.7451075148964932
+F3_same_stack,comparator,Random Forest view model,HNSC,R1:F1,0.8820052158794554
+F3_same_stack,comparator,Random Forest view model,HNSC,R1:F2,0.894264736685036
+F3_same_stack,comparator,Random Forest view model,HNSC,R1:F3,0.8792374736531269
+F3_same_stack,comparator,Random Forest view model,HNSC,R1:F4,0.9074693542769182
+F3_same_stack,comparator,Random Forest view model,HNSC,R1:F5,0.8424851905606623
+F3_same_stack,comparator,Random Forest view model,HNSC,R2:F1,0.8383741562835858
+F3_same_stack,comparator,Random Forest view model,HNSC,R2:F2,0.9120184784089622
+F3_same_stack,comparator,Random Forest view model,HNSC,R2:F3,0.9402380952380952
+F3_same_stack,comparator,Random Forest view model,HNSC,R2:F4,0.8854613511147136
+F3_same_stack,comparator,Random Forest view model,HNSC,R2:F5,0.9108040363212778
+F3_same_stack,comparator,Random Forest view model,HNSC,R3:F1,0.915002713534274
+F3_same_stack,comparator,Random Forest view model,HNSC,R3:F2,0.932965199427936
+F3_same_stack,comparator,Random Forest view model,HNSC,R3:F3,0.8365201465201466
+F3_same_stack,comparator,Random Forest view model,HNSC,R3:F4,0.8543245643245643
+F3_same_stack,comparator,Random Forest view model,HNSC,R3:F5,0.9059909059997018
+F3_same_stack,comparator,Random Forest view model,KIRCKICH,R1:F1,0.8845360824742268
+F3_same_stack,comparator,Random Forest view model,KIRCKICH,R1:F2,0.9789173789173788
+F3_same_stack,comparator,Random Forest view model,KIRCKICH,R1:F3,0.956436420722135
+F3_same_stack,comparator,Random Forest view model,KIRCKICH,R1:F4,0.8351485148514851
+F3_same_stack,comparator,Random Forest view model,KIRCKICH,R1:F5,0.956436420722135
+F3_same_stack,comparator,Random Forest view model,KIRCKICH,R2:F1,0.9533333333333334
+F3_same_stack,comparator,Random Forest view model,KIRCKICH,R2:F2,0.8873096446700508
+F3_same_stack,comparator,Random Forest view model,KIRCKICH,R2:F3,0.9789173789173788
+F3_same_stack,comparator,Random Forest view model,KIRCKICH,R2:F4,1.0
+F3_same_stack,comparator,Random Forest view model,KIRCKICH,R2:F5,0.9405038413435768
+F3_same_stack,comparator,Random Forest view model,KIRCKICH,R3:F1,0.9591836734693876
+F3_same_stack,comparator,Random Forest view model,KIRCKICH,R3:F2,0.9789173789173788
+F3_same_stack,comparator,Random Forest view model,KIRCKICH,R3:F3,0.8990909090909092
+F3_same_stack,comparator,Random Forest view model,KIRCKICH,R3:F4,1.0
+F3_same_stack,comparator,Random Forest view model,KIRCKICH,R3:F5,0.8873096446700508
+F3_same_stack,comparator,Random Forest view model,LGGGBM,R1:F1,0.7391706107469282
+F3_same_stack,comparator,Random Forest view model,LGGGBM,R1:F2,0.7608943580051124
+F3_same_stack,comparator,Random Forest view model,LGGGBM,R1:F3,0.6864210661553648
+F3_same_stack,comparator,Random Forest view model,LGGGBM,R1:F4,0.7625410952990176
+F3_same_stack,comparator,Random Forest view model,LGGGBM,R1:F5,0.7530180221669583
+F3_same_stack,comparator,Random Forest view model,LGGGBM,R2:F1,0.7533243198368084
+F3_same_stack,comparator,Random Forest view model,LGGGBM,R2:F2,0.6871907237878345
+F3_same_stack,comparator,Random Forest view model,LGGGBM,R2:F3,0.6170474266941101
+F3_same_stack,comparator,Random Forest view model,LGGGBM,R2:F4,0.7521090649698614
+F3_same_stack,comparator,Random Forest view model,LGGGBM,R2:F5,0.6797022477525865
+F3_same_stack,comparator,Random Forest view model,LGGGBM,R3:F1,0.7234411084764625
+F3_same_stack,comparator,Random Forest view model,LGGGBM,R3:F2,0.7828291125633319
+F3_same_stack,comparator,Random Forest view model,LGGGBM,R3:F3,0.6668046928916495
+F3_same_stack,comparator,Random Forest view model,LGGGBM,R3:F4,0.5636431113634761
+F3_same_stack,comparator,Random Forest view model,LGGGBM,R3:F5,0.6099531697538342
+F3_same_stack,comparator,Random Forest view model,LUAD,R1:F1,0.8991657072537718
+F3_same_stack,comparator,Random Forest view model,LUAD,R1:F2,0.7668444427697657
+F3_same_stack,comparator,Random Forest view model,LUAD,R1:F3,0.8064452308520107
+F3_same_stack,comparator,Random Forest view model,LUAD,R1:F4,0.8687500442819592
+F3_same_stack,comparator,Random Forest view model,LUAD,R1:F5,0.7792475443831364
+F3_same_stack,comparator,Random Forest view model,LUAD,R2:F1,0.7416632981915382
+F3_same_stack,comparator,Random Forest view model,LUAD,R2:F2,0.8262191467069517
+F3_same_stack,comparator,Random Forest view model,LUAD,R2:F3,0.8288228592872556
+F3_same_stack,comparator,Random Forest view model,LUAD,R2:F4,0.7857100021417862
+F3_same_stack,comparator,Random Forest view model,LUAD,R2:F5,0.8676785714285714
+F3_same_stack,comparator,Random Forest view model,LUAD,R3:F1,0.8383581469938284
+F3_same_stack,comparator,Random Forest view model,LUAD,R3:F2,0.7796456175403543
+F3_same_stack,comparator,Random Forest view model,LUAD,R3:F3,0.7536231516620846
+F3_same_stack,comparator,Random Forest view model,LUAD,R3:F4,0.940152266034619
+F3_same_stack,comparator,Random Forest view model,LUAD,R3:F5,0.7476098907779475
+F3_same_stack,comparator,Random Forest view model,LUSC,R1:F1,0.8263202649480844
+F3_same_stack,comparator,Random Forest view model,LUSC,R1:F2,0.8759775277632421
+F3_same_stack,comparator,Random Forest view model,LUSC,R1:F3,0.7906683612625383
+F3_same_stack,comparator,Random Forest view model,LUSC,R1:F4,0.665620611813221
+F3_same_stack,comparator,Random Forest view model,LUSC,R1:F5,0.8646051328332752
+F3_same_stack,comparator,Random Forest view model,LUSC,R2:F1,0.803095536460198
+F3_same_stack,comparator,Random Forest view model,LUSC,R2:F2,0.8650384178197478
+F3_same_stack,comparator,Random Forest view model,LUSC,R2:F3,0.7964056894214155
+F3_same_stack,comparator,Random Forest view model,LUSC,R2:F4,0.8779486673896612
+F3_same_stack,comparator,Random Forest view model,LUSC,R2:F5,0.7368244092508799
+F3_same_stack,comparator,Random Forest view model,LUSC,R3:F1,0.7414954870837224
+F3_same_stack,comparator,Random Forest view model,LUSC,R3:F2,0.7824238669826905
+F3_same_stack,comparator,Random Forest view model,LUSC,R3:F3,0.8047171646436353
+F3_same_stack,comparator,Random Forest view model,LUSC,R3:F4,0.8550319250507221
+F3_same_stack,comparator,Random Forest view model,LUSC,R3:F5,0.8214450354609929
+F3_same_stack,comparator,Random Forest view model,SKCM,R1:F1,0.4749809305873379
+F3_same_stack,comparator,Random Forest view model,SKCM,R1:F2,0.4261363636363636
+F3_same_stack,comparator,Random Forest view model,SKCM,R1:F3,0.5198593341344455
+F3_same_stack,comparator,Random Forest view model,SKCM,R1:F4,0.4745653099949657
+F3_same_stack,comparator,Random Forest view model,SKCM,R1:F5,0.5748922964585614
+F3_same_stack,comparator,Random Forest view model,SKCM,R2:F1,0.4632863590310399
+F3_same_stack,comparator,Random Forest view model,SKCM,R2:F2,0.5335211815001943
+F3_same_stack,comparator,Random Forest view model,SKCM,R2:F3,0.4722298534798534
+F3_same_stack,comparator,Random Forest view model,SKCM,R2:F4,0.5002262443438914
+F3_same_stack,comparator,Random Forest view model,SKCM,R2:F5,0.5143843498273878
+F3_same_stack,comparator,Random Forest view model,SKCM,R3:F1,0.5136950024590474
+F3_same_stack,comparator,Random Forest view model,SKCM,R3:F2,0.4280701754385965
+F3_same_stack,comparator,Random Forest view model,SKCM,R3:F3,0.5626491155902921
+F3_same_stack,comparator,Random Forest view model,SKCM,R3:F4,0.382461260510041
+F3_same_stack,comparator,Random Forest view model,SKCM,R3:F5,0.4644883485309017
+F3_same_stack,comparator,Random Forest view model,THCA,R1:F1,0.8425616251703207
+F3_same_stack,comparator,Random Forest view model,THCA,R1:F2,0.7106930693069305
+F3_same_stack,comparator,Random Forest view model,THCA,R1:F3,0.721840251252016
+F3_same_stack,comparator,Random Forest view model,THCA,R1:F4,0.7426624737945492
+F3_same_stack,comparator,Random Forest view model,THCA,R1:F5,0.7546897546897546
+F3_same_stack,comparator,Random Forest view model,THCA,R2:F1,0.7707139134966129
+F3_same_stack,comparator,Random Forest view model,THCA,R2:F2,0.7072649572649573
+F3_same_stack,comparator,Random Forest view model,THCA,R2:F3,0.7975363363200043
+F3_same_stack,comparator,Random Forest view model,THCA,R2:F4,0.6705299272015358
+F3_same_stack,comparator,Random Forest view model,THCA,R2:F5,0.7733631546715659
+F3_same_stack,comparator,Random Forest view model,THCA,R3:F1,0.7823721081785598
+F3_same_stack,comparator,Random Forest view model,THCA,R3:F2,0.754290543764228
+F3_same_stack,comparator,Random Forest view model,THCA,R3:F3,0.6885178313749742
+F3_same_stack,comparator,Random Forest view model,THCA,R3:F4,0.7535505430242272
+F3_same_stack,comparator,Random Forest view model,THCA,R3:F5,0.7236046199301639
+F3_same_stack,comparator,Random Forest view model,UCEC,R1:F1,0.7361297706125293
+F3_same_stack,comparator,Random Forest view model,UCEC,R1:F2,0.8145662857014044
+F3_same_stack,comparator,Random Forest view model,UCEC,R1:F3,0.7519537760657802
+F3_same_stack,comparator,Random Forest view model,UCEC,R1:F4,0.7184697655285891
+F3_same_stack,comparator,Random Forest view model,UCEC,R1:F5,0.8233798782670962
+F3_same_stack,comparator,Random Forest view model,UCEC,R2:F1,0.844779399214883
+F3_same_stack,comparator,Random Forest view model,UCEC,R2:F2,0.7324192176870749
+F3_same_stack,comparator,Random Forest view model,UCEC,R2:F3,0.77445923046252
+F3_same_stack,comparator,Random Forest view model,UCEC,R2:F4,0.7779861792556341
+F3_same_stack,comparator,Random Forest view model,UCEC,R2:F5,0.7791414736710591
+F3_same_stack,comparator,Random Forest view model,UCEC,R3:F1,0.7924436870013931
+F3_same_stack,comparator,Random Forest view model,UCEC,R3:F2,0.8032051282051282
+F3_same_stack,comparator,Random Forest view model,UCEC,R3:F3,0.799909960258321
+F3_same_stack,comparator,Random Forest view model,UCEC,R3:F4,0.7482398649549404
+F3_same_stack,comparator,Random Forest view model,UCEC,R3:F5,0.7898267812188982
 F3_same_stack,comparator,LightGBM view model,BLCA,R1:F1,0.6456504163634893
 F3_same_stack,comparator,LightGBM view model,BLCA,R1:F2,0.8344472467423287
 F3_same_stack,comparator,LightGBM view model,BLCA,R1:F3,0.7761156186612577
@@ -6779,6 +7319,366 @@ F3_same_stack,comparator,LightGBM view model,UCEC,R3:F2,0.7981159819869497
 F3_same_stack,comparator,LightGBM view model,UCEC,R3:F3,0.8150136862308883
 F3_same_stack,comparator,LightGBM view model,UCEC,R3:F4,0.7926249491338216
 F3_same_stack,comparator,LightGBM view model,UCEC,R3:F5,0.7908129268698983
+F3_same_stack,comparator,XGBoost view model,BLCA,R1:F1,0.5976260094681147
+F3_same_stack,comparator,XGBoost view model,BLCA,R1:F2,0.8005165933858635
+F3_same_stack,comparator,XGBoost view model,BLCA,R1:F3,0.7370186210077252
+F3_same_stack,comparator,XGBoost view model,BLCA,R1:F4,0.7906910872420058
+F3_same_stack,comparator,XGBoost view model,BLCA,R1:F5,0.8629874120329072
+F3_same_stack,comparator,XGBoost view model,BLCA,R2:F1,0.7472818462401797
+F3_same_stack,comparator,XGBoost view model,BLCA,R2:F2,0.7215352049910874
+F3_same_stack,comparator,XGBoost view model,BLCA,R2:F3,0.6751485135116848
+F3_same_stack,comparator,XGBoost view model,BLCA,R2:F4,0.7347985347985347
+F3_same_stack,comparator,XGBoost view model,BLCA,R2:F5,0.5290886260460298
+F3_same_stack,comparator,XGBoost view model,BLCA,R3:F1,0.6736111929577815
+F3_same_stack,comparator,XGBoost view model,BLCA,R3:F2,0.7622235848628102
+F3_same_stack,comparator,XGBoost view model,BLCA,R3:F3,0.6761338584255251
+F3_same_stack,comparator,XGBoost view model,BLCA,R3:F4,0.6984635832004255
+F3_same_stack,comparator,XGBoost view model,BLCA,R3:F5,0.8415697797570328
+F3_same_stack,comparator,XGBoost view model,BRCA,R1:F1,0.9007573139162286
+F3_same_stack,comparator,XGBoost view model,BRCA,R1:F2,0.9252645502645502
+F3_same_stack,comparator,XGBoost view model,BRCA,R1:F3,0.9241734970040876
+F3_same_stack,comparator,XGBoost view model,BRCA,R1:F4,0.9269295378336928
+F3_same_stack,comparator,XGBoost view model,BRCA,R1:F5,0.9130097972203236
+F3_same_stack,comparator,XGBoost view model,BRCA,R2:F1,0.9261507762554668
+F3_same_stack,comparator,XGBoost view model,BRCA,R2:F2,0.9196021202361782
+F3_same_stack,comparator,XGBoost view model,BRCA,R2:F3,0.909172077922078
+F3_same_stack,comparator,XGBoost view model,BRCA,R2:F4,0.8747969808780873
+F3_same_stack,comparator,XGBoost view model,BRCA,R2:F5,0.9353043092635144
+F3_same_stack,comparator,XGBoost view model,BRCA,R3:F1,0.8979898777692895
+F3_same_stack,comparator,XGBoost view model,BRCA,R3:F2,0.8888191954406645
+F3_same_stack,comparator,XGBoost view model,BRCA,R3:F3,0.8854477672486532
+F3_same_stack,comparator,XGBoost view model,BRCA,R3:F4,0.9169479204488769
+F3_same_stack,comparator,XGBoost view model,BRCA,R3:F5,0.8871213953761123
+F3_same_stack,comparator,XGBoost view model,COADREAD,R1:F1,0.7193735676088617
+F3_same_stack,comparator,XGBoost view model,COADREAD,R1:F2,0.8211337513061653
+F3_same_stack,comparator,XGBoost view model,COADREAD,R1:F3,0.690677966101695
+F3_same_stack,comparator,XGBoost view model,COADREAD,R1:F4,0.6983918128654971
+F3_same_stack,comparator,XGBoost view model,COADREAD,R1:F5,0.6765791678227867
+F3_same_stack,comparator,XGBoost view model,COADREAD,R2:F1,0.673772213035147
+F3_same_stack,comparator,XGBoost view model,COADREAD,R2:F2,0.6562972669900381
+F3_same_stack,comparator,XGBoost view model,COADREAD,R2:F3,0.7371277458351763
+F3_same_stack,comparator,XGBoost view model,COADREAD,R2:F4,0.592606713324191
+F3_same_stack,comparator,XGBoost view model,COADREAD,R2:F5,0.7150567849197985
+F3_same_stack,comparator,XGBoost view model,COADREAD,R3:F1,0.6515302170226561
+F3_same_stack,comparator,XGBoost view model,COADREAD,R3:F2,0.6583335525219846
+F3_same_stack,comparator,XGBoost view model,COADREAD,R3:F3,0.7268871904649504
+F3_same_stack,comparator,XGBoost view model,COADREAD,R3:F4,0.5686055856941933
+F3_same_stack,comparator,XGBoost view model,COADREAD,R3:F5,0.6336849507735584
+F3_same_stack,comparator,XGBoost view model,GEA,R1:F1,0.6258503401360543
+F3_same_stack,comparator,XGBoost view model,GEA,R1:F2,0.5949658578968924
+F3_same_stack,comparator,XGBoost view model,GEA,R1:F3,0.6399938217298072
+F3_same_stack,comparator,XGBoost view model,GEA,R1:F4,0.7727592086420192
+F3_same_stack,comparator,XGBoost view model,GEA,R1:F5,0.6291501927724837
+F3_same_stack,comparator,XGBoost view model,GEA,R2:F1,0.7163177263764968
+F3_same_stack,comparator,XGBoost view model,GEA,R2:F2,0.6050891402504305
+F3_same_stack,comparator,XGBoost view model,GEA,R2:F3,0.6796940137772056
+F3_same_stack,comparator,XGBoost view model,GEA,R2:F4,0.6498350001612833
+F3_same_stack,comparator,XGBoost view model,GEA,R2:F5,0.7115035794126542
+F3_same_stack,comparator,XGBoost view model,GEA,R3:F1,0.6186368623695813
+F3_same_stack,comparator,XGBoost view model,GEA,R3:F2,0.6028130517934048
+F3_same_stack,comparator,XGBoost view model,GEA,R3:F3,0.7507906340658954
+F3_same_stack,comparator,XGBoost view model,GEA,R3:F4,0.6873534784864834
+F3_same_stack,comparator,XGBoost view model,GEA,R3:F5,0.6399180184894471
+F3_same_stack,comparator,XGBoost view model,HNSC,R1:F1,0.860822949869603
+F3_same_stack,comparator,XGBoost view model,HNSC,R1:F2,0.8346153846153846
+F3_same_stack,comparator,XGBoost view model,HNSC,R1:F3,0.8824034030485643
+F3_same_stack,comparator,XGBoost view model,HNSC,R1:F4,0.8945330512042062
+F3_same_stack,comparator,XGBoost view model,HNSC,R1:F5,0.8907746705239473
+F3_same_stack,comparator,XGBoost view model,HNSC,R2:F1,0.8452843708016122
+F3_same_stack,comparator,XGBoost view model,HNSC,R2:F2,0.877609900429373
+F3_same_stack,comparator,XGBoost view model,HNSC,R2:F3,0.8900375939849624
+F3_same_stack,comparator,XGBoost view model,HNSC,R2:F4,0.8526673326673327
+F3_same_stack,comparator,XGBoost view model,HNSC,R2:F5,0.8727416953600065
+F3_same_stack,comparator,XGBoost view model,HNSC,R3:F1,0.9036904761904762
+F3_same_stack,comparator,XGBoost view model,HNSC,R3:F2,0.8478202385098937
+F3_same_stack,comparator,XGBoost view model,HNSC,R3:F3,0.8526047358834244
+F3_same_stack,comparator,XGBoost view model,HNSC,R3:F4,0.8343736577790993
+F3_same_stack,comparator,XGBoost view model,HNSC,R3:F5,0.8881989605316176
+F3_same_stack,comparator,XGBoost view model,KIRCKICH,R1:F1,0.8613616268788682
+F3_same_stack,comparator,XGBoost view model,KIRCKICH,R1:F2,0.956436420722135
+F3_same_stack,comparator,XGBoost view model,KIRCKICH,R1:F3,0.956436420722135
+F3_same_stack,comparator,XGBoost view model,KIRCKICH,R1:F4,0.9532828282828284
+F3_same_stack,comparator,XGBoost view model,KIRCKICH,R1:F5,0.956436420722135
+F3_same_stack,comparator,XGBoost view model,KIRCKICH,R2:F1,0.9533333333333334
+F3_same_stack,comparator,XGBoost view model,KIRCKICH,R2:F2,0.8945868945868946
+F3_same_stack,comparator,XGBoost view model,KIRCKICH,R2:F3,0.956436420722135
+F3_same_stack,comparator,XGBoost view model,KIRCKICH,R2:F4,0.97746192893401
+F3_same_stack,comparator,XGBoost view model,KIRCKICH,R2:F5,0.9405038413435768
+F3_same_stack,comparator,XGBoost view model,KIRCKICH,R3:F1,0.9591836734693876
+F3_same_stack,comparator,XGBoost view model,KIRCKICH,R3:F2,0.956436420722135
+F3_same_stack,comparator,XGBoost view model,KIRCKICH,R3:F3,0.9532828282828284
+F3_same_stack,comparator,XGBoost view model,KIRCKICH,R3:F4,1.0
+F3_same_stack,comparator,XGBoost view model,KIRCKICH,R3:F5,0.869309262166405
+F3_same_stack,comparator,XGBoost view model,LGGGBM,R1:F1,0.7673040269489521
+F3_same_stack,comparator,XGBoost view model,LGGGBM,R1:F2,0.7307692307692307
+F3_same_stack,comparator,XGBoost view model,LGGGBM,R1:F3,0.696831971015128
+F3_same_stack,comparator,XGBoost view model,LGGGBM,R1:F4,0.6519237927233913
+F3_same_stack,comparator,XGBoost view model,LGGGBM,R1:F5,0.663895228245831
+F3_same_stack,comparator,XGBoost view model,LGGGBM,R2:F1,0.7465013555670355
+F3_same_stack,comparator,XGBoost view model,LGGGBM,R2:F2,0.7368887440945576
+F3_same_stack,comparator,XGBoost view model,LGGGBM,R2:F3,0.7002020116047654
+F3_same_stack,comparator,XGBoost view model,LGGGBM,R2:F4,0.7210479175996417
+F3_same_stack,comparator,XGBoost view model,LGGGBM,R2:F5,0.674173669467787
+F3_same_stack,comparator,XGBoost view model,LGGGBM,R3:F1,0.7350517640858497
+F3_same_stack,comparator,XGBoost view model,LGGGBM,R3:F2,0.8394752887025023
+F3_same_stack,comparator,XGBoost view model,LGGGBM,R3:F3,0.7148537643161299
+F3_same_stack,comparator,XGBoost view model,LGGGBM,R3:F4,0.6086546851825998
+F3_same_stack,comparator,XGBoost view model,LGGGBM,R3:F5,0.695509262259084
+F3_same_stack,comparator,XGBoost view model,LUAD,R1:F1,0.7992899974248612
+F3_same_stack,comparator,XGBoost view model,LUAD,R1:F2,0.7902561243268211
+F3_same_stack,comparator,XGBoost view model,LUAD,R1:F3,0.7800700938405857
+F3_same_stack,comparator,XGBoost view model,LUAD,R1:F4,0.8477777777777777
+F3_same_stack,comparator,XGBoost view model,LUAD,R1:F5,0.7754798761609907
+F3_same_stack,comparator,XGBoost view model,LUAD,R2:F1,0.6835298847159125
+F3_same_stack,comparator,XGBoost view model,LUAD,R2:F2,0.876916533758639
+F3_same_stack,comparator,XGBoost view model,LUAD,R2:F3,0.7787518037518038
+F3_same_stack,comparator,XGBoost view model,LUAD,R2:F4,0.8242370321834255
+F3_same_stack,comparator,XGBoost view model,LUAD,R2:F5,0.8512617149848823
+F3_same_stack,comparator,XGBoost view model,LUAD,R3:F1,0.7861631932528997
+F3_same_stack,comparator,XGBoost view model,LUAD,R3:F2,0.8605429484893419
+F3_same_stack,comparator,XGBoost view model,LUAD,R3:F3,0.7717847642968299
+F3_same_stack,comparator,XGBoost view model,LUAD,R3:F4,0.9358376332989335
+F3_same_stack,comparator,XGBoost view model,LUAD,R3:F5,0.8183066361556064
+F3_same_stack,comparator,XGBoost view model,LUSC,R1:F1,0.7786682290184985
+F3_same_stack,comparator,XGBoost view model,LUSC,R1:F2,0.9017777531432992
+F3_same_stack,comparator,XGBoost view model,LUSC,R1:F3,0.8257659124255764
+F3_same_stack,comparator,XGBoost view model,LUSC,R1:F4,0.6891024266024267
+F3_same_stack,comparator,XGBoost view model,LUSC,R1:F5,0.8174362365091848
+F3_same_stack,comparator,XGBoost view model,LUSC,R2:F1,0.857163420133345
+F3_same_stack,comparator,XGBoost view model,LUSC,R2:F2,0.8714811948171081
+F3_same_stack,comparator,XGBoost view model,LUSC,R2:F3,0.8156039208208073
+F3_same_stack,comparator,XGBoost view model,LUSC,R2:F4,0.8747384125274823
+F3_same_stack,comparator,XGBoost view model,LUSC,R2:F5,0.7889178789795487
+F3_same_stack,comparator,XGBoost view model,LUSC,R3:F1,0.7758858395861171
+F3_same_stack,comparator,XGBoost view model,LUSC,R3:F2,0.8262562802898937
+F3_same_stack,comparator,XGBoost view model,LUSC,R3:F3,0.8050891116680591
+F3_same_stack,comparator,XGBoost view model,LUSC,R3:F4,0.7905212203084543
+F3_same_stack,comparator,XGBoost view model,LUSC,R3:F5,0.8519815453062946
+F3_same_stack,comparator,XGBoost view model,SKCM,R1:F1,0.6069366861168434
+F3_same_stack,comparator,XGBoost view model,SKCM,R1:F2,0.592743041272453
+F3_same_stack,comparator,XGBoost view model,SKCM,R1:F3,0.6375616631430585
+F3_same_stack,comparator,XGBoost view model,SKCM,R1:F4,0.6094742232382682
+F3_same_stack,comparator,XGBoost view model,SKCM,R1:F5,0.6537650945545682
+F3_same_stack,comparator,XGBoost view model,SKCM,R2:F1,0.6128130039894746
+F3_same_stack,comparator,XGBoost view model,SKCM,R2:F2,0.5550342244608033
+F3_same_stack,comparator,XGBoost view model,SKCM,R2:F3,0.642594349567784
+F3_same_stack,comparator,XGBoost view model,SKCM,R2:F4,0.6357505548638553
+F3_same_stack,comparator,XGBoost view model,SKCM,R2:F5,0.6224830316742082
+F3_same_stack,comparator,XGBoost view model,SKCM,R3:F1,0.6117808519982433
+F3_same_stack,comparator,XGBoost view model,SKCM,R3:F2,0.5541641337386018
+F3_same_stack,comparator,XGBoost view model,SKCM,R3:F3,0.6622777810230348
+F3_same_stack,comparator,XGBoost view model,SKCM,R3:F4,0.5269910073106036
+F3_same_stack,comparator,XGBoost view model,SKCM,R3:F5,0.5166759690756544
+F3_same_stack,comparator,XGBoost view model,THCA,R1:F1,0.7289953856604127
+F3_same_stack,comparator,XGBoost view model,THCA,R1:F2,0.6946406420090631
+F3_same_stack,comparator,XGBoost view model,THCA,R1:F3,0.7740207481286648
+F3_same_stack,comparator,XGBoost view model,THCA,R1:F4,0.7875937519370234
+F3_same_stack,comparator,XGBoost view model,THCA,R1:F5,0.7443510737628385
+F3_same_stack,comparator,XGBoost view model,THCA,R2:F1,0.7624217406260749
+F3_same_stack,comparator,XGBoost view model,THCA,R2:F2,0.6920634920634919
+F3_same_stack,comparator,XGBoost view model,THCA,R2:F3,0.7483938870077483
+F3_same_stack,comparator,XGBoost view model,THCA,R2:F4,0.7052782715711746
+F3_same_stack,comparator,XGBoost view model,THCA,R2:F5,0.7755192292505725
+F3_same_stack,comparator,XGBoost view model,THCA,R3:F1,0.7508335799546216
+F3_same_stack,comparator,XGBoost view model,THCA,R3:F2,0.8224677999053503
+F3_same_stack,comparator,XGBoost view model,THCA,R3:F3,0.6589390142021722
+F3_same_stack,comparator,XGBoost view model,THCA,R3:F4,0.7449559533958512
+F3_same_stack,comparator,XGBoost view model,THCA,R3:F5,0.6684742158426369
+F3_same_stack,comparator,XGBoost view model,UCEC,R1:F1,0.7204017598084572
+F3_same_stack,comparator,XGBoost view model,UCEC,R1:F2,0.8074171223028997
+F3_same_stack,comparator,XGBoost view model,UCEC,R1:F3,0.7911841043425156
+F3_same_stack,comparator,XGBoost view model,UCEC,R1:F4,0.7204439952081462
+F3_same_stack,comparator,XGBoost view model,UCEC,R1:F5,0.8356772074792097
+F3_same_stack,comparator,XGBoost view model,UCEC,R2:F1,0.8319778251971648
+F3_same_stack,comparator,XGBoost view model,UCEC,R2:F2,0.7007680976430977
+F3_same_stack,comparator,XGBoost view model,UCEC,R2:F3,0.7762212643678161
+F3_same_stack,comparator,XGBoost view model,UCEC,R2:F4,0.7637867647058824
+F3_same_stack,comparator,XGBoost view model,UCEC,R2:F5,0.7477102852931887
+F3_same_stack,comparator,XGBoost view model,UCEC,R3:F1,0.8102665018648626
+F3_same_stack,comparator,XGBoost view model,UCEC,R3:F2,0.7622043010752688
+F3_same_stack,comparator,XGBoost view model,UCEC,R3:F3,0.7904473107374207
+F3_same_stack,comparator,XGBoost view model,UCEC,R3:F4,0.7852685840646907
+F3_same_stack,comparator,XGBoost view model,UCEC,R3:F5,0.7769538023161872
+F3_same_stack,comparator,RealMLP view model,BLCA,R1:F1,0.747310985797828
+F3_same_stack,comparator,RealMLP view model,BLCA,R1:F2,0.87958875813771
+F3_same_stack,comparator,RealMLP view model,BLCA,R1:F3,0.8524929971988796
+F3_same_stack,comparator,RealMLP view model,BLCA,R1:F4,0.8460710664100494
+F3_same_stack,comparator,RealMLP view model,BLCA,R1:F5,0.620557804768331
+F3_same_stack,comparator,RealMLP view model,BLCA,R2:F1,0.7523744637715226
+F3_same_stack,comparator,RealMLP view model,BLCA,R2:F2,0.8363656650465766
+F3_same_stack,comparator,RealMLP view model,BLCA,R2:F3,0.7263845755693582
+F3_same_stack,comparator,RealMLP view model,BLCA,R2:F4,0.9210775015806462
+F3_same_stack,comparator,RealMLP view model,BLCA,R2:F5,0.5830572994686909
+F3_same_stack,comparator,RealMLP view model,BLCA,R3:F1,0.6962347257743676
+F3_same_stack,comparator,RealMLP view model,BLCA,R3:F2,0.933423180592992
+F3_same_stack,comparator,RealMLP view model,BLCA,R3:F3,0.7812454111170474
+F3_same_stack,comparator,RealMLP view model,BLCA,R3:F4,0.722140522875817
+F3_same_stack,comparator,RealMLP view model,BLCA,R3:F5,0.9371831158355658
+F3_same_stack,comparator,RealMLP view model,BRCA,R1:F1,0.903660359405262
+F3_same_stack,comparator,RealMLP view model,BRCA,R1:F2,0.9277768763116332
+F3_same_stack,comparator,RealMLP view model,BRCA,R1:F3,0.9109100083854642
+F3_same_stack,comparator,RealMLP view model,BRCA,R1:F4,0.8923297944994739
+F3_same_stack,comparator,RealMLP view model,BRCA,R1:F5,0.9195960129648316
+F3_same_stack,comparator,RealMLP view model,BRCA,R2:F1,0.940146750524109
+F3_same_stack,comparator,RealMLP view model,BRCA,R2:F2,0.9385022197964168
+F3_same_stack,comparator,RealMLP view model,BRCA,R2:F3,0.8816176470588235
+F3_same_stack,comparator,RealMLP view model,BRCA,R2:F4,0.8784425133689839
+F3_same_stack,comparator,RealMLP view model,BRCA,R2:F5,0.915939894896157
+F3_same_stack,comparator,RealMLP view model,BRCA,R3:F1,0.9024279514673252
+F3_same_stack,comparator,RealMLP view model,BRCA,R3:F2,0.8952019915190066
+F3_same_stack,comparator,RealMLP view model,BRCA,R3:F3,0.9203592539170768
+F3_same_stack,comparator,RealMLP view model,BRCA,R3:F4,0.9294247218898196
+F3_same_stack,comparator,RealMLP view model,BRCA,R3:F5,0.8820971937787125
+F3_same_stack,comparator,RealMLP view model,COADREAD,R1:F1,0.7263775271008543
+F3_same_stack,comparator,RealMLP view model,COADREAD,R1:F2,0.754583436820279
+F3_same_stack,comparator,RealMLP view model,COADREAD,R1:F3,0.7176092933321249
+F3_same_stack,comparator,RealMLP view model,COADREAD,R1:F4,0.6832252733282482
+F3_same_stack,comparator,RealMLP view model,COADREAD,R1:F5,0.712386557005105
+F3_same_stack,comparator,RealMLP view model,COADREAD,R2:F1,0.6632130020315674
+F3_same_stack,comparator,RealMLP view model,COADREAD,R2:F2,0.7205833464954834
+F3_same_stack,comparator,RealMLP view model,COADREAD,R2:F3,0.6422982754949969
+F3_same_stack,comparator,RealMLP view model,COADREAD,R2:F4,0.6980994152046783
+F3_same_stack,comparator,RealMLP view model,COADREAD,R2:F5,0.5527631342392029
+F3_same_stack,comparator,RealMLP view model,COADREAD,R3:F1,0.7482468609334281
+F3_same_stack,comparator,RealMLP view model,COADREAD,R3:F2,0.656716223265519
+F3_same_stack,comparator,RealMLP view model,COADREAD,R3:F3,0.6583406154934865
+F3_same_stack,comparator,RealMLP view model,COADREAD,R3:F4,0.7756196486293089
+F3_same_stack,comparator,RealMLP view model,COADREAD,R3:F5,0.6766328213696635
+F3_same_stack,comparator,RealMLP view model,GEA,R1:F1,0.6450667068579897
+F3_same_stack,comparator,RealMLP view model,GEA,R1:F2,0.6323645092808856
+F3_same_stack,comparator,RealMLP view model,GEA,R1:F3,0.6825242836952006
+F3_same_stack,comparator,RealMLP view model,GEA,R1:F4,0.7517379679144385
+F3_same_stack,comparator,RealMLP view model,GEA,R1:F5,0.6884310134310134
+F3_same_stack,comparator,RealMLP view model,GEA,R2:F1,0.8036807705538356
+F3_same_stack,comparator,RealMLP view model,GEA,R2:F2,0.6302353419574553
+F3_same_stack,comparator,RealMLP view model,GEA,R2:F3,0.7037135109424266
+F3_same_stack,comparator,RealMLP view model,GEA,R2:F4,0.6607076866223208
+F3_same_stack,comparator,RealMLP view model,GEA,R2:F5,0.4885590599876314
+F3_same_stack,comparator,RealMLP view model,GEA,R3:F1,0.579537143731517
+F3_same_stack,comparator,RealMLP view model,GEA,R3:F2,0.5529375386518244
+F3_same_stack,comparator,RealMLP view model,GEA,R3:F3,0.70785841142984
+F3_same_stack,comparator,RealMLP view model,GEA,R3:F4,0.6787246787712163
+F3_same_stack,comparator,RealMLP view model,GEA,R3:F5,0.6871484696330297
+F3_same_stack,comparator,RealMLP view model,HNSC,R1:F1,0.9299289467753222
+F3_same_stack,comparator,RealMLP view model,HNSC,R1:F2,0.8393265663853899
+F3_same_stack,comparator,RealMLP view model,HNSC,R1:F3,0.8826537082988697
+F3_same_stack,comparator,RealMLP view model,HNSC,R1:F4,0.9417903169627306
+F3_same_stack,comparator,RealMLP view model,HNSC,R1:F5,0.9339297385620916
+F3_same_stack,comparator,RealMLP view model,HNSC,R2:F1,0.8803867907316183
+F3_same_stack,comparator,RealMLP view model,HNSC,R2:F2,0.9178728365169044
+F3_same_stack,comparator,RealMLP view model,HNSC,R2:F3,0.8752940340404363
+F3_same_stack,comparator,RealMLP view model,HNSC,R2:F4,0.8720725966991045
+F3_same_stack,comparator,RealMLP view model,HNSC,R2:F5,0.9189131862320652
+F3_same_stack,comparator,RealMLP view model,HNSC,R3:F1,0.921440539002536
+F3_same_stack,comparator,RealMLP view model,HNSC,R3:F2,0.9361902740722774
+F3_same_stack,comparator,RealMLP view model,HNSC,R3:F3,0.8578178357292627
+F3_same_stack,comparator,RealMLP view model,HNSC,R3:F4,0.8567148202674518
+F3_same_stack,comparator,RealMLP view model,HNSC,R3:F5,0.9214756697648988
+F3_same_stack,comparator,RealMLP view model,KIRCKICH,R1:F1,0.8613616268788682
+F3_same_stack,comparator,RealMLP view model,KIRCKICH,R1:F2,0.9789173789173788
+F3_same_stack,comparator,RealMLP view model,KIRCKICH,R1:F3,0.956436420722135
+F3_same_stack,comparator,RealMLP view model,KIRCKICH,R1:F4,0.8685145700071073
+F3_same_stack,comparator,RealMLP view model,KIRCKICH,R1:F5,0.9532828282828284
+F3_same_stack,comparator,RealMLP view model,KIRCKICH,R2:F1,0.9774874371859296
+F3_same_stack,comparator,RealMLP view model,KIRCKICH,R2:F2,0.91287284144427
+F3_same_stack,comparator,RealMLP view model,KIRCKICH,R2:F3,0.8990909090909092
+F3_same_stack,comparator,RealMLP view model,KIRCKICH,R2:F4,1.0
+F3_same_stack,comparator,RealMLP view model,KIRCKICH,R2:F5,0.9323857868020304
+F3_same_stack,comparator,RealMLP view model,KIRCKICH,R3:F1,0.9368302312464748
+F3_same_stack,comparator,RealMLP view model,KIRCKICH,R3:F2,0.9532828282828284
+F3_same_stack,comparator,RealMLP view model,KIRCKICH,R3:F3,0.7581699346405228
+F3_same_stack,comparator,RealMLP view model,KIRCKICH,R3:F4,1.0
+F3_same_stack,comparator,RealMLP view model,KIRCKICH,R3:F5,0.91287284144427
+F3_same_stack,comparator,RealMLP view model,LGGGBM,R1:F1,0.8027257465196576
+F3_same_stack,comparator,RealMLP view model,LGGGBM,R1:F2,0.7987105505332106
+F3_same_stack,comparator,RealMLP view model,LGGGBM,R1:F3,0.6895707268931892
+F3_same_stack,comparator,RealMLP view model,LGGGBM,R1:F4,0.8143087071658499
+F3_same_stack,comparator,RealMLP view model,LGGGBM,R1:F5,0.7443204706631816
+F3_same_stack,comparator,RealMLP view model,LGGGBM,R2:F1,0.7268628626684448
+F3_same_stack,comparator,RealMLP view model,LGGGBM,R2:F2,0.7525743402321191
+F3_same_stack,comparator,RealMLP view model,LGGGBM,R2:F3,0.7152468309621803
+F3_same_stack,comparator,RealMLP view model,LGGGBM,R2:F4,0.7143790499853049
+F3_same_stack,comparator,RealMLP view model,LGGGBM,R2:F5,0.799760084448386
+F3_same_stack,comparator,RealMLP view model,LGGGBM,R3:F1,0.742551113056731
+F3_same_stack,comparator,RealMLP view model,LGGGBM,R3:F2,0.7379540766875081
+F3_same_stack,comparator,RealMLP view model,LGGGBM,R3:F3,0.6835987967703484
+F3_same_stack,comparator,RealMLP view model,LGGGBM,R3:F4,0.6291329865279446
+F3_same_stack,comparator,RealMLP view model,LGGGBM,R3:F5,0.8259280008299615
+F3_same_stack,comparator,RealMLP view model,LUAD,R1:F1,0.865845195952901
+F3_same_stack,comparator,RealMLP view model,LUAD,R1:F2,0.7646122294183468
+F3_same_stack,comparator,RealMLP view model,LUAD,R1:F3,0.8615032128253391
+F3_same_stack,comparator,RealMLP view model,LUAD,R1:F4,0.8755195646818128
+F3_same_stack,comparator,RealMLP view model,LUAD,R1:F5,0.8429201214854013
+F3_same_stack,comparator,RealMLP view model,LUAD,R2:F1,0.850110728872275
+F3_same_stack,comparator,RealMLP view model,LUAD,R2:F2,0.8362494889077168
+F3_same_stack,comparator,RealMLP view model,LUAD,R2:F3,0.8981682164667024
+F3_same_stack,comparator,RealMLP view model,LUAD,R2:F4,0.8388486367433735
+F3_same_stack,comparator,RealMLP view model,LUAD,R2:F5,0.9248605529168188
+F3_same_stack,comparator,RealMLP view model,LUAD,R3:F1,0.7502996466625869
+F3_same_stack,comparator,RealMLP view model,LUAD,R3:F2,0.8600144273472677
+F3_same_stack,comparator,RealMLP view model,LUAD,R3:F3,0.8128601436688905
+F3_same_stack,comparator,RealMLP view model,LUAD,R3:F4,0.9414550246992008
+F3_same_stack,comparator,RealMLP view model,LUAD,R3:F5,0.9175210084033611
+F3_same_stack,comparator,RealMLP view model,LUSC,R1:F1,0.8651927437641723
+F3_same_stack,comparator,RealMLP view model,LUSC,R1:F2,0.8832702671711959
+F3_same_stack,comparator,RealMLP view model,LUSC,R1:F3,0.8279089413543196
+F3_same_stack,comparator,RealMLP view model,LUSC,R1:F4,0.708943833943834
+F3_same_stack,comparator,RealMLP view model,LUSC,R1:F5,0.8855111302316271
+F3_same_stack,comparator,RealMLP view model,LUSC,R2:F1,0.853546418567427
+F3_same_stack,comparator,RealMLP view model,LUSC,R2:F2,0.8430441809295713
+F3_same_stack,comparator,RealMLP view model,LUSC,R2:F3,0.8337401627317593
+F3_same_stack,comparator,RealMLP view model,LUSC,R2:F4,0.8846051383564616
+F3_same_stack,comparator,RealMLP view model,LUSC,R2:F5,0.7858142639206712
+F3_same_stack,comparator,RealMLP view model,LUSC,R3:F1,0.7989061365286855
+F3_same_stack,comparator,RealMLP view model,LUSC,R3:F2,0.8102552552552553
+F3_same_stack,comparator,RealMLP view model,LUSC,R3:F3,0.8496732026143792
+F3_same_stack,comparator,RealMLP view model,LUSC,R3:F4,0.8275330576263809
+F3_same_stack,comparator,RealMLP view model,LUSC,R3:F5,0.8926104635402549
+F3_same_stack,comparator,RealMLP view model,SKCM,R1:F1,0.566440534237863
+F3_same_stack,comparator,RealMLP view model,SKCM,R1:F2,0.6317951787560537
+F3_same_stack,comparator,RealMLP view model,SKCM,R1:F3,0.6764962750842084
+F3_same_stack,comparator,RealMLP view model,SKCM,R1:F4,0.4592437985295128
+F3_same_stack,comparator,RealMLP view model,SKCM,R1:F5,0.7430104193576165
+F3_same_stack,comparator,RealMLP view model,SKCM,R2:F1,0.6343796016430288
+F3_same_stack,comparator,RealMLP view model,SKCM,R2:F2,0.5928127428127429
+F3_same_stack,comparator,RealMLP view model,SKCM,R2:F3,0.7204800194931774
+F3_same_stack,comparator,RealMLP view model,SKCM,R2:F4,0.6553525261685548
+F3_same_stack,comparator,RealMLP view model,SKCM,R2:F5,0.6191820162408397
+F3_same_stack,comparator,RealMLP view model,SKCM,R3:F1,0.6363802549132104
+F3_same_stack,comparator,RealMLP view model,SKCM,R3:F2,0.6428413540482506
+F3_same_stack,comparator,RealMLP view model,SKCM,R3:F3,0.6208741258741259
+F3_same_stack,comparator,RealMLP view model,SKCM,R3:F4,0.5794071828554587
+F3_same_stack,comparator,RealMLP view model,SKCM,R3:F5,0.7114064632310528
+F3_same_stack,comparator,RealMLP view model,THCA,R1:F1,0.8063428925814248
+F3_same_stack,comparator,RealMLP view model,THCA,R1:F2,0.7303219811131204
+F3_same_stack,comparator,RealMLP view model,THCA,R1:F3,0.7278817247722887
+F3_same_stack,comparator,RealMLP view model,THCA,R1:F4,0.7873878029560437
+F3_same_stack,comparator,RealMLP view model,THCA,R1:F5,0.8009952437516192
+F3_same_stack,comparator,RealMLP view model,THCA,R2:F1,0.7112010091783026
+F3_same_stack,comparator,RealMLP view model,THCA,R2:F2,0.6952630534048044
+F3_same_stack,comparator,RealMLP view model,THCA,R2:F3,0.7740972477814583
+F3_same_stack,comparator,RealMLP view model,THCA,R2:F4,0.6887704324355307
+F3_same_stack,comparator,RealMLP view model,THCA,R2:F5,0.8005155113688668
+F3_same_stack,comparator,RealMLP view model,THCA,R3:F1,0.7869523190507142
+F3_same_stack,comparator,RealMLP view model,THCA,R3:F2,0.7719837227477296
+F3_same_stack,comparator,RealMLP view model,THCA,R3:F3,0.6456701975352972
+F3_same_stack,comparator,RealMLP view model,THCA,R3:F4,0.8442101368849427
+F3_same_stack,comparator,RealMLP view model,THCA,R3:F5,0.7316596420499665
+F3_same_stack,comparator,RealMLP view model,UCEC,R1:F1,0.7407309165929855
+F3_same_stack,comparator,RealMLP view model,UCEC,R1:F2,0.83076567828723
+F3_same_stack,comparator,RealMLP view model,UCEC,R1:F3,0.7636543705304316
+F3_same_stack,comparator,RealMLP view model,UCEC,R1:F4,0.797125723738627
+F3_same_stack,comparator,RealMLP view model,UCEC,R1:F5,0.8180992736077481
+F3_same_stack,comparator,RealMLP view model,UCEC,R2:F1,0.8791627449302644
+F3_same_stack,comparator,RealMLP view model,UCEC,R2:F2,0.7605135959470637
+F3_same_stack,comparator,RealMLP view model,UCEC,R2:F3,0.8291354084918094
+F3_same_stack,comparator,RealMLP view model,UCEC,R2:F4,0.7466689995812228
+F3_same_stack,comparator,RealMLP view model,UCEC,R2:F5,0.7775235189422832
+F3_same_stack,comparator,RealMLP view model,UCEC,R3:F1,0.8454676952748312
+F3_same_stack,comparator,RealMLP view model,UCEC,R3:F2,0.8564788643929401
+F3_same_stack,comparator,RealMLP view model,UCEC,R3:F3,0.8423793859649122
+F3_same_stack,comparator,RealMLP view model,UCEC,R3:F4,0.8239867659222498
+F3_same_stack,comparator,RealMLP view model,UCEC,R3:F5,0.780378802464382
 REC_recurrence,reference,Anchor-conditioned (concentrated recurrence),BLCA,R1:F1,0.830837576120595
 REC_recurrence,reference,Anchor-conditioned (concentrated recurrence),BLCA,R1:F2,0.8181061804012623
 REC_recurrence,reference,Anchor-conditioned (concentrated recurrence),BLCA,R1:F3,0.8494333370113637
@@ -8039,6 +8939,546 @@ ABL_view_construction,comparator,"Elastic-net LR view model, single view (K=1)",
 ABL_view_construction,comparator,"Elastic-net LR view model, single view (K=1)",UCEC,R3:F3,0.8228125623433844
 ABL_view_construction,comparator,"Elastic-net LR view model, single view (K=1)",UCEC,R3:F4,0.7766816516816516
 ABL_view_construction,comparator,"Elastic-net LR view model, single view (K=1)",UCEC,R3:F5,0.7904153865847414
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BLCA,R1:F1,0.6849747474747475
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BLCA,R1:F2,0.8698058038177204
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BLCA,R1:F3,0.8706971677559913
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BLCA,R1:F4,0.90224512951907
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BLCA,R1:F5,0.8593483709273184
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BLCA,R2:F1,0.8359392890252773
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BLCA,R2:F2,0.7968643628412343
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BLCA,R2:F3,0.7477912562874612
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BLCA,R2:F4,0.9383892423366108
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BLCA,R2:F5,0.5758963152471307
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BLCA,R3:F1,0.7502600910900555
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BLCA,R3:F2,0.9111803302258252
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BLCA,R3:F3,0.7604224355977512
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BLCA,R3:F4,0.668904119024659
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BLCA,R3:F5,0.9115444055606328
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BRCA,R1:F1,0.9098242246296636
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BRCA,R1:F2,0.9268109612427576
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BRCA,R1:F3,0.921367680272433
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BRCA,R1:F4,0.88134541228018
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BRCA,R1:F5,0.9014357308218456
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BRCA,R2:F1,0.9209011347376128
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BRCA,R2:F2,0.9164541880138212
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BRCA,R2:F3,0.863108787404562
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BRCA,R2:F4,0.8789896747721386
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BRCA,R2:F5,0.9401652041104004
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BRCA,R3:F1,0.8595825983873184
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BRCA,R3:F2,0.8728335530423923
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BRCA,R3:F3,0.9404377880184333
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BRCA,R3:F4,0.9161485283142764
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",BRCA,R3:F5,0.8944036493101913
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",COADREAD,R1:F1,0.7387314439946019
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",COADREAD,R1:F2,0.7203869327974433
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",COADREAD,R1:F3,0.710796327761629
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",COADREAD,R1:F4,0.7676009342676009
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",COADREAD,R1:F5,0.6739376698714047
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",COADREAD,R2:F1,0.6537061927634878
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",COADREAD,R2:F2,0.6836529200595395
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",COADREAD,R2:F3,0.7220238095238095
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",COADREAD,R2:F4,0.764050414050414
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",COADREAD,R2:F5,0.5903754620581899
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",COADREAD,R3:F1,0.7270439762962195
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",COADREAD,R3:F2,0.7779256519697052
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",COADREAD,R3:F3,0.7264323911382734
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",COADREAD,R3:F4,0.7605059117664159
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",COADREAD,R3:F5,0.7197403820285176
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",GEA,R1:F1,0.6064390261444961
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",GEA,R1:F2,0.6437329974315821
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",GEA,R1:F3,0.6688372514997903
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",GEA,R1:F4,0.686300285080773
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",GEA,R1:F5,0.6640646934764582
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",GEA,R2:F1,0.8218837286819742
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",GEA,R2:F2,0.5871476587665795
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",GEA,R2:F3,0.6455197132616488
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",GEA,R2:F4,0.6555631502999925
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",GEA,R2:F5,0.6725066966919806
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",GEA,R3:F1,0.6070048418480474
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",GEA,R3:F2,0.5799200799200799
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",GEA,R3:F3,0.802933177933178
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",GEA,R3:F4,0.745508944318468
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",GEA,R3:F5,0.688884286445262
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",HNSC,R1:F1,0.8794693427554329
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",HNSC,R1:F2,0.8962205679625035
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",HNSC,R1:F3,0.9021844246084456
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",HNSC,R1:F4,0.938445545682388
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",HNSC,R1:F5,0.9308894705423152
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",HNSC,R2:F1,0.9118664477285168
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",HNSC,R2:F2,0.934661314360149
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",HNSC,R2:F3,0.8989502069462258
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",HNSC,R2:F4,0.9104697263520792
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",HNSC,R2:F5,0.9254167874046172
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",HNSC,R3:F1,0.9159313018136548
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",HNSC,R3:F2,0.9149069914142216
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",HNSC,R3:F3,0.941690321770192
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",HNSC,R3:F4,0.8744688644688645
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",HNSC,R3:F5,0.90949781502973
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",KIRCKICH,R1:F1,0.8775510204081632
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",KIRCKICH,R1:F2,0.956436420722135
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",KIRCKICH,R1:F3,0.9591310751104566
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",KIRCKICH,R1:F4,0.9272449202534412
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",KIRCKICH,R1:F5,1.0
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",KIRCKICH,R2:F1,0.9774874371859296
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",KIRCKICH,R2:F2,0.91287284144427
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",KIRCKICH,R2:F3,0.97746192893401
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",KIRCKICH,R2:F4,0.97746192893401
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",KIRCKICH,R2:F5,0.9405038413435768
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",KIRCKICH,R3:F1,0.9368302312464748
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",KIRCKICH,R3:F2,0.956436420722135
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",KIRCKICH,R3:F3,0.97746192893401
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",KIRCKICH,R3:F4,1.0
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",KIRCKICH,R3:F5,0.8773932253313697
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LGGGBM,R1:F1,0.8002304207745832
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LGGGBM,R1:F2,0.7389874043600752
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LGGGBM,R1:F3,0.7163090877376591
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LGGGBM,R1:F4,0.7705277140919781
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LGGGBM,R1:F5,0.7397498771135386
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LGGGBM,R2:F1,0.7993577850720708
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LGGGBM,R2:F2,0.6487821531167386
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LGGGBM,R2:F3,0.7557165343740214
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LGGGBM,R2:F4,0.7136375181753735
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LGGGBM,R2:F5,0.8248285323351496
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LGGGBM,R3:F1,0.718673986448512
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LGGGBM,R3:F2,0.877266184791824
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LGGGBM,R3:F3,0.7454086582626102
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LGGGBM,R3:F4,0.6441200917945104
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LGGGBM,R3:F5,0.7231899579492292
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUAD,R1:F1,0.8964863510565306
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUAD,R1:F2,0.7975214130386544
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUAD,R1:F3,0.8423674456116217
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUAD,R1:F4,0.8407183817854132
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUAD,R1:F5,0.7466683316683316
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUAD,R2:F1,0.844283557595946
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUAD,R2:F2,0.8270203846786124
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUAD,R2:F3,0.8781972106494335
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUAD,R2:F4,0.8691499599037689
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUAD,R2:F5,0.9006312422848165
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUAD,R3:F1,0.7656641604010025
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUAD,R3:F2,0.8202022132456914
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUAD,R3:F3,0.854229074792781
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUAD,R3:F4,0.925978495589166
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUAD,R3:F5,0.877154708037061
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUSC,R1:F1,0.9038569419402604
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUSC,R1:F2,0.8535174880763116
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUSC,R1:F3,0.8450240798073616
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUSC,R1:F4,0.7661165373931332
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUSC,R1:F5,0.8998941798941799
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUSC,R2:F1,0.8318732193732195
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUSC,R2:F2,0.8434735365131208
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUSC,R2:F3,0.866578608028776
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUSC,R2:F4,0.913709792965112
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUSC,R2:F5,0.7909800750136885
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUSC,R3:F1,0.7782261529320352
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUSC,R3:F2,0.813644963339747
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUSC,R3:F3,0.7790940214469626
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUSC,R3:F4,0.8290125951719659
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",LUSC,R3:F5,0.9068552146841972
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",SKCM,R1:F1,0.6384660063585228
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",SKCM,R1:F2,0.6179425837320573
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",SKCM,R1:F3,0.5850094765757416
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",SKCM,R1:F4,0.5581824299251983
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",SKCM,R1:F5,0.6554646980505932
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",SKCM,R2:F1,0.5623699390310686
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",SKCM,R2:F2,0.5682234432234432
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",SKCM,R2:F3,0.6512971342383107
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",SKCM,R2:F4,0.6408503401360545
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",SKCM,R2:F5,0.7157704162551994
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",SKCM,R3:F1,0.6299971866009602
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",SKCM,R3:F2,0.6684782608695652
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",SKCM,R3:F3,0.6056077694235589
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",SKCM,R3:F4,0.5630952380952381
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",SKCM,R3:F5,0.6114030896639592
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",THCA,R1:F1,0.7688711798637967
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",THCA,R1:F2,0.7492938483037492
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",THCA,R1:F3,0.7515532339061751
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",THCA,R1:F4,0.8080699850806998
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",THCA,R1:F5,0.7264317555562648
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",THCA,R2:F1,0.6849550573965778
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",THCA,R2:F2,0.7072562358276645
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",THCA,R2:F3,0.8267620561738208
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",THCA,R2:F4,0.7641027090961354
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",THCA,R2:F5,0.7440351841671248
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",THCA,R3:F1,0.7392898874324653
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",THCA,R3:F2,0.7921654519592664
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",THCA,R3:F3,0.6673504273504274
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",THCA,R3:F4,0.8080699850806998
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",THCA,R3:F5,0.6903731189445476
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",UCEC,R1:F1,0.6918281172379533
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",UCEC,R1:F2,0.8227869352869353
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",UCEC,R1:F3,0.8013492946307184
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",UCEC,R1:F4,0.7491165542969134
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",UCEC,R1:F5,0.8116779556650245
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",UCEC,R2:F1,0.8182229302636312
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",UCEC,R2:F2,0.7473267892248021
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",UCEC,R2:F3,0.8227570158377326
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",UCEC,R2:F4,0.7539365982241953
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",UCEC,R2:F5,0.787454918853937
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",UCEC,R3:F1,0.7940960004691533
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",UCEC,R3:F2,0.8115384615384615
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",UCEC,R3:F3,0.8309464649445581
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",UCEC,R3:F4,0.7690669326241135
+ABL_view_construction,comparator,"Logistic regression (L2) view model, single view (K=1)",UCEC,R3:F5,0.7678260436881126
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BLCA,R1:F1,0.793335726118745
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BLCA,R1:F2,0.826923076923077
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BLCA,R1:F3,0.8608660130718956
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BLCA,R1:F4,0.8441041261677712
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BLCA,R1:F5,0.904366828401052
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BLCA,R2:F1,0.8099189070887184
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BLCA,R2:F2,0.8105967533212115
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BLCA,R2:F3,0.7409535595444349
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BLCA,R2:F4,0.9218293812798942
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BLCA,R2:F5,0.7453878406708595
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BLCA,R3:F1,0.7059514559514559
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BLCA,R3:F2,0.8861072972285786
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BLCA,R3:F3,0.8094773091277636
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BLCA,R3:F4,0.6832863309443754
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BLCA,R3:F5,0.894012196215586
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BRCA,R1:F1,0.8987345987345988
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BRCA,R1:F2,0.9261085028690662
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BRCA,R1:F3,0.9157507480661258
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BRCA,R1:F4,0.8827537899110058
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BRCA,R1:F5,0.9367405827456556
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BRCA,R2:F1,0.9360550302410768
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BRCA,R2:F2,0.9522024288781537
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BRCA,R2:F3,0.8846590585960455
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BRCA,R2:F4,0.8651988940714981
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BRCA,R2:F5,0.9342875152147452
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BRCA,R3:F1,0.8976355909336212
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BRCA,R3:F2,0.9094989681579568
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BRCA,R3:F3,0.9281815245478036
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BRCA,R3:F4,0.9051520641194556
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",BRCA,R3:F5,0.8930769982411568
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",COADREAD,R1:F1,0.723519598029402
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",COADREAD,R1:F2,0.7564726111520511
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",COADREAD,R1:F3,0.6917715344844405
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",COADREAD,R1:F4,0.7418513839242916
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",COADREAD,R1:F5,0.7148624953857512
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",COADREAD,R2:F1,0.7276320199694811
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",COADREAD,R2:F2,0.6537391801947955
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",COADREAD,R2:F3,0.7414164941338854
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",COADREAD,R2:F4,0.7473328591749645
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",COADREAD,R2:F5,0.6301921026966955
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",COADREAD,R3:F1,0.6772901894060804
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",COADREAD,R3:F2,0.6658641975308642
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",COADREAD,R3:F3,0.7465769340769342
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",COADREAD,R3:F4,0.74641484876779
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",COADREAD,R3:F5,0.6354920712011533
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",GEA,R1:F1,0.6470665259243722
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",GEA,R1:F2,0.6560950953808097
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",GEA,R1:F3,0.6985039470333588
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",GEA,R1:F4,0.8013450834879405
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",GEA,R1:F5,0.6866472135459477
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",GEA,R2:F1,0.7576582289836012
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",GEA,R2:F2,0.6827976645203536
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",GEA,R2:F3,0.7143356643356643
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",GEA,R2:F4,0.6881664677554119
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",GEA,R2:F5,0.6778424190188896
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",GEA,R3:F1,0.7162316325931887
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",GEA,R3:F2,0.5992906691701873
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",GEA,R3:F3,0.7561851461232266
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",GEA,R3:F4,0.7266424486623253
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",GEA,R3:F5,0.721425633190339
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",HNSC,R1:F1,0.8778786610429613
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",HNSC,R1:F2,0.9135059133244252
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",HNSC,R1:F3,0.9296658896658896
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",HNSC,R1:F4,0.9441856993581133
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",HNSC,R1:F5,0.9300282124223588
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",HNSC,R2:F1,0.8898412698412699
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",HNSC,R2:F2,0.9227979626164382
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",HNSC,R2:F3,0.9326824043175546
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",HNSC,R2:F4,0.8742187919607275
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",HNSC,R2:F5,0.90413143141012
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",HNSC,R3:F1,0.9177226139497944
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",HNSC,R3:F2,0.9259537558630118
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",HNSC,R3:F3,0.8925887663455722
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",HNSC,R3:F4,0.8367899619846227
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",HNSC,R3:F5,0.8986031746031745
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",KIRCKICH,R1:F1,0.8694638694638694
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",KIRCKICH,R1:F2,0.9789173789173788
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",KIRCKICH,R1:F3,0.956436420722135
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",KIRCKICH,R1:F4,0.8351485148514851
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",KIRCKICH,R1:F5,0.956436420722135
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",KIRCKICH,R2:F1,0.927319922128488
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",KIRCKICH,R2:F2,0.8873096446700508
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",KIRCKICH,R2:F3,0.9789173789173788
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",KIRCKICH,R2:F4,0.97746192893401
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",KIRCKICH,R2:F5,0.9591310751104566
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",KIRCKICH,R3:F1,0.9591836734693876
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",KIRCKICH,R3:F2,0.9323857868020304
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",KIRCKICH,R3:F3,0.8685145700071073
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",KIRCKICH,R3:F4,1.0
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",KIRCKICH,R3:F5,0.8873096446700508
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LGGGBM,R1:F1,0.8360345011955943
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LGGGBM,R1:F2,0.7746627078925216
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LGGGBM,R1:F3,0.7028021583962296
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LGGGBM,R1:F4,0.7107763532576229
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LGGGBM,R1:F5,0.7674389271818817
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LGGGBM,R2:F1,0.7076786391137938
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LGGGBM,R2:F2,0.6909118703661239
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LGGGBM,R2:F3,0.6238613698517467
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LGGGBM,R2:F4,0.6965177044383194
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LGGGBM,R2:F5,0.7668988689399736
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LGGGBM,R3:F1,0.7488972600534467
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LGGGBM,R3:F2,0.7847652692373188
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LGGGBM,R3:F3,0.6698656726805917
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LGGGBM,R3:F4,0.636182687044756
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LGGGBM,R3:F5,0.702997030654838
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUAD,R1:F1,0.9101052910192148
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUAD,R1:F2,0.7345400260613244
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUAD,R1:F3,0.8640640737169185
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUAD,R1:F4,0.8849760765550239
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUAD,R1:F5,0.8337672507767948
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUAD,R2:F1,0.7890132416603004
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUAD,R2:F2,0.8113131313131312
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUAD,R2:F3,0.8493553290830969
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUAD,R2:F4,0.8598476343223738
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUAD,R2:F5,0.845546218487395
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUAD,R3:F1,0.8375093478393335
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUAD,R3:F2,0.8362423403909472
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUAD,R3:F3,0.8032963514895707
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUAD,R3:F4,0.9304255105624968
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUAD,R3:F5,0.8330960963264055
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUSC,R1:F1,0.8604606286959228
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUSC,R1:F2,0.8755086899624716
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUSC,R1:F3,0.8568930533404218
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUSC,R1:F4,0.7833011450194113
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUSC,R1:F5,0.8607482567495083
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUSC,R2:F1,0.8396247387844028
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUSC,R2:F2,0.8522543308821505
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUSC,R2:F3,0.8742144611981907
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUSC,R2:F4,0.8735330389465727
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUSC,R2:F5,0.7286017232243648
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUSC,R3:F1,0.7831280816420135
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUSC,R3:F2,0.8535981156595192
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUSC,R3:F3,0.8246003401360543
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUSC,R3:F4,0.8319477655560868
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",LUSC,R3:F5,0.8932000991886114
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",SKCM,R1:F1,0.4866737134024368
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",SKCM,R1:F2,0.5116341991341992
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",SKCM,R1:F3,0.5999153771760155
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",SKCM,R1:F4,0.6267857142857143
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",SKCM,R1:F5,0.5866910866910867
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",SKCM,R2:F1,0.4975116804933919
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",SKCM,R2:F2,0.5727244642907294
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",SKCM,R2:F3,0.6575871728001546
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",SKCM,R2:F4,0.5917683257427889
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",SKCM,R2:F5,0.5503234107664486
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",SKCM,R3:F1,0.5963505615776414
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",SKCM,R3:F2,0.5983614951356886
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",SKCM,R3:F3,0.6959706959706959
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",SKCM,R3:F4,0.4941589557171183
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",SKCM,R3:F5,0.6350364040853473
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",THCA,R1:F1,0.8288317187399756
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",THCA,R1:F2,0.7179575100367179
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",THCA,R1:F3,0.7494665997699158
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",THCA,R1:F4,0.7946156240273887
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",THCA,R1:F5,0.7479499129124889
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",THCA,R2:F1,0.778924584187742
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",THCA,R2:F2,0.7285067873303168
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",THCA,R2:F3,0.8035435122459614
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",THCA,R2:F4,0.6730914528979278
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",THCA,R2:F5,0.820192024699996
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",THCA,R3:F1,0.7749627421758568
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",THCA,R3:F2,0.7657198551935394
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",THCA,R3:F3,0.7072583419332646
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",THCA,R3:F4,0.7624071011765601
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",THCA,R3:F5,0.7020707070707072
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",UCEC,R1:F1,0.703524212366792
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",UCEC,R1:F2,0.7915582512040779
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",UCEC,R1:F3,0.7933548560667205
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",UCEC,R1:F4,0.7822225393653964
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",UCEC,R1:F5,0.8414102564102564
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",UCEC,R2:F1,0.8752100840336134
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",UCEC,R2:F2,0.7229050711193568
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",UCEC,R2:F3,0.7891258874239351
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",UCEC,R2:F4,0.7564296081277214
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",UCEC,R2:F5,0.7760599415204678
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",UCEC,R3:F1,0.8400878109634663
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",UCEC,R3:F2,0.7926080476900149
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",UCEC,R3:F3,0.8007332617955972
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",UCEC,R3:F4,0.7373551266280154
+ABL_view_construction,comparator,"SVM (RBF) view model, single view (K=1)",UCEC,R3:F5,0.7580357142857143
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BLCA,R1:F1,0.5649605296664121
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BLCA,R1:F2,0.5726288540946153
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BLCA,R1:F3,0.5549392161532638
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BLCA,R1:F4,0.697954822954823
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BLCA,R1:F5,0.6136209953634871
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BLCA,R2:F1,0.5031551642955638
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BLCA,R2:F2,0.6274615649228652
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BLCA,R2:F3,0.6446939826655299
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BLCA,R2:F4,0.6117405582922825
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BLCA,R2:F5,0.5769434121876794
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BLCA,R3:F1,0.6869432759762949
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BLCA,R3:F2,0.5952905944277816
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BLCA,R3:F3,0.502192229092895
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BLCA,R3:F4,0.5656317271071369
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BLCA,R3:F5,0.6284170353022812
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BRCA,R1:F1,0.8539799768839159
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BRCA,R1:F2,0.9383215484066652
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BRCA,R1:F3,0.9232153732988492
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BRCA,R1:F4,0.8952049348151111
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BRCA,R1:F5,0.8966510903426792
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BRCA,R2:F1,0.9398026880796976
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BRCA,R2:F2,0.9420404968930204
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BRCA,R2:F3,0.8716085622478317
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BRCA,R2:F4,0.8398831560596266
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BRCA,R2:F5,0.9202530063544512
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BRCA,R3:F1,0.8848037038367621
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BRCA,R3:F2,0.916867523415568
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BRCA,R3:F3,0.921467656830174
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BRCA,R3:F4,0.9092826557500472
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",BRCA,R3:F5,0.9007936507936508
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",COADREAD,R1:F1,0.6215147555087595
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",COADREAD,R1:F2,0.6331312608486521
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",COADREAD,R1:F3,0.5565503124326653
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",COADREAD,R1:F4,0.6100540168651624
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",COADREAD,R1:F5,0.6416820947788398
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",COADREAD,R2:F1,0.6012531328320802
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",COADREAD,R2:F2,0.6392096369050139
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",COADREAD,R2:F3,0.5530533534565792
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",COADREAD,R2:F4,0.6590250135141776
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",COADREAD,R2:F5,0.5850270957874689
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",COADREAD,R3:F1,0.6924505067727574
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",COADREAD,R3:F2,0.6116756092108204
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",COADREAD,R3:F3,0.6490479916536255
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",COADREAD,R3:F4,0.5537806420159361
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",COADREAD,R3:F5,0.5416038920276208
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",GEA,R1:F1,0.5186891089528006
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",GEA,R1:F2,0.5132772172414116
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",GEA,R1:F3,0.5313013136288999
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",GEA,R1:F4,0.5526438492168689
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",GEA,R1:F5,0.5350365168145562
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",GEA,R2:F1,0.5383814029977632
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",GEA,R2:F2,0.5471716986479502
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",GEA,R2:F3,0.5665685337680222
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",GEA,R2:F4,0.4794212732293227
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",GEA,R2:F5,0.5186003255056963
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",GEA,R3:F1,0.5113540152903268
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",GEA,R3:F2,0.5120927798668662
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",GEA,R3:F3,0.5264558536916261
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",GEA,R3:F4,0.6031433262960356
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",GEA,R3:F5,0.5528652477447659
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",HNSC,R1:F1,0.8834837478905275
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",HNSC,R1:F2,0.8888821853527737
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",HNSC,R1:F3,0.8431274281274282
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",HNSC,R1:F4,0.9017828823471106
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",HNSC,R1:F5,0.831888111888112
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",HNSC,R2:F1,0.8291934298405395
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",HNSC,R2:F2,0.8917143788111529
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",HNSC,R2:F3,0.9143953689015056
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",HNSC,R2:F4,0.8157218853585577
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",HNSC,R2:F5,0.9345317625351304
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",HNSC,R3:F1,0.8886936567578851
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",HNSC,R3:F2,0.8768821324104973
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",HNSC,R3:F3,0.8426887288956255
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",HNSC,R3:F4,0.8194017410925085
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",HNSC,R3:F5,0.8828753745813505
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",KIRCKICH,R1:F1,0.900972590627763
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",KIRCKICH,R1:F2,0.9789173789173788
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",KIRCKICH,R1:F3,0.956436420722135
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",KIRCKICH,R1:F4,0.8351485148514851
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",KIRCKICH,R1:F5,0.956436420722135
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",KIRCKICH,R2:F1,0.9533333333333334
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",KIRCKICH,R2:F2,0.8598484848484849
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",KIRCKICH,R2:F3,0.9789173789173788
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",KIRCKICH,R2:F4,0.97746192893401
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",KIRCKICH,R2:F5,0.9182621502209132
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",KIRCKICH,R3:F1,0.9591836734693876
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",KIRCKICH,R3:F2,0.956436420722135
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",KIRCKICH,R3:F3,0.8990909090909092
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",KIRCKICH,R3:F4,1.0
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",KIRCKICH,R3:F5,0.8873096446700508
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LGGGBM,R1:F1,0.5407057186650149
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LGGGBM,R1:F2,0.5732685238452763
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LGGGBM,R1:F3,0.554763720896444
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LGGGBM,R1:F4,0.5696276739133882
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LGGGBM,R1:F5,0.5725410164065626
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LGGGBM,R2:F1,0.7041890671229977
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LGGGBM,R2:F2,0.5689161474432104
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LGGGBM,R2:F3,0.5010450557034408
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LGGGBM,R2:F4,0.5085872029971409
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LGGGBM,R2:F5,0.6384471284690527
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LGGGBM,R3:F1,0.5427302761992864
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LGGGBM,R3:F2,0.5905202712785592
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LGGGBM,R3:F3,0.5629056526553999
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LGGGBM,R3:F4,0.5692861313979327
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LGGGBM,R3:F5,0.5284278531519878
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUAD,R1:F1,0.6800805060379529
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUAD,R1:F2,0.7493424325848287
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUAD,R1:F3,0.7403925511894405
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUAD,R1:F4,0.6807293576690355
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUAD,R1:F5,0.7576819331087921
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUAD,R2:F1,0.7343844628052001
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUAD,R2:F2,0.8043676742622587
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUAD,R2:F3,0.7012592339356234
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUAD,R2:F4,0.7379080169630436
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUAD,R2:F5,0.7565303871755484
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUAD,R3:F1,0.6930639193530519
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUAD,R3:F2,0.7692412617220802
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUAD,R3:F3,0.6600147761842676
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUAD,R3:F4,0.8535528318513178
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUAD,R3:F5,0.6432728264881955
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUSC,R1:F1,0.7913659275943664
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUSC,R1:F2,0.8556322529011605
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUSC,R1:F3,0.8024160064254403
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUSC,R1:F4,0.6851007326007327
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUSC,R1:F5,0.8646051328332752
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUSC,R2:F1,0.7525327599670528
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUSC,R2:F2,0.8596301846606503
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUSC,R2:F3,0.8063456670462138
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUSC,R2:F4,0.8040551776266062
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUSC,R2:F5,0.7311283003767545
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUSC,R3:F1,0.7806251946013113
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUSC,R3:F2,0.7668426344896933
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUSC,R3:F3,0.7746623093681917
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUSC,R3:F4,0.8214120429893704
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",LUSC,R3:F5,0.8299206349206348
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",SKCM,R1:F1,0.4210358056265985
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",SKCM,R1:F2,0.3972990777338603
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",SKCM,R1:F3,0.460485347985348
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",SKCM,R1:F4,0.4808554039593365
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",SKCM,R1:F5,0.4891077361177028
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",SKCM,R2:F1,0.425
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",SKCM,R2:F2,0.4243883229684447
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",SKCM,R2:F3,0.4881926584054243
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",SKCM,R2:F4,0.5223060164236635
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",SKCM,R2:F5,0.4037499203161853
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",SKCM,R3:F1,0.5411614247821144
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",SKCM,R3:F2,0.4066049675684227
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",SKCM,R3:F3,0.498871149814546
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",SKCM,R3:F4,0.4020804947070537
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",SKCM,R3:F5,0.4394122383252817
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",THCA,R1:F1,0.8288317187399756
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",THCA,R1:F2,0.7024648410787026
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",THCA,R1:F3,0.728736461370445
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",THCA,R1:F4,0.7494954148567418
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",THCA,R1:F5,0.7307013799971546
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",THCA,R2:F1,0.7707139134966129
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",THCA,R2:F2,0.7459123002601263
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",THCA,R2:F3,0.7740972477814583
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",THCA,R2:F4,0.7021862833183588
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",THCA,R2:F5,0.7898500945229917
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",THCA,R3:F1,0.7585311392650843
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",THCA,R3:F2,0.7624486170217587
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",THCA,R3:F3,0.658781911946469
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",THCA,R3:F4,0.7535505430242272
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",THCA,R3:F5,0.71641159876454
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",UCEC,R1:F1,0.705180900659624
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",UCEC,R1:F2,0.8213667891329061
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",UCEC,R1:F3,0.7596115288220551
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",UCEC,R1:F4,0.730169340463458
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",UCEC,R1:F5,0.8091665716703489
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",UCEC,R2:F1,0.8135373885373886
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",UCEC,R2:F2,0.7243380713489409
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",UCEC,R2:F3,0.759062049062049
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",UCEC,R2:F4,0.735725059254471
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",UCEC,R2:F5,0.798025845834145
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",UCEC,R3:F1,0.8062329523680711
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",UCEC,R3:F2,0.7822964669738863
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",UCEC,R3:F3,0.7784632034632035
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",UCEC,R3:F4,0.7515416989757688
+ABL_view_construction,comparator,"Random Forest view model, single view (K=1)",UCEC,R3:F5,0.7353595569583766
 ABL_view_construction,comparator,"LightGBM view model, single view (K=1)",BLCA,R1:F1,0.5826960563802669
 ABL_view_construction,comparator,"LightGBM view model, single view (K=1)",BLCA,R1:F2,0.7100682793809052
 ABL_view_construction,comparator,"LightGBM view model, single view (K=1)",BLCA,R1:F3,0.7401454490928175
@@ -8219,6 +9659,366 @@ ABL_view_construction,comparator,"LightGBM view model, single view (K=1)",UCEC,R
 ABL_view_construction,comparator,"LightGBM view model, single view (K=1)",UCEC,R3:F3,0.848431702226345
 ABL_view_construction,comparator,"LightGBM view model, single view (K=1)",UCEC,R3:F4,0.7774560840646907
 ABL_view_construction,comparator,"LightGBM view model, single view (K=1)",UCEC,R3:F5,0.7747614027868516
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BLCA,R1:F1,0.5689223057644109
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BLCA,R1:F2,0.6630797253748073
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BLCA,R1:F3,0.5313480194337622
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BLCA,R1:F4,0.6483521047006974
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BLCA,R1:F5,0.6111869313482217
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BLCA,R2:F1,0.5556066021984917
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BLCA,R2:F2,0.6263050674815381
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BLCA,R2:F3,0.6388336531193674
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BLCA,R2:F4,0.6950909759493085
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BLCA,R2:F5,0.5445174238277687
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BLCA,R3:F1,0.6656898656898657
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BLCA,R3:F2,0.6089865324660938
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BLCA,R3:F3,0.4522730937825277
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BLCA,R3:F4,0.6931948582147193
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BLCA,R3:F5,0.6918103240137139
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BRCA,R1:F1,0.8956336526254935
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BRCA,R1:F2,0.958466844681798
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BRCA,R1:F3,0.9097838604937996
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BRCA,R1:F4,0.9007331314799878
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BRCA,R1:F5,0.9164884135472372
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BRCA,R2:F1,0.9258257438442186
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BRCA,R2:F2,0.9180763294614744
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BRCA,R2:F3,0.9101348975481892
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BRCA,R2:F4,0.8435676392572945
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BRCA,R2:F5,0.9448951851508656
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BRCA,R3:F1,0.8707041708662803
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BRCA,R3:F2,0.8888191954406645
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BRCA,R3:F3,0.8973960018088436
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BRCA,R3:F4,0.8994110297447001
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",BRCA,R3:F5,0.923110065729445
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",COADREAD,R1:F1,0.6559811956038372
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",COADREAD,R1:F2,0.6963806529003383
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",COADREAD,R1:F3,0.6145378042005981
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",COADREAD,R1:F4,0.5323754789272029
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",COADREAD,R1:F5,0.5417857142857142
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",COADREAD,R2:F1,0.670479302832244
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",COADREAD,R2:F2,0.6129613185168741
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",COADREAD,R2:F3,0.6306409162042965
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",COADREAD,R2:F4,0.6467279942279941
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",COADREAD,R2:F5,0.5768919848641211
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",COADREAD,R3:F1,0.630088932806324
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",COADREAD,R3:F2,0.6051127819548873
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",COADREAD,R3:F3,0.8310790040148724
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",COADREAD,R3:F4,0.5334834551104393
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",COADREAD,R3:F5,0.5884615384615385
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",GEA,R1:F1,0.5439375750300119
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",GEA,R1:F2,0.5760406317348863
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",GEA,R1:F3,0.579459245608314
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",GEA,R1:F4,0.6852192560525895
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",GEA,R1:F5,0.6097474958234451
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",GEA,R2:F1,0.6882003150910714
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",GEA,R2:F2,0.5586031227517548
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",GEA,R2:F3,0.686988719722353
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",GEA,R2:F4,0.6920586416384735
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",GEA,R2:F5,0.669110774283188
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",GEA,R3:F1,0.52825435159401
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",GEA,R3:F2,0.5464848876613583
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",GEA,R3:F3,0.7909966914070881
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",GEA,R3:F4,0.6470157955655379
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",GEA,R3:F5,0.584450773111764
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",HNSC,R1:F1,0.8458201956504163
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",HNSC,R1:F2,0.873204898446834
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",HNSC,R1:F3,0.8897502497502497
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",HNSC,R1:F4,0.882342638204707
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",HNSC,R1:F5,0.8539682539682539
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",HNSC,R2:F1,0.835249042145594
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",HNSC,R2:F2,0.876394524510775
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",HNSC,R2:F3,0.894165753649976
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",HNSC,R2:F4,0.8406662155049253
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",HNSC,R2:F5,0.8591554357592093
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",HNSC,R3:F1,0.8514942528735633
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",HNSC,R3:F2,0.8648430556139687
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",HNSC,R3:F3,0.8518997131900358
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",HNSC,R3:F4,0.8094672297689538
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",HNSC,R3:F5,0.839765448472345
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",KIRCKICH,R1:F1,0.8947170520774581
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",KIRCKICH,R1:F2,0.956436420722135
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",KIRCKICH,R1:F3,0.956436420722135
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",KIRCKICH,R1:F4,0.97746192893401
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",KIRCKICH,R1:F5,0.956436420722135
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",KIRCKICH,R2:F1,0.8991899189918993
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",KIRCKICH,R2:F2,0.91287284144427
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",KIRCKICH,R2:F3,0.956436420722135
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",KIRCKICH,R2:F4,1.0
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",KIRCKICH,R2:F5,0.9405038413435768
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",KIRCKICH,R3:F1,0.9591836734693876
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",KIRCKICH,R3:F2,0.956436420722135
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",KIRCKICH,R3:F3,0.9532828282828284
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",KIRCKICH,R3:F4,1.0
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",KIRCKICH,R3:F5,0.842233502538071
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LGGGBM,R1:F1,0.722310189709448
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LGGGBM,R1:F2,0.7478180089239997
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LGGGBM,R1:F3,0.6959969569725667
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LGGGBM,R1:F4,0.6429311893296644
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LGGGBM,R1:F5,0.6441820933810912
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LGGGBM,R2:F1,0.7728180633955709
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LGGGBM,R2:F2,0.7075254677295494
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LGGGBM,R2:F3,0.7149262969161555
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LGGGBM,R2:F4,0.6560637106248122
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LGGGBM,R2:F5,0.6640103781204483
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LGGGBM,R3:F1,0.7006201081831334
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LGGGBM,R3:F2,0.7711843973356073
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LGGGBM,R3:F3,0.6619157322661365
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LGGGBM,R3:F4,0.6353900748738646
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LGGGBM,R3:F5,0.6704926764191866
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUAD,R1:F1,0.7982144012421556
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUAD,R1:F2,0.7187939078465394
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUAD,R1:F3,0.8366541729135433
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUAD,R1:F4,0.814086203651421
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUAD,R1:F5,0.7482272846294842
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUAD,R2:F1,0.6921338895023105
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUAD,R2:F2,0.7876674632092588
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUAD,R2:F3,0.8123274559715238
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUAD,R2:F4,0.7501191281110146
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUAD,R2:F5,0.8135084838533114
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUAD,R3:F1,0.7914193507641784
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUAD,R3:F2,0.8036924360207143
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUAD,R3:F3,0.7202816901408451
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUAD,R3:F4,0.8949298454582963
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUAD,R3:F5,0.8146710220839205
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUSC,R1:F1,0.7863639490884075
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUSC,R1:F2,0.8460223634858335
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUSC,R1:F3,0.8287314925970389
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUSC,R1:F4,0.7612973326982616
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUSC,R1:F5,0.8209773318468971
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUSC,R2:F1,0.7599766739804333
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUSC,R2:F2,0.803531746031746
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUSC,R2:F3,0.7792411540813076
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUSC,R2:F4,0.8286859648674699
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUSC,R2:F5,0.7980422938406132
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUSC,R3:F1,0.7495642701525055
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUSC,R3:F2,0.8193835038888849
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUSC,R3:F3,0.7600401159114117
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUSC,R3:F4,0.7810300207039337
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",LUSC,R3:F5,0.7943402106168064
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",SKCM,R1:F1,0.5038981184171747
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",SKCM,R1:F2,0.6078196035642844
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",SKCM,R1:F3,0.6336038961038961
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",SKCM,R1:F4,0.4925717013482971
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",SKCM,R1:F5,0.6578644265950767
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",SKCM,R2:F1,0.6016042780748664
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",SKCM,R2:F2,0.5777777777777778
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",SKCM,R2:F3,0.5719864602905153
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",SKCM,R2:F4,0.6312997347480106
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",SKCM,R2:F5,0.6234693877551021
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",SKCM,R3:F1,0.5147817460317461
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",SKCM,R3:F2,0.6145665445665445
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",SKCM,R3:F3,0.6650199104031858
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",SKCM,R3:F4,0.5172558245728978
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",SKCM,R3:F5,0.5553158223889931
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",THCA,R1:F1,0.780772381840269
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",THCA,R1:F2,0.7505610561056105
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",THCA,R1:F3,0.7304982599100246
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",THCA,R1:F4,0.7841716396703609
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",THCA,R1:F5,0.7007003815872096
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",THCA,R2:F1,0.7624217406260749
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",THCA,R2:F2,0.6761904761904761
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",THCA,R2:F3,0.7492700467457749
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",THCA,R2:F4,0.6867167919799498
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",THCA,R2:F5,0.7475699681582034
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",THCA,R3:F1,0.761185347693126
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",THCA,R3:F2,0.7165402216715065
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",THCA,R3:F3,0.7613716108452951
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",THCA,R3:F4,0.789105000372606
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",THCA,R3:F5,0.654295532646048
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",UCEC,R1:F1,0.7152589326096789
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",UCEC,R1:F2,0.8253154388714733
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",UCEC,R1:F3,0.7651776927282669
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",UCEC,R1:F4,0.7306120784597534
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",UCEC,R1:F5,0.8646633825944171
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",UCEC,R2:F1,0.8541708291708292
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",UCEC,R2:F2,0.7729779537232954
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",UCEC,R2:F3,0.8078071353933423
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",UCEC,R2:F4,0.7441869840041279
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",UCEC,R2:F5,0.7849115696389094
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",UCEC,R3:F1,0.7713675213675213
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",UCEC,R3:F2,0.7999105812220566
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",UCEC,R3:F3,0.7391849529780564
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",UCEC,R3:F4,0.774799454270269
+ABL_view_construction,comparator,"XGBoost view model, single view (K=1)",UCEC,R3:F5,0.7665735388884505
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BLCA,R1:F1,0.6696597816380031
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BLCA,R1:F2,0.8227201936173559
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BLCA,R1:F3,0.7639249639249638
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BLCA,R1:F4,0.6332760976330268
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BLCA,R1:F5,0.652932678919521
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BLCA,R2:F1,0.5980235042735044
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BLCA,R2:F2,0.7795154349659907
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BLCA,R2:F3,0.7002125290168769
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BLCA,R2:F4,0.6449128970868101
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BLCA,R2:F5,0.5705800139762404
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BLCA,R3:F1,0.6199671855921856
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BLCA,R3:F2,0.8796275178387916
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BLCA,R3:F3,0.6035367682426506
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BLCA,R3:F4,0.6695484921291373
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BLCA,R3:F5,0.8985674971743083
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BRCA,R1:F1,0.8915668630895967
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BRCA,R1:F2,0.9332033414311895
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BRCA,R1:F3,0.9193869953570748
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BRCA,R1:F4,0.865142931319402
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BRCA,R1:F5,0.8907534489923796
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BRCA,R2:F1,0.915359059545106
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BRCA,R2:F2,0.9342503627742056
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BRCA,R2:F3,0.864226786027734
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BRCA,R2:F4,0.8833153925357367
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BRCA,R2:F5,0.9187416912317208
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BRCA,R3:F1,0.845326437985511
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BRCA,R3:F2,0.8588210992864819
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BRCA,R3:F3,0.9283777922359576
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BRCA,R3:F4,0.9220764492474292
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",BRCA,R3:F5,0.8908349579284764
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",COADREAD,R1:F1,0.6863499245852188
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",COADREAD,R1:F2,0.7319182389937108
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",COADREAD,R1:F3,0.649467684653279
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",COADREAD,R1:F4,0.6926081543728603
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",COADREAD,R1:F5,0.6142553584626755
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",COADREAD,R2:F1,0.6912885609084439
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",COADREAD,R2:F2,0.619047619047619
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",COADREAD,R2:F3,0.5631704980842912
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",COADREAD,R2:F4,0.7820535413582711
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",COADREAD,R2:F5,0.5510919201782781
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",COADREAD,R3:F1,0.6987586722756215
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",COADREAD,R3:F2,0.6503007483186511
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",COADREAD,R3:F3,0.6126574041594859
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",COADREAD,R3:F4,0.6193386243386243
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",COADREAD,R3:F5,0.6229869355557303
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",GEA,R1:F1,0.6272633186169685
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",GEA,R1:F2,0.6798571583455305
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",GEA,R1:F3,0.6241304916836536
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",GEA,R1:F4,0.7091173169604542
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",GEA,R1:F5,0.649520209690302
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",GEA,R2:F1,0.7325272916104835
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",GEA,R2:F2,0.5597065473226464
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",GEA,R2:F3,0.5154810765826257
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",GEA,R2:F4,0.6617680565048987
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",GEA,R2:F5,0.5574094935363961
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",GEA,R3:F1,0.56724925867783
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",GEA,R3:F2,0.5729890264773986
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",GEA,R3:F3,0.7011222862350682
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",GEA,R3:F4,0.6972861852573161
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",GEA,R3:F5,0.5887282651988535
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",HNSC,R1:F1,0.822761831754806
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",HNSC,R1:F2,0.8375627732482572
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",HNSC,R1:F3,0.8234287984213022
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",HNSC,R1:F4,0.9063664711167488
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",HNSC,R1:F5,0.8848048503220916
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",HNSC,R2:F1,0.8301818632462744
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",HNSC,R2:F2,0.936017316017316
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",HNSC,R2:F3,0.8735739870336081
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",HNSC,R2:F4,0.7676839691473838
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",HNSC,R2:F5,0.8680737113524
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",HNSC,R3:F1,0.9311561851686124
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",HNSC,R3:F2,0.851569950517319
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",HNSC,R3:F3,0.8413447472068162
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",HNSC,R3:F4,0.8189114844287257
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",HNSC,R3:F5,0.9093658166363084
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",KIRCKICH,R1:F1,0.8874371859296483
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",KIRCKICH,R1:F2,0.9789173789173788
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",KIRCKICH,R1:F3,0.956436420722135
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",KIRCKICH,R1:F4,0.8685145700071073
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",KIRCKICH,R1:F5,0.6632281553398058
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",KIRCKICH,R2:F1,0.9533333333333334
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",KIRCKICH,R2:F2,0.8945868945868946
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",KIRCKICH,R2:F3,0.7985480943738656
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",KIRCKICH,R2:F4,1.0
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",KIRCKICH,R2:F5,0.8351485148514851
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",KIRCKICH,R3:F1,0.9368302312464748
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",KIRCKICH,R3:F2,0.956436420722135
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",KIRCKICH,R3:F3,0.7985480943738656
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",KIRCKICH,R3:F4,1.0
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",KIRCKICH,R3:F5,0.91287284144427
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LGGGBM,R1:F1,0.7678846014793009
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LGGGBM,R1:F2,0.7153025128435282
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LGGGBM,R1:F3,0.6164521811168211
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LGGGBM,R1:F4,0.7285521838526235
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LGGGBM,R1:F5,0.7191560682243913
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LGGGBM,R2:F1,0.7951399005307361
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LGGGBM,R2:F2,0.615043059940296
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LGGGBM,R2:F3,0.7519627164706612
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LGGGBM,R2:F4,0.6653034336264149
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LGGGBM,R2:F5,0.6648061423318686
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LGGGBM,R3:F1,0.7190186604005671
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LGGGBM,R3:F2,0.7187705254515598
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LGGGBM,R3:F3,0.5879302620674445
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LGGGBM,R3:F4,0.6351315351315351
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LGGGBM,R3:F5,0.7419825548218798
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUAD,R1:F1,0.7221839080459771
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUAD,R1:F2,0.7537314772341995
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUAD,R1:F3,0.8460204109985987
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUAD,R1:F4,0.877947205259159
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUAD,R1:F5,0.8339848560957005
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUAD,R2:F1,0.8260374243741385
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUAD,R2:F2,0.8024633656212604
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUAD,R2:F3,0.8498230871295887
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUAD,R2:F4,0.7629515940898248
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUAD,R2:F5,0.8418295282139676
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUAD,R3:F1,0.7454232633180002
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUAD,R3:F2,0.8050241545893719
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUAD,R3:F3,0.8200128779249267
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUAD,R3:F4,0.8635931122104182
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUAD,R3:F5,0.8175811268834524
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUSC,R1:F1,0.7448253999601882
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUSC,R1:F2,0.823917378917379
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUSC,R1:F3,0.7868317412435059
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUSC,R1:F4,0.7509231365502176
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUSC,R1:F5,0.8641478104244061
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUSC,R2:F1,0.7913526857283794
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUSC,R2:F2,0.7988939165409752
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUSC,R2:F3,0.8342927769398357
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUSC,R2:F4,0.831689717523984
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUSC,R2:F5,0.7086781845605374
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUSC,R3:F1,0.763571169208424
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUSC,R3:F2,0.8517256170760987
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUSC,R3:F3,0.7793813017869621
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUSC,R3:F4,0.834645829216345
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",LUSC,R3:F5,0.8471296296296296
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",SKCM,R1:F1,0.5399030623485349
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",SKCM,R1:F2,0.5515522875816994
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",SKCM,R1:F3,0.5979638009049774
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",SKCM,R1:F4,0.5427819779949598
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",SKCM,R1:F5,0.5964285714285714
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",SKCM,R2:F1,0.6156355950514848
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",SKCM,R2:F2,0.5280428012986152
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",SKCM,R2:F3,0.6243958422529851
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",SKCM,R2:F4,0.4400974025974026
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",SKCM,R2:F5,0.6263306898153109
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",SKCM,R3:F1,0.6157616892911011
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",SKCM,R3:F2,0.5030864197530864
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",SKCM,R3:F3,0.5936757624398074
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",SKCM,R3:F4,0.543153942428035
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",SKCM,R3:F5,0.5534410679275747
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",THCA,R1:F1,0.804040404040404
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",THCA,R1:F2,0.7135327635327635
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",THCA,R1:F3,0.7193135286243012
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",THCA,R1:F4,0.6882539682539682
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",THCA,R1:F5,0.7495029239766082
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",THCA,R2:F1,0.6892877492877494
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",THCA,R2:F2,0.7361904761904762
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",THCA,R2:F3,0.780127186009539
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",THCA,R2:F4,0.7117100928421682
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",THCA,R2:F5,0.7263512316143895
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",THCA,R3:F1,0.7752293577981652
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",THCA,R3:F2,0.7401157533007777
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",THCA,R3:F3,0.6723426212590299
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",THCA,R3:F4,0.8484963098736338
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",THCA,R3:F5,0.687215197605522
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",UCEC,R1:F1,0.6964524444186253
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",UCEC,R1:F2,0.798261273000079
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",UCEC,R1:F3,0.777604512213332
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",UCEC,R1:F4,0.7904948795300282
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",UCEC,R1:F5,0.8003657262277951
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",UCEC,R2:F1,0.8604977132095777
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",UCEC,R2:F2,0.6927489177489178
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",UCEC,R2:F3,0.8052083333333333
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",UCEC,R2:F4,0.7812401883830455
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",UCEC,R2:F5,0.7358045651763817
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",UCEC,R3:F1,0.7706349206349206
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",UCEC,R3:F2,0.7454415954415954
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",UCEC,R3:F3,0.8325298569220387
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",UCEC,R3:F4,0.7759132892197409
+ABL_view_construction,comparator,"RealMLP view model, single view (K=1)",UCEC,R3:F5,0.7641369047619048
 F4_same_backbone,reference,TabPFN-Anchor,GEA,R3:F5,0.6941886348531918
 F4_same_backbone,reference,TabPFN-Anchor,GEA,R3:F4,0.7549219687875149
 F4_same_backbone,reference,TabPFN-Anchor,GEA,R3:F3,0.7704256061398919

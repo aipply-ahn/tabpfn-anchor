@@ -17219,3 +17219,723 @@ SIG_selector_x_classifier[XGB],comparator,limma-F-100,UCEC,R1:F4,0.7198135964912
 SIG_selector_x_classifier[XGB],comparator,limma-F-100,UCEC,R2:F3,0.7425242026635215
 SIG_selector_x_classifier[XGB],comparator,limma-F-100,THCA,R3:F3,0.7460469355206197
 SIG_selector_x_classifier[XGB],comparator,limma-F-100,UCEC,R3:F2,0.7741011137487392
+R2_controls,reference,TabPFN-Anchor (reported construction),BRCA,R1:F1,0.9089233347297864
+R2_controls,reference,TabPFN-Anchor (reported construction),BRCA,R1:F2,0.9330171635049684
+R2_controls,reference,TabPFN-Anchor (reported construction),BRCA,R1:F3,0.9232153732988492
+R2_controls,reference,TabPFN-Anchor (reported construction),BRCA,R1:F4,0.8820105909336212
+R2_controls,reference,TabPFN-Anchor (reported construction),BRCA,R1:F5,0.9475221768031143
+R2_controls,reference,TabPFN-Anchor (reported construction),BRCA,R2:F1,0.9361118746564046
+R2_controls,reference,TabPFN-Anchor (reported construction),BRCA,R2:F2,0.9430964870093697
+R2_controls,reference,TabPFN-Anchor (reported construction),BRCA,R2:F3,0.880860878536566
+R2_controls,reference,TabPFN-Anchor (reported construction),BRCA,R2:F4,0.861154304016099
+R2_controls,reference,TabPFN-Anchor (reported construction),BRCA,R2:F5,0.9594057050848078
+R2_controls,reference,TabPFN-Anchor (reported construction),LGGGBM,R1:F1,0.8389679369015365
+R2_controls,reference,TabPFN-Anchor (reported construction),BRCA,R3:F1,0.9237469062418768
+R2_controls,reference,TabPFN-Anchor (reported construction),LGGGBM,R1:F2,0.82298766661136
+R2_controls,reference,TabPFN-Anchor (reported construction),BRCA,R3:F2,0.9255440098939708
+R2_controls,reference,TabPFN-Anchor (reported construction),LGGGBM,R1:F3,0.737462131029672
+R2_controls,reference,TabPFN-Anchor (reported construction),BRCA,R3:F3,0.922630665799176
+R2_controls,reference,TabPFN-Anchor (reported construction),LGGGBM,R1:F4,0.7871927558902349
+R2_controls,reference,TabPFN-Anchor (reported construction),BRCA,R3:F4,0.9298707370236122
+R2_controls,reference,TabPFN-Anchor (reported construction),LGGGBM,R1:F5,0.7460380529209034
+R2_controls,reference,TabPFN-Anchor (reported construction),LGGGBM,R2:F1,0.7237648898197435
+R2_controls,reference,TabPFN-Anchor (reported construction),BRCA,R3:F5,0.9134949034916504
+R2_controls,reference,TabPFN-Anchor (reported construction),LGGGBM,R2:F2,0.8008706436639679
+R2_controls,reference,TabPFN-Anchor (reported construction),LGGGBM,R2:F3,0.6796946347167696
+R2_controls,reference,TabPFN-Anchor (reported construction),LGGGBM,R2:F4,0.7716114113629642
+R2_controls,reference,TabPFN-Anchor (reported construction),LGGGBM,R2:F5,0.8309812002057883
+R2_controls,reference,TabPFN-Anchor (reported construction),LGGGBM,R3:F1,0.7638638964764327
+R2_controls,reference,TabPFN-Anchor (reported construction),LGGGBM,R3:F2,0.8296469306922268
+R2_controls,reference,TabPFN-Anchor (reported construction),LGGGBM,R3:F3,0.6988130149420472
+R2_controls,reference,TabPFN-Anchor (reported construction),LGGGBM,R3:F4,0.65545052472685
+R2_controls,reference,TabPFN-Anchor (reported construction),LGGGBM,R3:F5,0.7423546341613568
+R2_controls,reference,TabPFN-Anchor (reported construction),LUAD,R1:F1,0.8874918490409494
+R2_controls,reference,TabPFN-Anchor (reported construction),KIRCKICH,R1:F1,0.8775510204081632
+R2_controls,reference,TabPFN-Anchor (reported construction),LUAD,R1:F2,0.7909038132053297
+R2_controls,reference,TabPFN-Anchor (reported construction),HNSC,R1:F1,0.918809523809524
+R2_controls,reference,TabPFN-Anchor (reported construction),KIRCKICH,R1:F2,0.9789173789173788
+R2_controls,reference,TabPFN-Anchor (reported construction),LUAD,R1:F3,0.8487837837837839
+R2_controls,reference,TabPFN-Anchor (reported construction),HNSC,R1:F2,0.859831249573
+R2_controls,reference,TabPFN-Anchor (reported construction),KIRCKICH,R1:F3,0.956436420722135
+R2_controls,reference,TabPFN-Anchor (reported construction),UCEC,R1:F1,0.7593184196340806
+R2_controls,reference,TabPFN-Anchor (reported construction),LUAD,R1:F4,0.9063495328201212
+R2_controls,reference,TabPFN-Anchor (reported construction),HNSC,R1:F3,0.9110774419636832
+R2_controls,reference,TabPFN-Anchor (reported construction),KIRCKICH,R1:F4,0.9272449202534412
+R2_controls,reference,TabPFN-Anchor (reported construction),UCEC,R1:F2,0.834348229776621
+R2_controls,reference,TabPFN-Anchor (reported construction),LUAD,R1:F5,0.8271301683066389
+R2_controls,reference,TabPFN-Anchor (reported construction),HNSC,R1:F4,0.9394304277480028
+R2_controls,reference,TabPFN-Anchor (reported construction),KIRCKICH,R1:F5,0.956436420722135
+R2_controls,reference,TabPFN-Anchor (reported construction),UCEC,R1:F3,0.816491034564208
+R2_controls,reference,TabPFN-Anchor (reported construction),LUAD,R2:F1,0.7602948599532884
+R2_controls,reference,TabPFN-Anchor (reported construction),HNSC,R1:F5,0.908741500890216
+R2_controls,reference,TabPFN-Anchor (reported construction),KIRCKICH,R2:F1,0.9533333333333334
+R2_controls,reference,TabPFN-Anchor (reported construction),UCEC,R1:F4,0.8053926663822782
+R2_controls,reference,TabPFN-Anchor (reported construction),THCA,R1:F1,0.8206673973937401
+R2_controls,reference,TabPFN-Anchor (reported construction),LUAD,R2:F2,0.811468634061702
+R2_controls,reference,TabPFN-Anchor (reported construction),HNSC,R2:F1,0.8678410057357426
+R2_controls,reference,TabPFN-Anchor (reported construction),KIRCKICH,R2:F2,0.91287284144427
+R2_controls,reference,TabPFN-Anchor (reported construction),THCA,R1:F2,0.75905279207166
+R2_controls,reference,TabPFN-Anchor (reported construction),UCEC,R1:F5,0.8473248681837322
+R2_controls,reference,TabPFN-Anchor (reported construction),HNSC,R2:F2,0.9307025631569242
+R2_controls,reference,TabPFN-Anchor (reported construction),LUAD,R2:F3,0.9086982657405192
+R2_controls,reference,TabPFN-Anchor (reported construction),THCA,R1:F3,0.7727658616915729
+R2_controls,reference,TabPFN-Anchor (reported construction),KIRCKICH,R2:F3,0.97746192893401
+R2_controls,reference,TabPFN-Anchor (reported construction),UCEC,R2:F1,0.8741872925800807
+R2_controls,reference,TabPFN-Anchor (reported construction),HNSC,R2:F3,0.9220781285487168
+R2_controls,reference,TabPFN-Anchor (reported construction),LUAD,R2:F4,0.9040705765185386
+R2_controls,reference,TabPFN-Anchor (reported construction),THCA,R1:F4,0.8065864442317334
+R2_controls,reference,TabPFN-Anchor (reported construction),KIRCKICH,R2:F4,0.97746192893401
+R2_controls,reference,TabPFN-Anchor (reported construction),UCEC,R2:F2,0.7575614861329146
+R2_controls,reference,TabPFN-Anchor (reported construction),HNSC,R2:F4,0.9014630547222316
+R2_controls,reference,TabPFN-Anchor (reported construction),LUAD,R2:F5,0.8879237304424711
+R2_controls,reference,TabPFN-Anchor (reported construction),THCA,R1:F5,0.7614237614237614
+R2_controls,reference,TabPFN-Anchor (reported construction),KIRCKICH,R2:F5,0.9182621502209132
+R2_controls,reference,TabPFN-Anchor (reported construction),UCEC,R2:F3,0.8771779679613781
+R2_controls,reference,TabPFN-Anchor (reported construction),HNSC,R2:F5,0.9097881324099222
+R2_controls,reference,TabPFN-Anchor (reported construction),THCA,R2:F1,0.7266964791717268
+R2_controls,reference,TabPFN-Anchor (reported construction),LUAD,R3:F1,0.8033776301218161
+R2_controls,reference,TabPFN-Anchor (reported construction),KIRCKICH,R3:F1,0.9591836734693876
+R2_controls,reference,TabPFN-Anchor (reported construction),UCEC,R2:F4,0.8091341991341992
+R2_controls,reference,TabPFN-Anchor (reported construction),HNSC,R3:F1,0.9612408350573168
+R2_controls,reference,TabPFN-Anchor (reported construction),THCA,R2:F2,0.6933587887083799
+R2_controls,reference,TabPFN-Anchor (reported construction),LUAD,R3:F2,0.8633050016345211
+R2_controls,reference,TabPFN-Anchor (reported construction),KIRCKICH,R3:F2,0.956436420722135
+R2_controls,reference,TabPFN-Anchor (reported construction),UCEC,R2:F5,0.7910851122058018
+R2_controls,reference,TabPFN-Anchor (reported construction),HNSC,R3:F2,0.9534930586654724
+R2_controls,reference,TabPFN-Anchor (reported construction),THCA,R2:F3,0.800807574491785
+R2_controls,reference,TabPFN-Anchor (reported construction),LUAD,R3:F3,0.8027915131124551
+R2_controls,reference,TabPFN-Anchor (reported construction),HNSC,R3:F3,0.8786498850358884
+R2_controls,reference,TabPFN-Anchor (reported construction),KIRCKICH,R3:F3,0.9532828282828284
+R2_controls,reference,TabPFN-Anchor (reported construction),UCEC,R3:F1,0.7953419351037663
+R2_controls,reference,TabPFN-Anchor (reported construction),THCA,R2:F4,0.7326126377458501
+R2_controls,reference,TabPFN-Anchor (reported construction),HNSC,R3:F4,0.8321758419036097
+R2_controls,reference,TabPFN-Anchor (reported construction),KIRCKICH,R3:F4,1.0
+R2_controls,reference,TabPFN-Anchor (reported construction),UCEC,R3:F2,0.8081400329117918
+R2_controls,reference,TabPFN-Anchor (reported construction),LUAD,R3:F4,0.921896836303616
+R2_controls,reference,TabPFN-Anchor (reported construction),THCA,R2:F5,0.7967819062291207
+R2_controls,reference,TabPFN-Anchor (reported construction),HNSC,R3:F5,0.9218235476856164
+R2_controls,reference,TabPFN-Anchor (reported construction),KIRCKICH,R3:F5,0.8873096446700508
+R2_controls,reference,TabPFN-Anchor (reported construction),UCEC,R3:F3,0.8087534854452147
+R2_controls,reference,TabPFN-Anchor (reported construction),LUAD,R3:F5,0.8897434874168851
+R2_controls,reference,TabPFN-Anchor (reported construction),THCA,R3:F1,0.7797619047619048
+R2_controls,reference,TabPFN-Anchor (reported construction),SKCM,R1:F1,0.6202233250620348
+R2_controls,reference,TabPFN-Anchor (reported construction),BLCA,R1:F1,0.830837576120595
+R2_controls,reference,TabPFN-Anchor (reported construction),UCEC,R3:F4,0.8442201518288475
+R2_controls,reference,TabPFN-Anchor (reported construction),COADREAD,R1:F1,0.7994192626545567
+R2_controls,reference,TabPFN-Anchor (reported construction),THCA,R3:F2,0.7844197138314785
+R2_controls,reference,TabPFN-Anchor (reported construction),SKCM,R1:F2,0.6216042780748663
+R2_controls,reference,TabPFN-Anchor (reported construction),BLCA,R1:F2,0.8181061804012623
+R2_controls,reference,TabPFN-Anchor (reported construction),UCEC,R3:F5,0.8332233829766724
+R2_controls,reference,TabPFN-Anchor (reported construction),COADREAD,R1:F2,0.7667493422428424
+R2_controls,reference,TabPFN-Anchor (reported construction),THCA,R3:F3,0.6886407939039518
+R2_controls,reference,TabPFN-Anchor (reported construction),SKCM,R1:F3,0.6307263411693791
+R2_controls,reference,TabPFN-Anchor (reported construction),BLCA,R1:F3,0.8494333370113637
+R2_controls,reference,TabPFN-Anchor (reported construction),LUSC,R1:F1,0.8639802427845905
+R2_controls,reference,TabPFN-Anchor (reported construction),THCA,R3:F4,0.7972855023129964
+R2_controls,reference,TabPFN-Anchor (reported construction),SKCM,R1:F4,0.6027532250358337
+R2_controls,reference,TabPFN-Anchor (reported construction),COADREAD,R1:F3,0.7458381096645651
+R2_controls,reference,TabPFN-Anchor (reported construction),BLCA,R1:F4,0.828187134502924
+R2_controls,reference,TabPFN-Anchor (reported construction),LUSC,R1:F2,0.9177796217269902
+R2_controls,reference,TabPFN-Anchor (reported construction),THCA,R3:F5,0.6864478114478114
+R2_controls,reference,TabPFN-Anchor (reported construction),SKCM,R1:F5,0.7000686813186814
+R2_controls,reference,TabPFN-Anchor (reported construction),BLCA,R1:F5,0.8555951845425529
+R2_controls,reference,TabPFN-Anchor (reported construction),COADREAD,R1:F4,0.7132399626517273
+R2_controls,reference,TabPFN-Anchor (reported construction),LUSC,R1:F3,0.8218535277358806
+R2_controls,reference,TabPFN-Anchor (reported construction),BLCA,R2:F1,0.8744628086547069
+R2_controls,reference,TabPFN-Anchor (reported construction),SKCM,R2:F1,0.6739775461106656
+R2_controls,reference,TabPFN-Anchor (reported construction),LUSC,R1:F4,0.7482188319954277
+R2_controls,reference,TabPFN-Anchor (reported construction),GEA,R1:F1,0.6755672898530042
+R2_controls,reference,TabPFN-Anchor (reported construction),COADREAD,R1:F5,0.6920054200542004
+R2_controls,reference,TabPFN-Anchor (reported construction),BLCA,R2:F2,0.7840705441511894
+R2_controls,reference,TabPFN-Anchor (reported construction),SKCM,R2:F2,0.6076685660018993
+R2_controls,reference,TabPFN-Anchor (reported construction),LUSC,R1:F5,0.8838735344828489
+R2_controls,reference,TabPFN-Anchor (reported construction),COADREAD,R2:F1,0.7386521860206071
+R2_controls,reference,TabPFN-Anchor (reported construction),GEA,R1:F2,0.632649497045782
+R2_controls,reference,TabPFN-Anchor (reported construction),BLCA,R2:F3,0.970727479397556
+R2_controls,reference,TabPFN-Anchor (reported construction),LUSC,R2:F1,0.8549628230704253
+R2_controls,reference,TabPFN-Anchor (reported construction),SKCM,R2:F3,0.7324553315302024
+R2_controls,reference,TabPFN-Anchor (reported construction),GEA,R1:F3,0.7473401598401599
+R2_controls,reference,TabPFN-Anchor (reported construction),COADREAD,R2:F2,0.7909420289855073
+R2_controls,reference,TabPFN-Anchor (reported construction),BLCA,R2:F4,0.9248338081671416
+R2_controls,reference,TabPFN-Anchor (reported construction),LUSC,R2:F2,0.9118815333941384
+R2_controls,reference,TabPFN-Anchor (reported construction),SKCM,R2:F4,0.6323996265172735
+R2_controls,reference,TabPFN-Anchor (reported construction),GEA,R1:F4,0.7512817322050773
+R2_controls,reference,TabPFN-Anchor (reported construction),COADREAD,R2:F3,0.7589287973960044
+R2_controls,reference,TabPFN-Anchor (reported construction),BLCA,R2:F5,0.5758963152471307
+R2_controls,reference,TabPFN-Anchor (reported construction),LUSC,R2:F3,0.8501338313103018
+R2_controls,reference,TabPFN-Anchor (reported construction),SKCM,R2:F5,0.6631704583832243
+R2_controls,reference,TabPFN-Anchor (reported construction),BLCA,R3:F1,0.6751582587576884
+R2_controls,reference,TabPFN-Anchor (reported construction),GEA,R1:F5,0.609856477614107
+R2_controls,reference,TabPFN-Anchor (reported construction),COADREAD,R2:F4,0.8142642642642643
+R2_controls,reference,TabPFN-Anchor (reported construction),LUSC,R2:F4,0.8821665483413721
+R2_controls,reference,TabPFN-Anchor (reported construction),SKCM,R3:F1,0.5945552463409606
+R2_controls,reference,TabPFN-Anchor (reported construction),BLCA,R3:F2,0.8903470564736766
+R2_controls,reference,TabPFN-Anchor (reported construction),LUSC,R2:F5,0.7819147355912062
+R2_controls,reference,TabPFN-Anchor (reported construction),GEA,R2:F1,0.7625590667570618
+R2_controls,reference,TabPFN-Anchor (reported construction),COADREAD,R2:F5,0.670546398046398
+R2_controls,reference,TabPFN-Anchor (reported construction),SKCM,R3:F2,0.6531798766018035
+R2_controls,reference,TabPFN-Anchor (reported construction),BLCA,R3:F3,0.8735604692735423
+R2_controls,reference,TabPFN-Anchor (reported construction),LUSC,R3:F1,0.7709453781512604
+R2_controls,reference,TabPFN-Anchor (reported construction),GEA,R2:F2,0.7272393959424035
+R2_controls,reference,TabPFN-Anchor (reported construction),COADREAD,R3:F1,0.7474698236432329
+R2_controls,reference,TabPFN-Anchor (reported construction),SKCM,R3:F3,0.7151785714285714
+R2_controls,reference,TabPFN-Anchor (reported construction),BLCA,R3:F4,0.8651696467374433
+R2_controls,reference,TabPFN-Anchor (reported construction),LUSC,R3:F2,0.8490927072583419
+R2_controls,reference,TabPFN-Anchor (reported construction),GEA,R2:F3,0.6818165961023104
+R2_controls,reference,TabPFN-Anchor (reported construction),COADREAD,R3:F2,0.6809586475079433
+R2_controls,reference,TabPFN-Anchor (reported construction),SKCM,R3:F4,0.6368131868131868
+R2_controls,reference,TabPFN-Anchor (reported construction),BLCA,R3:F5,0.8431142571971318
+R2_controls,reference,TabPFN-Anchor (reported construction),LUSC,R3:F3,0.8134363593922417
+R2_controls,reference,TabPFN-Anchor (reported construction),GEA,R2:F4,0.6861620405738051
+R2_controls,reference,TabPFN-Anchor (reported construction),SKCM,R3:F5,0.659717868338558
+R2_controls,reference,TabPFN-Anchor (reported construction),COADREAD,R3:F3,0.6918604694920485
+R2_controls,reference,TabPFN-Anchor (reported construction),LUSC,R3:F4,0.8965151515151515
+R2_controls,reference,TabPFN-Anchor (reported construction),GEA,R2:F5,0.7689992176207714
+R2_controls,reference,TabPFN-Anchor (reported construction),COADREAD,R3:F4,0.7250696184906711
+R2_controls,reference,TabPFN-Anchor (reported construction),LUSC,R3:F5,0.860577897825797
+R2_controls,reference,TabPFN-Anchor (reported construction),GEA,R3:F1,0.6925094329229668
+R2_controls,reference,TabPFN-Anchor (reported construction),COADREAD,R3:F5,0.7639472613156825
+R2_controls,reference,TabPFN-Anchor (reported construction),GEA,R3:F2,0.6136523517568435
+R2_controls,reference,TabPFN-Anchor (reported construction),GEA,R3:F3,0.7704256061398919
+R2_controls,reference,TabPFN-Anchor (reported construction),GEA,R3:F4,0.7549219687875149
+R2_controls,reference,TabPFN-Anchor (reported construction),GEA,R3:F5,0.6941886348531918
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BLCA,R1:F1,0.871677523210542
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BLCA,R1:F2,0.8181061804012623
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BLCA,R1:F3,0.8555480556260823
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BLCA,R1:F4,0.8219433387390044
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BLCA,R1:F5,0.8432895656331606
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BLCA,R2:F1,0.8634204154128252
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BLCA,R2:F2,0.7680224582501621
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BLCA,R2:F3,0.970727479397556
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BLCA,R2:F4,0.9210775015806462
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BLCA,R2:F5,0.5758963152471307
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BLCA,R3:F1,0.6646621772841634
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BLCA,R3:F2,0.8903470564736766
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BLCA,R3:F3,0.8678160046581098
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BLCA,R3:F4,0.8778357388153002
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BLCA,R3:F5,0.8305972503944107
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BRCA,R1:F1,0.9272348571407164
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BRCA,R1:F2,0.9330171635049684
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BRCA,R1:F3,0.9232153732988492
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BRCA,R1:F4,0.8820105909336212
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BRCA,R1:F5,0.9430138599388214
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BRCA,R2:F1,0.9308251457784168
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BRCA,R2:F2,0.9430964870093697
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BRCA,R2:F3,0.9001417547584976
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BRCA,R2:F4,0.8601494971916726
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BRCA,R2:F5,0.9548984468339308
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BRCA,R3:F1,0.9139961460953474
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BRCA,R3:F2,0.9248023872101536
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BRCA,R3:F3,0.9252225189141076
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BRCA,R3:F4,0.9219524949281548
+R2_controls,comparator,"Ranked pool, permuted residual blocks",BRCA,R3:F5,0.9172634040005871
+R2_controls,comparator,"Ranked pool, permuted residual blocks",COADREAD,R1:F1,0.7446869382413812
+R2_controls,comparator,"Ranked pool, permuted residual blocks",COADREAD,R1:F2,0.7697517042344629
+R2_controls,comparator,"Ranked pool, permuted residual blocks",COADREAD,R1:F3,0.7557165115449029
+R2_controls,comparator,"Ranked pool, permuted residual blocks",COADREAD,R1:F4,0.7073885694628728
+R2_controls,comparator,"Ranked pool, permuted residual blocks",COADREAD,R1:F5,0.6983734436492838
+R2_controls,comparator,"Ranked pool, permuted residual blocks",COADREAD,R2:F1,0.7355756751983167
+R2_controls,comparator,"Ranked pool, permuted residual blocks",COADREAD,R2:F2,0.7883274231678487
+R2_controls,comparator,"Ranked pool, permuted residual blocks",COADREAD,R2:F3,0.7748519679554162
+R2_controls,comparator,"Ranked pool, permuted residual blocks",COADREAD,R2:F4,0.8142642642642643
+R2_controls,comparator,"Ranked pool, permuted residual blocks",COADREAD,R2:F5,0.670546398046398
+R2_controls,comparator,"Ranked pool, permuted residual blocks",COADREAD,R3:F1,0.7474698236432329
+R2_controls,comparator,"Ranked pool, permuted residual blocks",COADREAD,R3:F2,0.7316491541843654
+R2_controls,comparator,"Ranked pool, permuted residual blocks",COADREAD,R3:F3,0.7169590643274854
+R2_controls,comparator,"Ranked pool, permuted residual blocks",COADREAD,R3:F4,0.7047413356623883
+R2_controls,comparator,"Ranked pool, permuted residual blocks",COADREAD,R3:F5,0.7475132275132275
+R2_controls,comparator,"Ranked pool, permuted residual blocks",GEA,R1:F1,0.6641310307868007
+R2_controls,comparator,"Ranked pool, permuted residual blocks",GEA,R1:F2,0.6734413960023716
+R2_controls,comparator,"Ranked pool, permuted residual blocks",GEA,R1:F3,0.7360837157829639
+R2_controls,comparator,"Ranked pool, permuted residual blocks",GEA,R1:F4,0.7360516018754334
+R2_controls,comparator,"Ranked pool, permuted residual blocks",GEA,R1:F5,0.6081347850144841
+R2_controls,comparator,"Ranked pool, permuted residual blocks",GEA,R2:F1,0.7547601069190251
+R2_controls,comparator,"Ranked pool, permuted residual blocks",GEA,R2:F2,0.7164814327074817
+R2_controls,comparator,"Ranked pool, permuted residual blocks",GEA,R2:F3,0.704957271830337
+R2_controls,comparator,"Ranked pool, permuted residual blocks",GEA,R2:F4,0.6861620405738051
+R2_controls,comparator,"Ranked pool, permuted residual blocks",GEA,R2:F5,0.7318651366270413
+R2_controls,comparator,"Ranked pool, permuted residual blocks",GEA,R3:F1,0.6893166357452072
+R2_controls,comparator,"Ranked pool, permuted residual blocks",GEA,R3:F2,0.6492120301736648
+R2_controls,comparator,"Ranked pool, permuted residual blocks",GEA,R3:F3,0.7764716118320718
+R2_controls,comparator,"Ranked pool, permuted residual blocks",GEA,R3:F4,0.7546878891416707
+R2_controls,comparator,"Ranked pool, permuted residual blocks",GEA,R3:F5,0.6803974115533284
+R2_controls,comparator,"Ranked pool, permuted residual blocks",HNSC,R1:F1,0.930067920585162
+R2_controls,comparator,"Ranked pool, permuted residual blocks",HNSC,R1:F2,0.8773792044274563
+R2_controls,comparator,"Ranked pool, permuted residual blocks",HNSC,R1:F3,0.9110774419636832
+R2_controls,comparator,"Ranked pool, permuted residual blocks",HNSC,R1:F4,0.9492181668905808
+R2_controls,comparator,"Ranked pool, permuted residual blocks",HNSC,R1:F5,0.8978745614785659
+R2_controls,comparator,"Ranked pool, permuted residual blocks",HNSC,R2:F1,0.8780451127819549
+R2_controls,comparator,"Ranked pool, permuted residual blocks",HNSC,R2:F2,0.9307025631569242
+R2_controls,comparator,"Ranked pool, permuted residual blocks",HNSC,R2:F3,0.9220781285487168
+R2_controls,comparator,"Ranked pool, permuted residual blocks",HNSC,R2:F4,0.8713197497513404
+R2_controls,comparator,"Ranked pool, permuted residual blocks",HNSC,R2:F5,0.90459824751914
+R2_controls,comparator,"Ranked pool, permuted residual blocks",HNSC,R3:F1,0.9624716267339218
+R2_controls,comparator,"Ranked pool, permuted residual blocks",HNSC,R3:F2,0.9629342753435312
+R2_controls,comparator,"Ranked pool, permuted residual blocks",HNSC,R3:F3,0.8677441077441077
+R2_controls,comparator,"Ranked pool, permuted residual blocks",HNSC,R3:F4,0.8636897559991933
+R2_controls,comparator,"Ranked pool, permuted residual blocks",HNSC,R3:F5,0.9205384150030248
+R2_controls,comparator,"Ranked pool, permuted residual blocks",KIRCKICH,R1:F1,0.8775510204081632
+R2_controls,comparator,"Ranked pool, permuted residual blocks",KIRCKICH,R1:F2,0.9789173789173788
+R2_controls,comparator,"Ranked pool, permuted residual blocks",KIRCKICH,R1:F3,0.956436420722135
+R2_controls,comparator,"Ranked pool, permuted residual blocks",KIRCKICH,R1:F4,0.9272449202534412
+R2_controls,comparator,"Ranked pool, permuted residual blocks",KIRCKICH,R1:F5,0.956436420722135
+R2_controls,comparator,"Ranked pool, permuted residual blocks",KIRCKICH,R2:F1,0.9533333333333334
+R2_controls,comparator,"Ranked pool, permuted residual blocks",KIRCKICH,R2:F2,0.91287284144427
+R2_controls,comparator,"Ranked pool, permuted residual blocks",KIRCKICH,R2:F3,0.956436420722135
+R2_controls,comparator,"Ranked pool, permuted residual blocks",KIRCKICH,R2:F4,0.97746192893401
+R2_controls,comparator,"Ranked pool, permuted residual blocks",KIRCKICH,R2:F5,0.9367521367521368
+R2_controls,comparator,"Ranked pool, permuted residual blocks",KIRCKICH,R3:F1,0.9591836734693876
+R2_controls,comparator,"Ranked pool, permuted residual blocks",KIRCKICH,R3:F2,0.9323857868020304
+R2_controls,comparator,"Ranked pool, permuted residual blocks",KIRCKICH,R3:F3,0.9532828282828284
+R2_controls,comparator,"Ranked pool, permuted residual blocks",KIRCKICH,R3:F4,1.0
+R2_controls,comparator,"Ranked pool, permuted residual blocks",KIRCKICH,R3:F5,0.8873096446700508
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LGGGBM,R1:F1,0.8401032343940276
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LGGGBM,R1:F2,0.8313492063492064
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LGGGBM,R1:F3,0.7333736524912995
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LGGGBM,R1:F4,0.7922918451851543
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LGGGBM,R1:F5,0.7677881830943055
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LGGGBM,R2:F1,0.750042495278388
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LGGGBM,R2:F2,0.8486039316037963
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LGGGBM,R2:F3,0.6620968407585481
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LGGGBM,R2:F4,0.7625459165046085
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LGGGBM,R2:F5,0.8061297608878393
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LGGGBM,R3:F1,0.735924020037233
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LGGGBM,R3:F2,0.8370637299208727
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LGGGBM,R3:F3,0.7108827724937326
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LGGGBM,R3:F4,0.6564851711435562
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LGGGBM,R3:F5,0.7093408792088265
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUAD,R1:F1,0.8857305860197187
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUAD,R1:F2,0.8123266009439067
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUAD,R1:F3,0.8718141903758342
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUAD,R1:F4,0.9063495328201212
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUAD,R1:F5,0.8271301683066389
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUAD,R2:F1,0.7651847151324483
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUAD,R2:F2,0.7772567783094099
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUAD,R2:F3,0.8985303634673537
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUAD,R2:F4,0.9121999434585246
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUAD,R2:F5,0.9084046987495265
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUAD,R3:F1,0.8033776301218161
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUAD,R3:F2,0.83483741322616
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUAD,R3:F3,0.7870382741034022
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUAD,R3:F4,0.9220012291105444
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUAD,R3:F5,0.8626160990712075
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUSC,R1:F1,0.863006413694774
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUSC,R1:F2,0.8972794883349197
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUSC,R1:F3,0.8169934640522875
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUSC,R1:F4,0.7904332612917276
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUSC,R1:F5,0.9053163345716536
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUSC,R2:F1,0.8327406008482031
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUSC,R2:F2,0.9073438996271812
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUSC,R2:F3,0.858899232207503
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUSC,R2:F4,0.8821665483413721
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUSC,R2:F5,0.7979595857255432
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUSC,R3:F1,0.7709453781512604
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUSC,R3:F2,0.8620613025084247
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUSC,R3:F3,0.8277912518935873
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUSC,R3:F4,0.8965151515151515
+R2_controls,comparator,"Ranked pool, permuted residual blocks",LUSC,R3:F5,0.9100236510374758
+R2_controls,comparator,"Ranked pool, permuted residual blocks",SKCM,R1:F1,0.6606276641091219
+R2_controls,comparator,"Ranked pool, permuted residual blocks",SKCM,R1:F2,0.6346783924297689
+R2_controls,comparator,"Ranked pool, permuted residual blocks",SKCM,R1:F3,0.6200947031151454
+R2_controls,comparator,"Ranked pool, permuted residual blocks",SKCM,R1:F4,0.6331118881118881
+R2_controls,comparator,"Ranked pool, permuted residual blocks",SKCM,R1:F5,0.6738279418659165
+R2_controls,comparator,"Ranked pool, permuted residual blocks",SKCM,R2:F1,0.6977272727272728
+R2_controls,comparator,"Ranked pool, permuted residual blocks",SKCM,R2:F2,0.6385863694489555
+R2_controls,comparator,"Ranked pool, permuted residual blocks",SKCM,R2:F3,0.7557810358185828
+R2_controls,comparator,"Ranked pool, permuted residual blocks",SKCM,R2:F4,0.6961942105870143
+R2_controls,comparator,"Ranked pool, permuted residual blocks",SKCM,R2:F5,0.6472637550003278
+R2_controls,comparator,"Ranked pool, permuted residual blocks",SKCM,R3:F1,0.6042863984674329
+R2_controls,comparator,"Ranked pool, permuted residual blocks",SKCM,R3:F2,0.6602979122683557
+R2_controls,comparator,"Ranked pool, permuted residual blocks",SKCM,R3:F3,0.7577380952380952
+R2_controls,comparator,"Ranked pool, permuted residual blocks",SKCM,R3:F4,0.6142857142857143
+R2_controls,comparator,"Ranked pool, permuted residual blocks",SKCM,R3:F5,0.659717868338558
+R2_controls,comparator,"Ranked pool, permuted residual blocks",THCA,R1:F1,0.8206673973937401
+R2_controls,comparator,"Ranked pool, permuted residual blocks",THCA,R1:F2,0.7489517819706499
+R2_controls,comparator,"Ranked pool, permuted residual blocks",THCA,R1:F3,0.7431772915938151
+R2_controls,comparator,"Ranked pool, permuted residual blocks",THCA,R1:F4,0.8137362637362636
+R2_controls,comparator,"Ranked pool, permuted residual blocks",THCA,R1:F5,0.7630788238201136
+R2_controls,comparator,"Ranked pool, permuted residual blocks",THCA,R2:F1,0.7406975907946783
+R2_controls,comparator,"Ranked pool, permuted residual blocks",THCA,R2:F2,0.7003075438702285
+R2_controls,comparator,"Ranked pool, permuted residual blocks",THCA,R2:F3,0.802918122492744
+R2_controls,comparator,"Ranked pool, permuted residual blocks",THCA,R2:F4,0.7496032863534975
+R2_controls,comparator,"Ranked pool, permuted residual blocks",THCA,R2:F5,0.777418194893923
+R2_controls,comparator,"Ranked pool, permuted residual blocks",THCA,R3:F1,0.7896690879741728
+R2_controls,comparator,"Ranked pool, permuted residual blocks",THCA,R3:F2,0.7844197138314785
+R2_controls,comparator,"Ranked pool, permuted residual blocks",THCA,R3:F3,0.7023012075643654
+R2_controls,comparator,"Ranked pool, permuted residual blocks",THCA,R3:F4,0.8191798019249547
+R2_controls,comparator,"Ranked pool, permuted residual blocks",THCA,R3:F5,0.6864478114478114
+R2_controls,comparator,"Ranked pool, permuted residual blocks",UCEC,R1:F1,0.7395506194408048
+R2_controls,comparator,"Ranked pool, permuted residual blocks",UCEC,R1:F2,0.8594932844932844
+R2_controls,comparator,"Ranked pool, permuted residual blocks",UCEC,R1:F3,0.816491034564208
+R2_controls,comparator,"Ranked pool, permuted residual blocks",UCEC,R1:F4,0.7987804060935474
+R2_controls,comparator,"Ranked pool, permuted residual blocks",UCEC,R1:F5,0.8591912276307367
+R2_controls,comparator,"Ranked pool, permuted residual blocks",UCEC,R2:F1,0.8741872925800807
+R2_controls,comparator,"Ranked pool, permuted residual blocks",UCEC,R2:F2,0.7575614861329146
+R2_controls,comparator,"Ranked pool, permuted residual blocks",UCEC,R2:F3,0.8630107526881721
+R2_controls,comparator,"Ranked pool, permuted residual blocks",UCEC,R2:F4,0.8016140572390572
+R2_controls,comparator,"Ranked pool, permuted residual blocks",UCEC,R2:F5,0.7696287821001779
+R2_controls,comparator,"Ranked pool, permuted residual blocks",UCEC,R3:F1,0.8114670754156339
+R2_controls,comparator,"Ranked pool, permuted residual blocks",UCEC,R3:F2,0.8081400329117918
+R2_controls,comparator,"Ranked pool, permuted residual blocks",UCEC,R3:F3,0.8184792595198999
+R2_controls,comparator,"Ranked pool, permuted residual blocks",UCEC,R3:F4,0.8442201518288475
+R2_controls,comparator,"Ranked pool, permuted residual blocks",UCEC,R3:F5,0.8492476851851851
+R2_controls,comparator,Ranking without OddSHAP,BLCA,R2:F3,0.9503166483984898
+R2_controls,comparator,Ranking without OddSHAP,BLCA,R1:F4,0.8268481031638926
+R2_controls,comparator,Ranking without OddSHAP,BLCA,R3:F3,0.8687932437932439
+R2_controls,comparator,Ranking without OddSHAP,BLCA,R3:F4,0.935609215082117
+R2_controls,comparator,Ranking without OddSHAP,BLCA,R1:F2,0.8367639359011231
+R2_controls,comparator,Ranking without OddSHAP,BLCA,R1:F1,0.8452886343216531
+R2_controls,comparator,Ranking without OddSHAP,BLCA,R2:F1,0.8595935276089555
+R2_controls,comparator,Ranking without OddSHAP,BLCA,R3:F1,0.7897547557959457
+R2_controls,comparator,Ranking without OddSHAP,BLCA,R3:F5,0.8451264655892605
+R2_controls,comparator,Ranking without OddSHAP,BLCA,R2:F4,0.9273559773559772
+R2_controls,comparator,Ranking without OddSHAP,BLCA,R1:F5,0.8496031746031747
+R2_controls,comparator,Ranking without OddSHAP,BLCA,R3:F2,0.8428480692172376
+R2_controls,comparator,Ranking without OddSHAP,BLCA,R1:F3,0.8843551340129928
+R2_controls,comparator,Ranking without OddSHAP,BLCA,R2:F2,0.7840185536580223
+R2_controls,comparator,Ranking without OddSHAP,BLCA,R2:F5,0.572388816456613
+R2_controls,comparator,Ranking without OddSHAP,LGGGBM,R2:F3,0.7148056923918994
+R2_controls,comparator,Ranking without OddSHAP,LGGGBM,R1:F4,0.7656910014720066
+R2_controls,comparator,Ranking without OddSHAP,LGGGBM,R3:F3,0.7047918833085073
+R2_controls,comparator,Ranking without OddSHAP,LGGGBM,R3:F4,0.6632732421225801
+R2_controls,comparator,Ranking without OddSHAP,LGGGBM,R1:F2,0.7924969041990318
+R2_controls,comparator,Ranking without OddSHAP,LGGGBM,R1:F1,0.8423292814393516
+R2_controls,comparator,Ranking without OddSHAP,LGGGBM,R2:F1,0.7337703778826751
+R2_controls,comparator,Ranking without OddSHAP,LGGGBM,R3:F1,0.7545083487940633
+R2_controls,comparator,Ranking without OddSHAP,LGGGBM,R3:F5,0.7639414464758746
+R2_controls,comparator,Ranking without OddSHAP,LGGGBM,R2:F4,0.68471808198935
+R2_controls,comparator,Ranking without OddSHAP,LGGGBM,R1:F5,0.7591091492776886
+R2_controls,comparator,Ranking without OddSHAP,LGGGBM,R3:F2,0.8162713752775864
+R2_controls,comparator,Ranking without OddSHAP,LGGGBM,R1:F3,0.7446498599439778
+R2_controls,comparator,Ranking without OddSHAP,LGGGBM,R2:F2,0.7648937537556728
+R2_controls,comparator,Ranking without OddSHAP,LGGGBM,R2:F5,0.8415929116404793
+R2_controls,comparator,Ranking without OddSHAP,BRCA,R2:F3,0.8844983616788891
+R2_controls,comparator,Ranking without OddSHAP,BRCA,R1:F4,0.908600790973498
+R2_controls,comparator,Ranking without OddSHAP,BRCA,R3:F3,0.94670318598337
+R2_controls,comparator,Ranking without OddSHAP,BRCA,R3:F4,0.9265535792709706
+R2_controls,comparator,Ranking without OddSHAP,BRCA,R1:F2,0.9164675428116288
+R2_controls,comparator,Ranking without OddSHAP,BRCA,R1:F1,0.9084041384891048
+R2_controls,comparator,Ranking without OddSHAP,BRCA,R2:F1,0.932079058998496
+R2_controls,comparator,Ranking without OddSHAP,BRCA,R3:F1,0.907140057920187
+R2_controls,comparator,Ranking without OddSHAP,BRCA,R3:F5,0.9172634040005871
+R2_controls,comparator,Ranking without OddSHAP,BRCA,R2:F4,0.8658605176906387
+R2_controls,comparator,Ranking without OddSHAP,BRCA,R1:F5,0.9598180360804888
+R2_controls,comparator,Ranking without OddSHAP,BRCA,R3:F2,0.9444549335515068
+R2_controls,comparator,Ranking without OddSHAP,BRCA,R1:F3,0.932436199069798
+R2_controls,comparator,Ranking without OddSHAP,BRCA,R2:F2,0.9278639823286856
+R2_controls,comparator,Ranking without OddSHAP,BRCA,R2:F5,0.95199864498645
+R2_controls,comparator,Ranking without OddSHAP,SKCM,R2:F3,0.7072233724407637
+R2_controls,comparator,Ranking without OddSHAP,SKCM,R1:F4,0.6504413706448591
+R2_controls,comparator,Ranking without OddSHAP,SKCM,R3:F3,0.7496451154987741
+R2_controls,comparator,Ranking without OddSHAP,SKCM,R3:F4,0.653175313059034
+R2_controls,comparator,Ranking without OddSHAP,SKCM,R1:F2,0.6067676767676767
+R2_controls,comparator,Ranking without OddSHAP,SKCM,R1:F1,0.701912537590287
+R2_controls,comparator,Ranking without OddSHAP,SKCM,R2:F1,0.6551113563402888
+R2_controls,comparator,Ranking without OddSHAP,SKCM,R3:F1,0.635944032785528
+R2_controls,comparator,Ranking without OddSHAP,SKCM,R3:F5,0.6600587954870492
+R2_controls,comparator,Ranking without OddSHAP,SKCM,R2:F4,0.7379629629629629
+R2_controls,comparator,Ranking without OddSHAP,SKCM,R1:F5,0.6636210780114844
+R2_controls,comparator,Ranking without OddSHAP,SKCM,R3:F2,0.692965367965368
+R2_controls,comparator,Ranking without OddSHAP,SKCM,R1:F3,0.5819794584500466
+R2_controls,comparator,Ranking without OddSHAP,SKCM,R2:F2,0.6164332408053489
+R2_controls,comparator,Ranking without OddSHAP,SKCM,R2:F5,0.6496730253294405
+R2_controls,comparator,Ranking without OddSHAP,COADREAD,R2:F3,0.7347765607437678
+R2_controls,comparator,Ranking without OddSHAP,COADREAD,R1:F4,0.6759093031151854
+R2_controls,comparator,Ranking without OddSHAP,COADREAD,R3:F3,0.7554422961780901
+R2_controls,comparator,Ranking without OddSHAP,COADREAD,R3:F4,0.7400828460038986
+R2_controls,comparator,Ranking without OddSHAP,COADREAD,R1:F2,0.7697517042344629
+R2_controls,comparator,Ranking without OddSHAP,COADREAD,R1:F1,0.7937095115286604
+R2_controls,comparator,Ranking without OddSHAP,COADREAD,R2:F1,0.7758101135190918
+R2_controls,comparator,Ranking without OddSHAP,COADREAD,R3:F1,0.6775047299621603
+R2_controls,comparator,Ranking without OddSHAP,COADREAD,R3:F5,0.7515094926859632
+R2_controls,comparator,Ranking without OddSHAP,COADREAD,R2:F4,0.8036991536991538
+R2_controls,comparator,Ranking without OddSHAP,COADREAD,R1:F5,0.7389772950089492
+R2_controls,comparator,Ranking without OddSHAP,COADREAD,R3:F2,0.6915218566450226
+R2_controls,comparator,Ranking without OddSHAP,COADREAD,R1:F3,0.6023975565143874
+R2_controls,comparator,Ranking without OddSHAP,COADREAD,R2:F2,0.7728535353535354
+R2_controls,comparator,Ranking without OddSHAP,COADREAD,R2:F5,0.658500965838427
+R2_controls,comparator,Ranking without OddSHAP,LUAD,R2:F3,0.8874080236304611
+R2_controls,comparator,Ranking without OddSHAP,LUAD,R1:F4,0.8899142560687775
+R2_controls,comparator,Ranking without OddSHAP,LUAD,R3:F3,0.8109127907419296
+R2_controls,comparator,Ranking without OddSHAP,LUAD,R3:F4,0.9114749133210708
+R2_controls,comparator,Ranking without OddSHAP,LUAD,R1:F2,0.7975334667349187
+R2_controls,comparator,Ranking without OddSHAP,LUAD,R1:F1,0.8998978115953948
+R2_controls,comparator,Ranking without OddSHAP,LUAD,R2:F1,0.8163492063492063
+R2_controls,comparator,Ranking without OddSHAP,LUAD,R3:F1,0.8059487593021981
+R2_controls,comparator,Ranking without OddSHAP,LUAD,R3:F5,0.8626160990712075
+R2_controls,comparator,Ranking without OddSHAP,LUAD,R2:F4,0.8509746973192766
+R2_controls,comparator,Ranking without OddSHAP,LUAD,R1:F5,0.8075174199426385
+R2_controls,comparator,Ranking without OddSHAP,LUAD,R3:F2,0.8818756182869791
+R2_controls,comparator,Ranking without OddSHAP,LUAD,R1:F3,0.8727339391040969
+R2_controls,comparator,Ranking without OddSHAP,LUAD,R2:F2,0.8363190060713281
+R2_controls,comparator,Ranking without OddSHAP,LUAD,R2:F5,0.8879237304424711
+R2_controls,comparator,Ranking without OddSHAP,LUSC,R2:F3,0.8634168797542657
+R2_controls,comparator,Ranking without OddSHAP,LUSC,R1:F4,0.7602528711224363
+R2_controls,comparator,Ranking without OddSHAP,LUSC,R3:F3,0.8283267195767196
+R2_controls,comparator,Ranking without OddSHAP,LUSC,R3:F4,0.8997439020985593
+R2_controls,comparator,Ranking without OddSHAP,LUSC,R1:F2,0.8822665056360709
+R2_controls,comparator,Ranking without OddSHAP,LUSC,R1:F1,0.8835003584611646
+R2_controls,comparator,Ranking without OddSHAP,LUSC,R2:F1,0.8103601127712716
+R2_controls,comparator,Ranking without OddSHAP,LUSC,R3:F1,0.8079720777199769
+R2_controls,comparator,Ranking without OddSHAP,LUSC,R3:F5,0.8916477702191988
+R2_controls,comparator,Ranking without OddSHAP,LUSC,R2:F4,0.8932098570963514
+R2_controls,comparator,Ranking without OddSHAP,LUSC,R1:F5,0.8872079179086579
+R2_controls,comparator,Ranking without OddSHAP,LUSC,R3:F2,0.8365091089980101
+R2_controls,comparator,Ranking without OddSHAP,LUSC,R1:F3,0.8464161220043572
+R2_controls,comparator,Ranking without OddSHAP,LUSC,R2:F2,0.8416580667354662
+R2_controls,comparator,Ranking without OddSHAP,LUSC,R2:F5,0.8165839062897886
+R2_controls,comparator,Ranking without OddSHAP,HNSC,R2:F3,0.9047029598753736
+R2_controls,comparator,Ranking without OddSHAP,HNSC,R1:F4,0.9220350963925696
+R2_controls,comparator,Ranking without OddSHAP,HNSC,R3:F3,0.8745708196783779
+R2_controls,comparator,Ranking without OddSHAP,HNSC,R3:F4,0.8414335859129608
+R2_controls,comparator,Ranking without OddSHAP,HNSC,R1:F2,0.9142246735899986
+R2_controls,comparator,Ranking without OddSHAP,HNSC,R1:F1,0.9279287320900412
+R2_controls,comparator,Ranking without OddSHAP,HNSC,R2:F1,0.8790968215171209
+R2_controls,comparator,Ranking without OddSHAP,HNSC,R3:F1,0.9630291616732296
+R2_controls,comparator,Ranking without OddSHAP,HNSC,R3:F5,0.8927005012531328
+R2_controls,comparator,Ranking without OddSHAP,HNSC,R2:F4,0.8925913063858735
+R2_controls,comparator,Ranking without OddSHAP,HNSC,R1:F5,0.910022450667612
+R2_controls,comparator,Ranking without OddSHAP,HNSC,R3:F2,0.959866121086922
+R2_controls,comparator,Ranking without OddSHAP,HNSC,R1:F3,0.9205891641565266
+R2_controls,comparator,Ranking without OddSHAP,HNSC,R2:F2,0.9336002382463
+R2_controls,comparator,Ranking without OddSHAP,HNSC,R2:F5,0.9443340388325492
+R2_controls,comparator,Ranking without OddSHAP,THCA,R2:F3,0.8092875825686039
+R2_controls,comparator,Ranking without OddSHAP,THCA,R1:F4,0.811121094139962
+R2_controls,comparator,Ranking without OddSHAP,THCA,R3:F3,0.7665536549031694
+R2_controls,comparator,Ranking without OddSHAP,THCA,R3:F4,0.8003734827264238
+R2_controls,comparator,Ranking without OddSHAP,THCA,R1:F2,0.7205862054966915
+R2_controls,comparator,Ranking without OddSHAP,THCA,R1:F1,0.8188836762587269
+R2_controls,comparator,Ranking without OddSHAP,THCA,R2:F1,0.7624217406260749
+R2_controls,comparator,Ranking without OddSHAP,THCA,R3:F1,0.7726332890267317
+R2_controls,comparator,Ranking without OddSHAP,THCA,R3:F5,0.6935585585585585
+R2_controls,comparator,Ranking without OddSHAP,THCA,R2:F4,0.7471306471306471
+R2_controls,comparator,Ranking without OddSHAP,THCA,R1:F5,0.7630788238201136
+R2_controls,comparator,Ranking without OddSHAP,THCA,R3:F2,0.8140314378178456
+R2_controls,comparator,Ranking without OddSHAP,THCA,R1:F3,0.7642587310153419
+R2_controls,comparator,Ranking without OddSHAP,THCA,R2:F2,0.7142369991474852
+R2_controls,comparator,Ranking without OddSHAP,THCA,R2:F5,0.7996069182389937
+R2_controls,comparator,Ranking without OddSHAP,KIRCKICH,R2:F3,0.956436420722135
+R2_controls,comparator,Ranking without OddSHAP,KIRCKICH,R1:F4,0.9272449202534412
+R2_controls,comparator,Ranking without OddSHAP,KIRCKICH,R3:F3,0.9532828282828284
+R2_controls,comparator,Ranking without OddSHAP,KIRCKICH,R3:F4,1.0
+R2_controls,comparator,Ranking without OddSHAP,KIRCKICH,R1:F2,0.9789173789173788
+R2_controls,comparator,Ranking without OddSHAP,KIRCKICH,R1:F1,0.8845360824742268
+R2_controls,comparator,Ranking without OddSHAP,KIRCKICH,R2:F1,0.9533333333333334
+R2_controls,comparator,Ranking without OddSHAP,KIRCKICH,R3:F1,0.9591836734693876
+R2_controls,comparator,Ranking without OddSHAP,KIRCKICH,R3:F5,0.8873096446700508
+R2_controls,comparator,Ranking without OddSHAP,KIRCKICH,R2:F4,1.0
+R2_controls,comparator,Ranking without OddSHAP,KIRCKICH,R1:F5,0.956436420722135
+R2_controls,comparator,Ranking without OddSHAP,KIRCKICH,R3:F2,0.956436420722135
+R2_controls,comparator,Ranking without OddSHAP,KIRCKICH,R1:F3,0.956436420722135
+R2_controls,comparator,Ranking without OddSHAP,KIRCKICH,R2:F2,0.8945868945868946
+R2_controls,comparator,Ranking without OddSHAP,KIRCKICH,R2:F5,0.9182621502209132
+R2_controls,comparator,Ranking without OddSHAP,UCEC,R2:F3,0.8630107526881721
+R2_controls,comparator,Ranking without OddSHAP,UCEC,R1:F4,0.8114047484454494
+R2_controls,comparator,Ranking without OddSHAP,UCEC,R3:F3,0.8151664673046252
+R2_controls,comparator,Ranking without OddSHAP,UCEC,R3:F4,0.8168415492007794
+R2_controls,comparator,Ranking without OddSHAP,UCEC,R1:F2,0.8589514424668346
+R2_controls,comparator,Ranking without OddSHAP,UCEC,R1:F1,0.7687074358316637
+R2_controls,comparator,Ranking without OddSHAP,UCEC,R2:F1,0.8998318469514535
+R2_controls,comparator,Ranking without OddSHAP,UCEC,R3:F1,0.7891387604502358
+R2_controls,comparator,Ranking without OddSHAP,UCEC,R3:F5,0.843941597696859
+R2_controls,comparator,Ranking without OddSHAP,UCEC,R2:F4,0.7992871665582304
+R2_controls,comparator,Ranking without OddSHAP,UCEC,R1:F5,0.8387041785285596
+R2_controls,comparator,Ranking without OddSHAP,UCEC,R3:F2,0.8258241758241758
+R2_controls,comparator,Ranking without OddSHAP,UCEC,R1:F3,0.8086953382093525
+R2_controls,comparator,Ranking without OddSHAP,UCEC,R2:F2,0.7475503663003663
+R2_controls,comparator,Ranking without OddSHAP,UCEC,R2:F5,0.773317870920408
+R2_controls,comparator,Ranking without OddSHAP,GEA,R2:F3,0.7547643298730256
+R2_controls,comparator,Ranking without OddSHAP,GEA,R1:F4,0.7348775005831804
+R2_controls,comparator,Ranking without OddSHAP,GEA,R3:F3,0.780952380952381
+R2_controls,comparator,Ranking without OddSHAP,GEA,R3:F4,0.7514768656908439
+R2_controls,comparator,Ranking without OddSHAP,GEA,R1:F2,0.6571157188065311
+R2_controls,comparator,Ranking without OddSHAP,GEA,R1:F1,0.6962323508292011
+R2_controls,comparator,Ranking without OddSHAP,GEA,R2:F1,0.7974227140248812
+R2_controls,comparator,Ranking without OddSHAP,GEA,R3:F1,0.6467876588021778
+R2_controls,comparator,Ranking without OddSHAP,GEA,R3:F5,0.6889671733093675
+R2_controls,comparator,Ranking without OddSHAP,GEA,R2:F4,0.6319572947023927
+R2_controls,comparator,Ranking without OddSHAP,GEA,R1:F5,0.6017380600111161
+R2_controls,comparator,Ranking without OddSHAP,GEA,R3:F2,0.658028080388575
+R2_controls,comparator,Ranking without OddSHAP,GEA,R1:F3,0.7288816446711184
+R2_controls,comparator,Ranking without OddSHAP,GEA,R2:F2,0.6565121315872433
+R2_controls,comparator,Ranking without OddSHAP,GEA,R2:F5,0.7871810358025897
+R2_controls,comparator,Fully nested selection,BLCA,R2:F3,0.970727479397556
+R2_controls,comparator,Fully nested selection,BLCA,R1:F4,0.8370853604599735
+R2_controls,comparator,Fully nested selection,BLCA,R3:F3,0.8392376142376143
+R2_controls,comparator,Fully nested selection,BLCA,R3:F4,0.9019490953589973
+R2_controls,comparator,Fully nested selection,BLCA,R1:F2,0.8181061804012623
+R2_controls,comparator,Fully nested selection,BLCA,R1:F1,0.8202244786803609
+R2_controls,comparator,Fully nested selection,BLCA,R2:F1,0.885214442641635
+R2_controls,comparator,Fully nested selection,BLCA,R3:F1,0.6661992875169259
+R2_controls,comparator,Fully nested selection,BLCA,R3:F5,0.8406344708564366
+R2_controls,comparator,Fully nested selection,BLCA,R2:F4,0.9044108349139796
+R2_controls,comparator,Fully nested selection,BLCA,R1:F5,0.8555951845425529
+R2_controls,comparator,Fully nested selection,BLCA,R3:F2,0.8903470564736766
+R2_controls,comparator,Fully nested selection,BLCA,R1:F3,0.8494333370113637
+R2_controls,comparator,Fully nested selection,BLCA,R2:F2,0.7680224582501621
+R2_controls,comparator,Fully nested selection,BLCA,R2:F5,0.5758963152471307
+R2_controls,comparator,Fully nested selection,LGGGBM,R2:F3,0.6852694924123496
+R2_controls,comparator,Fully nested selection,LGGGBM,R1:F4,0.7912102888293363
+R2_controls,comparator,Fully nested selection,LGGGBM,R3:F3,0.7093859020821529
+R2_controls,comparator,Fully nested selection,LGGGBM,R3:F4,0.65545052472685
+R2_controls,comparator,Fully nested selection,LGGGBM,R1:F2,0.8219954648526077
+R2_controls,comparator,Fully nested selection,LGGGBM,R1:F1,0.8471268826387519
+R2_controls,comparator,Fully nested selection,LGGGBM,R2:F1,0.7357801618671184
+R2_controls,comparator,Fully nested selection,LGGGBM,R3:F1,0.7655792562655972
+R2_controls,comparator,Fully nested selection,LGGGBM,R3:F5,0.7175823322896699
+R2_controls,comparator,Fully nested selection,LGGGBM,R2:F4,0.7176054136288331
+R2_controls,comparator,Fully nested selection,LGGGBM,R1:F5,0.7635569985569985
+R2_controls,comparator,Fully nested selection,LGGGBM,R3:F2,0.8232880420072538
+R2_controls,comparator,Fully nested selection,LGGGBM,R1:F3,0.7602797147227686
+R2_controls,comparator,Fully nested selection,LGGGBM,R2:F2,0.8016901340644236
+R2_controls,comparator,Fully nested selection,LGGGBM,R2:F5,0.8032222017105882
+R2_controls,comparator,Fully nested selection,BRCA,R2:F3,0.880860878536566
+R2_controls,comparator,Fully nested selection,BRCA,R1:F4,0.8935384486244535
+R2_controls,comparator,Fully nested selection,BRCA,R3:F3,0.9263434119821844
+R2_controls,comparator,Fully nested selection,BRCA,R3:F4,0.9285699557409358
+R2_controls,comparator,Fully nested selection,BRCA,R1:F2,0.931418698048006
+R2_controls,comparator,Fully nested selection,BRCA,R1:F1,0.9127854942421006
+R2_controls,comparator,Fully nested selection,BRCA,R2:F1,0.9344155075966268
+R2_controls,comparator,Fully nested selection,BRCA,R3:F1,0.9107936250818188
+R2_controls,comparator,Fully nested selection,BRCA,R3:F5,0.9172634040005871
+R2_controls,comparator,Fully nested selection,BRCA,R2:F4,0.8705987203709715
+R2_controls,comparator,Fully nested selection,BRCA,R1:F5,0.9514699114804688
+R2_controls,comparator,Fully nested selection,BRCA,R3:F2,0.9255440098939708
+R2_controls,comparator,Fully nested selection,BRCA,R1:F3,0.9193869953570748
+R2_controls,comparator,Fully nested selection,BRCA,R2:F2,0.9522024288781537
+R2_controls,comparator,Fully nested selection,BRCA,R2:F5,0.9548984468339308
+R2_controls,comparator,Fully nested selection,SKCM,R2:F3,0.7592972464570927
+R2_controls,comparator,Fully nested selection,SKCM,R1:F4,0.63243006993007
+R2_controls,comparator,Fully nested selection,SKCM,R3:F3,0.6821478431234529
+R2_controls,comparator,Fully nested selection,SKCM,R3:F4,0.6652298850574713
+R2_controls,comparator,Fully nested selection,SKCM,R1:F2,0.6216042780748663
+R2_controls,comparator,Fully nested selection,SKCM,R1:F1,0.6871862963464308
+R2_controls,comparator,Fully nested selection,SKCM,R2:F1,0.6671518137035377
+R2_controls,comparator,Fully nested selection,SKCM,R3:F1,0.6143438697318008
+R2_controls,comparator,Fully nested selection,SKCM,R3:F5,0.659717868338558
+R2_controls,comparator,Fully nested selection,SKCM,R2:F4,0.6018618881118881
+R2_controls,comparator,Fully nested selection,SKCM,R1:F5,0.7000686813186814
+R2_controls,comparator,Fully nested selection,SKCM,R3:F2,0.6602979122683557
+R2_controls,comparator,Fully nested selection,SKCM,R1:F3,0.6392317760004884
+R2_controls,comparator,Fully nested selection,SKCM,R2:F2,0.6154647505945696
+R2_controls,comparator,Fully nested selection,SKCM,R2:F5,0.6616318081484793
+R2_controls,comparator,Fully nested selection,COADREAD,R2:F3,0.7699708953946242
+R2_controls,comparator,Fully nested selection,COADREAD,R1:F4,0.7168656936458793
+R2_controls,comparator,Fully nested selection,COADREAD,R3:F3,0.7092619466094482
+R2_controls,comparator,Fully nested selection,COADREAD,R3:F4,0.7256775496541579
+R2_controls,comparator,Fully nested selection,COADREAD,R1:F2,0.7592426730357765
+R2_controls,comparator,Fully nested selection,COADREAD,R1:F1,0.794861320596615
+R2_controls,comparator,Fully nested selection,COADREAD,R2:F1,0.7467178046125414
+R2_controls,comparator,Fully nested selection,COADREAD,R3:F1,0.7474698236432329
+R2_controls,comparator,Fully nested selection,COADREAD,R3:F5,0.7580454403983817
+R2_controls,comparator,Fully nested selection,COADREAD,R2:F4,0.8142642642642643
+R2_controls,comparator,Fully nested selection,COADREAD,R1:F5,0.6983734436492838
+R2_controls,comparator,Fully nested selection,COADREAD,R3:F2,0.6856661856661858
+R2_controls,comparator,Fully nested selection,COADREAD,R1:F3,0.7458381096645651
+R2_controls,comparator,Fully nested selection,COADREAD,R2:F2,0.7711827267382821
+R2_controls,comparator,Fully nested selection,COADREAD,R2:F5,0.670546398046398
+R2_controls,comparator,Fully nested selection,LUAD,R2:F3,0.921003212255992
+R2_controls,comparator,Fully nested selection,LUAD,R1:F4,0.889396485867074
+R2_controls,comparator,Fully nested selection,LUAD,R3:F3,0.7962341360632748
+R2_controls,comparator,Fully nested selection,LUAD,R3:F4,0.8997624983798044
+R2_controls,comparator,Fully nested selection,LUAD,R1:F2,0.8123266009439067
+R2_controls,comparator,Fully nested selection,LUAD,R1:F1,0.872358283419579
+R2_controls,comparator,Fully nested selection,LUAD,R2:F1,0.752960276984981
+R2_controls,comparator,Fully nested selection,LUAD,R3:F1,0.8033776301218161
+R2_controls,comparator,Fully nested selection,LUAD,R3:F5,0.8785730788780557
+R2_controls,comparator,Fully nested selection,LUAD,R2:F4,0.9040705765185386
+R2_controls,comparator,Fully nested selection,LUAD,R1:F5,0.8439872738732215
+R2_controls,comparator,Fully nested selection,LUAD,R3:F2,0.8493889759964469
+R2_controls,comparator,Fully nested selection,LUAD,R1:F3,0.8487837837837839
+R2_controls,comparator,Fully nested selection,LUAD,R2:F2,0.788745568157333
+R2_controls,comparator,Fully nested selection,LUAD,R2:F5,0.8879237304424711
+R2_controls,comparator,Fully nested selection,LUSC,R2:F3,0.8501338313103018
+R2_controls,comparator,Fully nested selection,LUSC,R1:F4,0.7243823743354406
+R2_controls,comparator,Fully nested selection,LUSC,R3:F3,0.8423844401404009
+R2_controls,comparator,Fully nested selection,LUSC,R3:F4,0.8965151515151515
+R2_controls,comparator,Fully nested selection,LUSC,R1:F2,0.9177796217269902
+R2_controls,comparator,Fully nested selection,LUSC,R1:F1,0.8500632907433322
+R2_controls,comparator,Fully nested selection,LUSC,R2:F1,0.8280180861367872
+R2_controls,comparator,Fully nested selection,LUSC,R3:F1,0.7623506069094305
+R2_controls,comparator,Fully nested selection,LUSC,R3:F5,0.8756897203325774
+R2_controls,comparator,Fully nested selection,LUSC,R2:F4,0.8988332150080388
+R2_controls,comparator,Fully nested selection,LUSC,R1:F5,0.905310874979728
+R2_controls,comparator,Fully nested selection,LUSC,R3:F2,0.8760421872599862
+R2_controls,comparator,Fully nested selection,LUSC,R1:F3,0.8218535277358806
+R2_controls,comparator,Fully nested selection,LUSC,R2:F2,0.8933630148756199
+R2_controls,comparator,Fully nested selection,LUSC,R2:F5,0.7788359788359788
+R2_controls,comparator,Fully nested selection,HNSC,R2:F3,0.9062658369109984
+R2_controls,comparator,Fully nested selection,HNSC,R1:F4,0.9394304277480028
+R2_controls,comparator,Fully nested selection,HNSC,R3:F3,0.8677441077441077
+R2_controls,comparator,Fully nested selection,HNSC,R3:F4,0.8458651262936726
+R2_controls,comparator,Fully nested selection,HNSC,R1:F2,0.8683516483516482
+R2_controls,comparator,Fully nested selection,HNSC,R1:F1,0.9056401292441336
+R2_controls,comparator,Fully nested selection,HNSC,R2:F1,0.8678410057357426
+R2_controls,comparator,Fully nested selection,HNSC,R3:F1,0.9612408350573168
+R2_controls,comparator,Fully nested selection,HNSC,R3:F5,0.9310501211979044
+R2_controls,comparator,Fully nested selection,HNSC,R2:F4,0.9024285323525534
+R2_controls,comparator,Fully nested selection,HNSC,R1:F5,0.8978745614785659
+R2_controls,comparator,Fully nested selection,HNSC,R3:F2,0.955791418200674
+R2_controls,comparator,Fully nested selection,HNSC,R1:F3,0.9110774419636832
+R2_controls,comparator,Fully nested selection,HNSC,R2:F2,0.9307025631569242
+R2_controls,comparator,Fully nested selection,HNSC,R2:F5,0.9304861467133272
+R2_controls,comparator,Fully nested selection,THCA,R2:F3,0.8022621497327679
+R2_controls,comparator,Fully nested selection,THCA,R1:F4,0.8191798019249547
+R2_controls,comparator,Fully nested selection,THCA,R3:F3,0.6886407939039518
+R2_controls,comparator,Fully nested selection,THCA,R3:F4,0.8281169071402146
+R2_controls,comparator,Fully nested selection,THCA,R1:F2,0.7349170437405732
+R2_controls,comparator,Fully nested selection,THCA,R1:F1,0.8206673973937401
+R2_controls,comparator,Fully nested selection,THCA,R2:F1,0.7406975907946783
+R2_controls,comparator,Fully nested selection,THCA,R3:F1,0.7869523190507142
+R2_controls,comparator,Fully nested selection,THCA,R3:F5,0.7006702382567024
+R2_controls,comparator,Fully nested selection,THCA,R2:F4,0.7232323232323233
+R2_controls,comparator,Fully nested selection,THCA,R1:F5,0.7776815776815776
+R2_controls,comparator,Fully nested selection,THCA,R3:F2,0.8054867667543725
+R2_controls,comparator,Fully nested selection,THCA,R1:F3,0.7656679494227597
+R2_controls,comparator,Fully nested selection,THCA,R2:F2,0.7072649572649573
+R2_controls,comparator,Fully nested selection,THCA,R2:F5,0.7918186843559978
+R2_controls,comparator,Fully nested selection,KIRCKICH,R2:F3,0.97746192893401
+R2_controls,comparator,Fully nested selection,KIRCKICH,R1:F4,0.9272449202534412
+R2_controls,comparator,Fully nested selection,KIRCKICH,R3:F3,0.9532828282828284
+R2_controls,comparator,Fully nested selection,KIRCKICH,R3:F4,1.0
+R2_controls,comparator,Fully nested selection,KIRCKICH,R1:F2,0.9789173789173788
+R2_controls,comparator,Fully nested selection,KIRCKICH,R1:F1,0.8775510204081632
+R2_controls,comparator,Fully nested selection,KIRCKICH,R2:F1,0.9533333333333334
+R2_controls,comparator,Fully nested selection,KIRCKICH,R3:F1,0.9591836734693876
+R2_controls,comparator,Fully nested selection,KIRCKICH,R3:F5,0.8873096446700508
+R2_controls,comparator,Fully nested selection,KIRCKICH,R2:F4,0.97746192893401
+R2_controls,comparator,Fully nested selection,KIRCKICH,R1:F5,0.956436420722135
+R2_controls,comparator,Fully nested selection,KIRCKICH,R3:F2,0.956436420722135
+R2_controls,comparator,Fully nested selection,KIRCKICH,R1:F3,0.956436420722135
+R2_controls,comparator,Fully nested selection,KIRCKICH,R2:F2,0.91287284144427
+R2_controls,comparator,Fully nested selection,KIRCKICH,R2:F5,0.9182621502209132
+R2_controls,comparator,Fully nested selection,UCEC,R2:F3,0.8630107526881721
+R2_controls,comparator,Fully nested selection,UCEC,R1:F4,0.7987804060935474
+R2_controls,comparator,Fully nested selection,UCEC,R3:F3,0.8087534854452147
+R2_controls,comparator,Fully nested selection,UCEC,R3:F4,0.8442201518288475
+R2_controls,comparator,Fully nested selection,UCEC,R1:F2,0.834348229776621
+R2_controls,comparator,Fully nested selection,UCEC,R1:F1,0.7593184196340806
+R2_controls,comparator,Fully nested selection,UCEC,R2:F1,0.8853234626154829
+R2_controls,comparator,Fully nested selection,UCEC,R3:F1,0.8062234365513054
+R2_controls,comparator,Fully nested selection,UCEC,R3:F5,0.8332233829766724
+R2_controls,comparator,Fully nested selection,UCEC,R2:F4,0.8082484948002189
+R2_controls,comparator,Fully nested selection,UCEC,R1:F5,0.8591912276307367
+R2_controls,comparator,Fully nested selection,UCEC,R3:F2,0.7993691493691494
+R2_controls,comparator,Fully nested selection,UCEC,R1:F3,0.816491034564208
+R2_controls,comparator,Fully nested selection,UCEC,R2:F2,0.7475503663003663
+R2_controls,comparator,Fully nested selection,UCEC,R2:F5,0.7930242272347535
+R2_controls,comparator,Fully nested selection,GEA,R2:F3,0.6902059985457536
+R2_controls,comparator,Fully nested selection,GEA,R1:F4,0.7411780543703069
+R2_controls,comparator,Fully nested selection,GEA,R3:F3,0.7951318989134115
+R2_controls,comparator,Fully nested selection,GEA,R3:F4,0.7802204798003117
+R2_controls,comparator,Fully nested selection,GEA,R1:F2,0.6300135969507166
+R2_controls,comparator,Fully nested selection,GEA,R1:F1,0.6697159982874269
+R2_controls,comparator,Fully nested selection,GEA,R2:F1,0.7849080109650892
+R2_controls,comparator,Fully nested selection,GEA,R3:F1,0.6809509231168219
+R2_controls,comparator,Fully nested selection,GEA,R3:F5,0.69009879009879
+R2_controls,comparator,Fully nested selection,GEA,R2:F4,0.6861620405738051
+R2_controls,comparator,Fully nested selection,GEA,R1:F5,0.6212890604752612
+R2_controls,comparator,Fully nested selection,GEA,R3:F2,0.6136523517568435
+R2_controls,comparator,Fully nested selection,GEA,R1:F3,0.7585059781488352
+R2_controls,comparator,Fully nested selection,GEA,R2:F2,0.7164814327074817
+R2_controls,comparator,Fully nested selection,GEA,R2:F5,0.6962894248608534

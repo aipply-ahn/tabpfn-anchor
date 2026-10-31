@@ -12,7 +12,8 @@ compared with each comparator through the 12 paired cohort means:
     the 12 cohorts (10,000 resamples, seed 20261007, cohorts in alphabetical order).
 
 Confirmatory families: F1_highdim_tabpfn, F2_general, F3_same_stack,
-F4_same_backbone (rows marked "descriptive" excluded) and REC_recurrence.
+F4_same_backbone (rows marked "descriptive" excluded), REC_recurrence and
+R2_controls.
 ABL_* and SIG_* are descriptive: effect sizes and intervals only.
 
     python aggregate_stats.py            # needs numpy, pandas, scipy

@@ -25,6 +25,8 @@ Families in `split_level_macroF1.csv`:
 | `R2_controls` | Table 5 | 12 cohorts x 15 |
 | `SIG_selector_x_classifier[...]` | Fig. 3A and Supplementary Table S9 (descriptive) | 12 cohorts x 15 |
 
+The 15-split analyses were run on the primary analysis server (NVIDIA Tesla V100) and the TabPFN-Anchor runs of `F1_highdim_tabpfn` on an auxiliary server (NVIDIA GeForce RTX 3090). For the 180 splits shared by the two executions, `F1_highdim_tabpfn` holds the values of the primary server.
+
 To reproduce the reported statistics (requires numpy, pandas and scipy):
 
 ```bash

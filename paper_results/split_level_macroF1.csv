@@ -58,7 +58,7 @@ F1_highdim_tabpfn,reference,TabPFN-Anchor,BRCA,R1:F1,0.9089233347297864
 F1_highdim_tabpfn,reference,TabPFN-Anchor,BRCA,R1:F2,0.9330171635049684
 F1_highdim_tabpfn,reference,TabPFN-Anchor,BRCA,R1:F3,0.9232153732988492
 F1_highdim_tabpfn,reference,TabPFN-Anchor,BRCA,R1:F4,0.8820105909336212
-F1_highdim_tabpfn,reference,TabPFN-Anchor,BRCA,R1:F5,0.943627450980392
+F1_highdim_tabpfn,reference,TabPFN-Anchor,BRCA,R1:F5,0.9475221768031143
 F1_highdim_tabpfn,reference,TabPFN-Anchor,BRCA,R2:F1,0.9361118746564046
 F1_highdim_tabpfn,reference,TabPFN-Anchor,BRCA,R2:F2,0.9430964870093697
 F1_highdim_tabpfn,reference,TabPFN-Anchor,BRCA,R2:F3,0.880860878536566
@@ -161,7 +161,7 @@ F1_highdim_tabpfn,reference,TabPFN-Anchor,GEA,R1:F4,0.7512817322050773
 F1_highdim_tabpfn,reference,TabPFN-Anchor,GEA,R1:F5,0.609856477614107
 F1_highdim_tabpfn,reference,TabPFN-Anchor,GEA,R2:F1,0.7625590667570618
 F1_highdim_tabpfn,reference,TabPFN-Anchor,GEA,R2:F2,0.7272393959424035
-F1_highdim_tabpfn,reference,TabPFN-Anchor,GEA,R2:F3,0.6798343678042926
+F1_highdim_tabpfn,reference,TabPFN-Anchor,GEA,R2:F3,0.6818165961023104
 F1_highdim_tabpfn,reference,TabPFN-Anchor,GEA,R2:F4,0.6861620405738051
 F1_highdim_tabpfn,reference,TabPFN-Anchor,GEA,R2:F5,0.7689992176207714
 F1_highdim_tabpfn,reference,TabPFN-Anchor,GEA,R3:F1,0.6925094329229668
@@ -213,7 +213,7 @@ F1_highdim_tabpfn,reference,TabPFN-Anchor,HNSC,R2:F1,0.8678410057357426
 F1_highdim_tabpfn,reference,TabPFN-Anchor,HNSC,R2:F2,0.9307025631569242
 F1_highdim_tabpfn,reference,TabPFN-Anchor,HNSC,R2:F3,0.9220781285487168
 F1_highdim_tabpfn,reference,TabPFN-Anchor,HNSC,R2:F4,0.9014630547222316
-F1_highdim_tabpfn,reference,TabPFN-Anchor,HNSC,R2:F5,0.9199226902118228
+F1_highdim_tabpfn,reference,TabPFN-Anchor,HNSC,R2:F5,0.9097881324099222
 F1_highdim_tabpfn,reference,TabPFN-Anchor,HNSC,R3:F1,0.9612408350573168
 F1_highdim_tabpfn,reference,TabPFN-Anchor,HNSC,R3:F2,0.9534930586654724
 F1_highdim_tabpfn,reference,TabPFN-Anchor,HNSC,R3:F3,0.8786498850358884
@@ -307,7 +307,7 @@ F1_highdim_tabpfn,reference,TabPFN-Anchor,LGGGBM,R10:F5,0.7238335377765662
 F1_highdim_tabpfn,reference,TabPFN-Anchor,LGGGBM,R1:F1,0.8389679369015365
 F1_highdim_tabpfn,reference,TabPFN-Anchor,LGGGBM,R1:F2,0.82298766661136
 F1_highdim_tabpfn,reference,TabPFN-Anchor,LGGGBM,R1:F3,0.737462131029672
-F1_highdim_tabpfn,reference,TabPFN-Anchor,LGGGBM,R1:F4,0.7912102888293363
+F1_highdim_tabpfn,reference,TabPFN-Anchor,LGGGBM,R1:F4,0.7871927558902349
 F1_highdim_tabpfn,reference,TabPFN-Anchor,LGGGBM,R1:F5,0.7460380529209034
 F1_highdim_tabpfn,reference,TabPFN-Anchor,LGGGBM,R2:F1,0.7237648898197435
 F1_highdim_tabpfn,reference,TabPFN-Anchor,LGGGBM,R2:F2,0.8008706436639679
@@ -454,7 +454,7 @@ F1_highdim_tabpfn,reference,TabPFN-Anchor,SKCM,R10:F2,0.6489601901366606
 F1_highdim_tabpfn,reference,TabPFN-Anchor,SKCM,R10:F3,0.6323340874811463
 F1_highdim_tabpfn,reference,TabPFN-Anchor,SKCM,R10:F4,0.6239066193853429
 F1_highdim_tabpfn,reference,TabPFN-Anchor,SKCM,R10:F5,0.6034667478714105
-F1_highdim_tabpfn,reference,TabPFN-Anchor,SKCM,R1:F1,0.5951167606971584
+F1_highdim_tabpfn,reference,TabPFN-Anchor,SKCM,R1:F1,0.6202233250620348
 F1_highdim_tabpfn,reference,TabPFN-Anchor,SKCM,R1:F2,0.6216042780748663
 F1_highdim_tabpfn,reference,TabPFN-Anchor,SKCM,R1:F3,0.6307263411693791
 F1_highdim_tabpfn,reference,TabPFN-Anchor,SKCM,R1:F4,0.6027532250358337
@@ -511,10 +511,10 @@ F1_highdim_tabpfn,reference,TabPFN-Anchor,THCA,R1:F4,0.8065864442317334
 F1_highdim_tabpfn,reference,TabPFN-Anchor,THCA,R1:F5,0.7614237614237614
 F1_highdim_tabpfn,reference,TabPFN-Anchor,THCA,R2:F1,0.7266964791717268
 F1_highdim_tabpfn,reference,TabPFN-Anchor,THCA,R2:F2,0.6933587887083799
-F1_highdim_tabpfn,reference,TabPFN-Anchor,THCA,R2:F3,0.7937857024014198
+F1_highdim_tabpfn,reference,TabPFN-Anchor,THCA,R2:F3,0.800807574491785
 F1_highdim_tabpfn,reference,TabPFN-Anchor,THCA,R2:F4,0.7326126377458501
 F1_highdim_tabpfn,reference,TabPFN-Anchor,THCA,R2:F5,0.7967819062291207
-F1_highdim_tabpfn,reference,TabPFN-Anchor,THCA,R3:F1,0.7724172719935432
+F1_highdim_tabpfn,reference,TabPFN-Anchor,THCA,R3:F1,0.7797619047619048
 F1_highdim_tabpfn,reference,TabPFN-Anchor,THCA,R3:F2,0.7844197138314785
 F1_highdim_tabpfn,reference,TabPFN-Anchor,THCA,R3:F3,0.6886407939039518
 F1_highdim_tabpfn,reference,TabPFN-Anchor,THCA,R3:F4,0.7972855023129964

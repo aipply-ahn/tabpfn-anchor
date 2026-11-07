@@ -13,6 +13,8 @@ Paper: <i>IEEE Access</i>, 2026 (accepted) · <a href="#citation">citation</a></
 
 ## Installation
 
+### Package installation
+
 Python 3.12+ · NVIDIA GPU recommended
 
 ```bash
@@ -21,13 +23,15 @@ cd tabpfn-anchor
 pip install -e .
 ```
 
-### TabPFN-3 checkpoint
+### TabPFN-3 checkpoint installation
+
+TabPFN-Anchor runs on a frozen TabPFN-3 backbone. By default it loads the multiclass
+checkpoint used in the paper, `tabpfn-v3-classifier-v3_20260417_multiclass.ckpt`.
 
 [Model access](https://huggingface.co/Prior-Labs/tabpfn_3) · [Setup guide](docs/installation.md)
 
-Sign in with Prior Labs and accept the licence once. The checkpoint then downloads automatically on the first run.
-
-Already downloaded the file? Put it in place:
+- **Automatic** — sign in with Prior Labs and accept the licence once; the checkpoint downloads on the first run.
+- **Manual** — if you downloaded the file yourself, put it in place:
 
 ```bash
 tabpfn-anchor checkpoint --install /path/to/tabpfn-v3-classifier-v3_20260417_multiclass.ckpt
@@ -104,29 +108,39 @@ tabpfn-anchor download-tcga --cohort UCEC --data-dir ./data
 tabpfn-anchor tcga-example  --cohort UCEC --repeat 1 --fold 1 --data-dir ./data
 ```
 
-## Execution
+## Parameters
 
-### What runs, by number of features
+### Feature selection — `mode`
 
-| Input features | Model | Feature ranking | Views |
+- `"auto"` (default) — chooses the route by the number of input features (table below)
+- `"anchor"` — always the anchor ensemble (nine views need ≥ 3,700 features)
+- `"tabpfn"` — always native TabPFN-3, no feature selection
+
+| Input features | `mode="auto"` runs | Feature ranking | Views |
 |---|---|---|---|
-| ≤ 500 | native TabPFN-3 | — | — |
-| 501 – 2,000 | native TabPFN-3 | — | — |
+| ≤ 2,000 | native TabPFN-3 | — | — |
 | 2,001 – 5,000 | TabPFN-Anchor | Random Forest → OddSHAP | 4 – 9 |
 | > 5,000 | TabPFN-Anchor | ANOVA-*F* → Random Forest → OddSHAP | 9 |
 
-**Up to 2,000 features**, the default `mode="auto"` runs native TabPFN-3.
-Use `mode="anchor"` to run the anchor ensemble instead.
+### Preprocessing — `preprocessing`
 
-### Input preprocessing
-
-- `rnaseq` — log₂(x + 1), for non-negative values; no library-size normalisation
-- `microarray` — values used as given
-- `none` — values used as given (default)
+- `"rnaseq"` — log₂(x + 1), for non-negative values; no library-size normalisation
+- `"microarray"` — values used as given
+- `"none"` (default) — values used as given
 
 Applied in both `fit` and `predict`.
 
-More options: [configuration](docs/configuration.md) · [examples](docs/examples.md)
+### Others
+
+| Parameter | Default | Controls |
+|---|---|---|
+| `stack_size` | 9 | number of views |
+| `n_anchor` · `n_residual` | 100 · 400 | anchors and view-specific features per view (sum = 500) |
+| `n_stage1` · `n_stage2` | 2000 · 500 | features kept by the ANOVA-*F* and Random Forest stages |
+| `anchor_source` | `"shap"` | `"rf"` skips OddSHAP (faster) |
+| `device` | `"auto"` | set one GPU, e.g. `"cuda:0"` |
+
+All parameters: [configuration](docs/configuration.md) · worked examples: [examples](docs/examples.md)
 
 ## Documentation
 

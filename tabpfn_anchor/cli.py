@@ -3,8 +3,9 @@
 
     tabpfn-anchor download-tcga     fetch and verify the official release
     tabpfn-anchor tcga-example      one official split of one real cohort
+    tabpfn-anchor checkpoint        locate or install the TabPFN-3 checkpoint
 
-Both work on the data the paper used, which you download yourself; nothing is
+The first two work on the data the paper used, which you download yourself; nothing is
 redistributed by this repository.
 
 **Neither reproduces the reported results.** `tcga-example` is a single outer
@@ -160,6 +161,38 @@ def cmd_tcga_example(a: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_checkpoint(a: argparse.Namespace) -> int:
+    """Show where the TabPFN-3 checkpoint is looked for, or install a downloaded copy.
+
+    The checkpoint is gated: downloading it needs a Prior Labs sign-in and licence
+    acceptance. If you downloaded the file yourself, `--install` copies it to the
+    location the estimator reads ($TABPFN_MODEL_CACHE_DIR, else ~/.cache/tabpfn).
+    """
+    import shutil
+    from .estimator import TabPFNAnchorClassifier
+
+    name = TabPFNAnchorClassifier().get_params()["tabpfn_model_path"]
+    target = Path(TabPFNAnchorClassifier._resolve_ckpt(name))
+    if a.install is not None:
+        src = Path(a.install).expanduser()
+        if not src.is_file():
+            raise SystemExit(f"not a file: {src}")
+        if src.name != name:
+            raise SystemExit(f"expected a file named {name}, got {src.name}")
+        if src.resolve() != target.resolve():
+            shutil.copy2(src, target)
+        print(f"installed     {target}")
+    print(f"checkpoint    {name}")
+    print(f"location      {target}")
+    print(f"status        {'present' if target.is_file() else 'missing'}")
+    if not target.is_file():
+        print("\nTo get it: run any example and sign in with Prior Labs when asked, or\n"
+              "download it from https://huggingface.co/Prior-Labs/tabpfn_3 after\n"
+              "accepting the licence, then:\n"
+              f"    tabpfn-anchor checkpoint --install /path/to/{name}")
+    return 0
+
+
 def main(argv=None) -> int:
     p = argparse.ArgumentParser(prog="tabpfn-anchor", description=__doc__)
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -186,6 +219,13 @@ def main(argv=None) -> int:
     t.add_argument("--seed", type=int, default=42)
     t.add_argument("-v", "--verbose", action="store_true")
     t.set_defaults(func=cmd_tcga_example)
+
+    c = sub.add_parser("checkpoint",
+                       help="show where the TabPFN-3 checkpoint is expected, or "
+                            "install a downloaded copy there")
+    c.add_argument("--install", type=Path, default=None, metavar="FILE",
+                   help="copy a downloaded checkpoint file into place")
+    c.set_defaults(func=cmd_checkpoint)
 
     a = p.parse_args(argv)
     return a.func(a)

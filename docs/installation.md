@@ -18,21 +18,30 @@ pip install -e .            # add ".[test]" to also install the test tools
 
 ## TabPFN-3 checkpoint
 
-1. Run any example. The `tabpfn` package opens a browser to sign in with Prior Labs.
-2. Accept the TabPFN-3 model licence.
-3. The checkpoint (~203 MB) downloads and is cached.
+The checkpoint is licence-gated: it does not download until you accept the
+Prior Labs licence. Choose one:
 
-**Headless machine (no browser):** accept the licence on the web first, then set
-`TABPFN_TOKEN` in the environment.
+| Option | Steps |
+|---|---|
+| Automatic | Run any example → sign in with Prior Labs in the browser → accept the licence → the file downloads |
+| Server, no browser | Accept the licence on the web → `export TABPFN_TOKEN=<your-token>` → run |
+| Manual | Download `tabpfn-v3-classifier-v3_20260417_multiclass.ckpt` from [huggingface.co/Prior-Labs/tabpfn_3](https://huggingface.co/Prior-Labs/tabpfn_3) → `tabpfn-anchor checkpoint --install /path/to/file.ckpt` |
 
-**Licence:** the TabPFN-3 weights are non-commercial.
-See [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md) and
-[github.com/PriorLabs/TabPFN](https://github.com/PriorLabs/TabPFN).
+```bash
+tabpfn-anchor checkpoint      # expected file name, location, present or missing
+```
+
+- **Location:** `$TABPFN_MODEL_CACHE_DIR` if set, otherwise `~/.cache/tabpfn/` (all platforms).
+- **Shared copy:** point `TABPFN_MODEL_CACHE_DIR` at a folder that already holds the file.
+- **Any path:** `TabPFNAnchorClassifier(tabpfn_model_path="/full/path/to/file.ckpt")`.
+- **Licence:** non-commercial. See [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md) and
+  [github.com/PriorLabs/TabPFN](https://github.com/PriorLabs/TabPFN).
 
 ## Troubleshooting
 
 | Problem | Fix |
 |---|---|
+| Checkpoint not found / licence error | Run `tabpfn-anchor checkpoint`; install the file manually (above) |
 | Very slow on a multi-GPU machine | Pass one device: `TabPFNAnchorClassifier(device="cuda:0")` |
 | `anchor_features_` does not exist | Input has ≤ 2,000 features, so native TabPFN-3 ran. Use `mode="anchor"` |
 | Error with `mode="anchor"` on narrow input | Nine views need ≥ 3,700 features. Lower `stack_size` |

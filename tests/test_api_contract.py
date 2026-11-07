@@ -280,6 +280,27 @@ def test_preprocessing_survives_clone():
     assert TabPFNAnchorClassifier().get_params()["preprocessing"] == "none"
 
 
+def test_checkpoint_command_installs_into_the_cache_dir(tmp_path, monkeypatch):
+    from tabpfn_anchor import cli
+    cache = tmp_path / "cache"
+    monkeypatch.setenv("TABPFN_MODEL_CACHE_DIR", str(cache))
+    name = TabPFNAnchorClassifier().get_params()["tabpfn_model_path"]
+    src = tmp_path / "download" / name
+    src.parent.mkdir()
+    src.write_bytes(b"checkpoint")
+    assert cli.main(["checkpoint", "--install", str(src)]) == 0
+    assert (cache / name).read_bytes() == b"checkpoint"
+
+
+def test_checkpoint_command_rejects_a_wrongly_named_file(tmp_path, monkeypatch):
+    from tabpfn_anchor import cli
+    monkeypatch.setenv("TABPFN_MODEL_CACHE_DIR", str(tmp_path / "cache"))
+    wrong = tmp_path / "other.ckpt"
+    wrong.write_bytes(b"x")
+    with pytest.raises(SystemExit):
+        cli.main(["checkpoint", "--install", str(wrong)])
+
+
 def test_duplicate_feature_names_are_rejected():
     clf = TabPFNAnchorClassifier()
     X = pd.DataFrame(np.zeros((4, 3)), columns=["a", "b", "a"])
@@ -318,9 +339,9 @@ TOY = Path(__file__).resolve().parents[1] / "tabpfn_anchor/demo/sklearn_toy.py"
 
 
 def _readme_example() -> str:
-    """The first python block under the pasteable-example heading."""
+    """The first python block under the toy-data quick-start heading."""
     body = README.read_text(encoding="utf-8").split(
-        "### A complete example you can paste and run", 1)[1]
+        "### [1] Toy data", 1)[1]
     return body.split("```python", 1)[1].split("```", 1)[0].strip("\n")
 
 

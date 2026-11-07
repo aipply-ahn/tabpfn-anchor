@@ -245,15 +245,9 @@ class TabPFNAnchorClassifier(ClassifierMixin, BaseEstimator):
     def _resolve_ckpt(name):
         """Resolve a checkpoint name against the cache directory.
 
-        TabPFN treats a relative model_path as relative to the **current
-        working directory**, and downloads there if the file is missing. Run
-        the example from example/ and a 40 MB checkpoint appears inside
-        example/ -- a file that must never reach the repository.
-
-        When only a name is given, it is sent to TabPFN's own cache directory
-        instead. One copy is then downloaded no matter where the code runs, and
-        the working directory stays clean. A name containing a path separator
-        means the user chose the location, so it is used as given.
+        A bare file name is looked up in $TABPFN_MODEL_CACHE_DIR, or in
+        ~/.cache/tabpfn when that is unset, so one copy serves every working
+        directory. A name containing a path separator is used as given.
         """
         import os
         if os.sep in str(name) or os.path.isabs(str(name)):

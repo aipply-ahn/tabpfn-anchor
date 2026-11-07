@@ -341,7 +341,7 @@ TOY = Path(__file__).resolve().parents[1] / "tabpfn_anchor/demo/sklearn_toy.py"
 def _readme_example() -> str:
     """The first python block under the toy-data quick-start heading."""
     body = README.read_text(encoding="utf-8").split(
-        "### [1] Toy data", 1)[1]
+        "### 01 — Toy data", 1)[1]
     return body.split("```python", 1)[1].split("```", 1)[0].strip("\n")
 
 

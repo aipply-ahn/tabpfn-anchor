@@ -301,6 +301,26 @@ def test_checkpoint_command_rejects_a_wrongly_named_file(tmp_path, monkeypatch):
         cli.main(["checkpoint", "--install", str(wrong)])
 
 
+def test_check_command_reports_a_missing_checkpoint(tmp_path, monkeypatch, capsys):
+    from tabpfn_anchor import cli
+    monkeypatch.setenv("TABPFN_MODEL_CACHE_DIR", str(tmp_path / "empty"))
+    assert cli.main(["check", "--skip-run"]) == 1
+    out = capsys.readouterr().out
+    assert "[1/3] Package installation       OK" in out
+    assert "MISSING" in out
+
+
+def test_check_command_passes_when_the_checkpoint_is_present(tmp_path, monkeypatch, capsys):
+    from tabpfn_anchor import cli
+    cache = tmp_path / "cache"
+    cache.mkdir()
+    name = TabPFNAnchorClassifier().get_params()["tabpfn_model_path"]
+    (cache / name).write_bytes(b"x")
+    monkeypatch.setenv("TABPFN_MODEL_CACHE_DIR", str(cache))
+    assert cli.main(["check", "--skip-run"]) == 0
+    assert "installed and ready" in capsys.readouterr().out
+
+
 def test_duplicate_feature_names_are_rejected():
     clf = TabPFNAnchorClassifier()
     X = pd.DataFrame(np.zeros((4, 3)), columns=["a", "b", "a"])

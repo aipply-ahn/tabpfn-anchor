@@ -44,6 +44,24 @@ tabpfn-anchor checkpoint      # check: expected location and status
 
 Model weights are under a non-commercial licence ([details](THIRD_PARTY_NOTICES.md)).
 
+### Installation test
+
+Once the package and the checkpoint are installed, run:
+
+```bash
+tabpfn-anchor check
+```
+
+Both installations are confirmed when you see:
+
+```text
+[1/3] Package installation       OK  (tabpfn-anchor 0.1.0, tabpfn 8.4.0)
+[2/3] Checkpoint installation    OK  (~/.cache/tabpfn/tabpfn-v3-classifier-v3_20260417_multiclass.ckpt)
+[3/3] Backbone test              OK  (TabPFN-3 loaded on cuda:0)
+
+TabPFN-Anchor is installed and ready.
+```
+
 ## Quick start
 
 ### 01 — Toy data

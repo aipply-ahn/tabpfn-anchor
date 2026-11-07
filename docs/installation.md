@@ -37,6 +37,19 @@ tabpfn-anchor checkpoint      # expected file name, location, present or missing
 - **Licence:** non-commercial. See [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md) and
   [github.com/PriorLabs/TabPFN](https://github.com/PriorLabs/TabPFN).
 
+## Check the installation
+
+```bash
+tabpfn-anchor check              # package + checkpoint + a short TabPFN-3 run
+tabpfn-anchor check --skip-run   # files only, no GPU needed
+```
+
+| Line | Meaning |
+|---|---|
+| `[1/3] Package installation OK` | `tabpfn-anchor` and `tabpfn` are importable |
+| `[2/3] Checkpoint installation OK` | the TabPFN-3 checkpoint is in place (`MISSING` → install it first) |
+| `[3/3] Backbone test OK` | TabPFN-3 loaded and predicted on a small synthetic set |
+
 ## Troubleshooting
 
 | Problem | Fix |

@@ -4,6 +4,7 @@
     tabpfn-anchor download-tcga     fetch and verify the official release
     tabpfn-anchor tcga-example      one official split of one real cohort
     tabpfn-anchor checkpoint        locate or install the TabPFN-3 checkpoint
+    tabpfn-anchor check             verify the installation
 
 The first two work on the data the paper used, which you download yourself; nothing is
 redistributed by this repository.
@@ -193,6 +194,44 @@ def cmd_checkpoint(a: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_check(a: argparse.Namespace) -> int:
+    """Check the installation: package, TabPFN-3 checkpoint and a short backbone run."""
+    from importlib.metadata import PackageNotFoundError, version
+
+    def ver(pkg):
+        try:
+            return version(pkg)
+        except PackageNotFoundError:
+            return "source checkout"
+
+    from .estimator import TabPFNAnchorClassifier
+    print(f"[1/3] Package installation       OK  "
+          f"(tabpfn-anchor {ver('tabpfn-anchor')}, tabpfn {ver('tabpfn')})")
+
+    name = TabPFNAnchorClassifier().get_params()["tabpfn_model_path"]
+    path = Path(TabPFNAnchorClassifier._resolve_ckpt(name))
+    if not path.is_file():
+        print(f"[2/3] Checkpoint installation    MISSING  ({path})")
+        print("      Install it first: see 'TabPFN-3 checkpoint installation' in the README,\n"
+              "      or run  tabpfn-anchor checkpoint  for the expected location.")
+        return 1
+    print(f"[2/3] Checkpoint installation    OK  ({path})")
+
+    if a.skip_run:
+        print("[3/3] Backbone test              skipped")
+    else:
+        import numpy as np
+        rng = np.random.default_rng(0)
+        X = rng.normal(size=(60, 10)).astype(np.float32)
+        y = (X[:, 0] > 0).astype(int)
+        device = a.device or _pick_device()
+        clf = TabPFNAnchorClassifier(mode="tabpfn", device=device).fit(X, y)
+        clf.predict_proba(X[:5])
+        print(f"[3/3] Backbone test              OK  (TabPFN-3 loaded on {device})")
+    print("\nTabPFN-Anchor is installed and ready.")
+    return 0
+
+
 def main(argv=None) -> int:
     p = argparse.ArgumentParser(prog="tabpfn-anchor", description=__doc__)
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -226,6 +265,13 @@ def main(argv=None) -> int:
     c.add_argument("--install", type=Path, default=None, metavar="FILE",
                    help="copy a downloaded checkpoint file into place")
     c.set_defaults(func=cmd_checkpoint)
+
+    k = sub.add_parser("check",
+                       help="check the package, the TabPFN-3 checkpoint and a short backbone run")
+    k.add_argument("--device", default=None, help='e.g. "cuda:0" or "cpu"')
+    k.add_argument("--skip-run", action="store_true",
+                   help="check files only, without loading the backbone")
+    k.set_defaults(func=cmd_check)
 
     a = p.parse_args(argv)
     return a.func(a)

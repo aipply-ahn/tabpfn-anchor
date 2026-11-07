@@ -1,20 +1,28 @@
 # TabPFN-Anchor
 
-TabPFN-Anchor is a scikit-learn-compatible classifier for high-dimensional
-tabular data, such as gene-expression profiles with about 20,000 features. It
-lets a frozen TabPFN backbone use far more features than one TabPFN estimator
-takes at once (500 for the TabPFN-3 checkpoint used here):
+**Anchor-based TabPFN for high-dimensional tabular classification,
+with an application to cancer-subtype classification from gene-expression data.**
 
-1. **Anchor-gene selection.** A cascaded ranking (one-way ANOVA *F* →
+TabPFN is a pretrained tabular foundation model that works well on small
+datasets, but each of its estimators reads only a limited number of features
+(500 for the TabPFN-3 checkpoint used here). TabPFN-Anchor lets a frozen TabPFN
+backbone use inputs with thousands to tens of thousands of features:
+
+1. **Anchor selection.** A cascaded feature ranking (one-way ANOVA *F* →
    Random Forest importance → TabPFN-based OddSHAP attribution) orders the
    features and keeps the top 100 as *anchors*.
-2. **Stacked TabPFN ensemble.** Each of *K* = 9 views contains the anchors plus
-   a different block of 400 next-ranked features. A frozen TabPFN model is fitted
-   to each view, and a logistic-regression meta-learner stacks their
-   out-of-fold probabilities.
+2. **Stacked multi-view TabPFN ensemble.** Each of *K* = 9 views contains the
+   anchors plus a different block of 400 next-ranked features. A frozen TabPFN
+   model is fitted to each view, and a logistic-regression meta-learner stacks
+   their out-of-fold probabilities.
 
-You get a classifier you can drop into any scikit-learn benchmark, and a
-100-feature anchor signature you can report and evaluate on its own.
+The result is a scikit-learn classifier you can drop into any benchmark, plus a
+compact anchor feature set you can report and evaluate on its own. The method
+needs only a numeric feature matrix and class labels, so it can be applied to
+any high-dimensional, low-sample-size classification problem. It was developed
+and evaluated on cancer gene-expression data (12 TCGA cohorts, about 20,000
+genes each), where the anchors form a 100-gene signature; its behaviour on
+other kinds of data has not been evaluated.
 
 ![TabPFN-Anchor graphical abstract](docs/graphical_abstract.png)
 
@@ -115,26 +123,9 @@ features, 5 for 2,100–2,499, 6 for 2,500–2,899, 7 for 2,900–3,299, 8 for
 400 ranked features.
 
 **With 2,000 features or fewer, `mode="auto"` runs TabPFN-3 itself, not the
-anchor ensemble, and no anchor signature is produced.** Results from that path
-should not be reported as TabPFN-Anchor results. To fix the procedure
-regardless of input width, set `mode` explicitly:
-
-| `mode` | Behaviour |
-|---|---|
-| `"auto"` (default) | as in the table above |
-| `"anchor"` | always the full anchor ensemble; with the default nine views this needs at least 3,700 features, otherwise it raises an error (lower `stack_size` for narrower inputs) |
-| `"tabpfn"` | always TabPFN-3 directly |
-
-After fitting, the path that actually ran is recorded:
-
-```python
-clf.fit(X_train, y_train)
-clf.execution_plan_     # route, which ranking stages ran, number of views and folds
-clf.resolved_config_    # the full resolved configuration, including preprocessing
-```
-
-When comparing against other classifiers, report the number of input
-features, `mode`, `preprocessing` and the number of views alongside the score.
+anchor ensemble, and no anchor signature is produced.** Use `mode="anchor"` to
+always run the anchor ensemble, and check `clf.execution_plan_` after fitting to
+see which path ran (examples 4 and 5 in [docs/examples.md](docs/examples.md)).
 
 ## Using your own data
 
@@ -236,6 +227,13 @@ Step 1.3 accounts for most of the run time. What it buys is the anchor
 signature, which can be evaluated independently of the ensemble. On a
 TCGA-sized cohort the published configuration takes about eighteen minutes per
 outer split on one GPU.
+
+## More examples
+
+[docs/examples.md](docs/examples.md) has worked examples, each in a collapsible
+section: preprocessing options, adjusting the cascaded ranking and the number
+of anchors, changing the number of views *K*, execution modes, reading the
+anchor signature, cross-validated benchmarking and shorter run times.
 
 ## Paper configuration and results
 

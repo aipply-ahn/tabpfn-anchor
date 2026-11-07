@@ -1,18 +1,19 @@
-# Numerical results of the paper
+# Paper configuration and results
 
-These files hold the macro-F1 of every predictive comparison reported in the
-paper, at the level of one outer cross-validation split, together with the
-script that turns them into the reported statistics. They are results, not
-data: no expression value, sample identifier or cross-validation assignment is
-included.
+This folder holds what is needed to check the paper's reported numbers: the
+configuration that produced them, the macro-F1 of every predictive comparison at
+the level of one outer cross-validation split, and the script that turns them
+into the reported statistics. These are results, not data: no expression value,
+sample identifier or cross-validation assignment is included.
 
 | File | Content |
 |---|---|
-| `split_level_macroF1.csv` | One row per (family, method, cohort, outer split): macro-F1 on that outer test fold. Columns: `family`, `role` (`reference` or `comparator`), `method`, `cohort`, `split` (`R<repeat>:F<fold>`), `macro_f1`. |
+| `configs/tabpfn_anchor.yaml` | The TabPFN-Anchor configuration that produced the reported results. Its values equal the estimator defaults; `tabpfn-anchor tcga-example --paper-settings` reads it. |
+| `results/split_level_macroF1.csv` | One row per (family, method, cohort, outer split): macro-F1 on that outer test fold. Columns: `family`, `role` (`reference` or `comparator`), `method`, `cohort`, `split` (`R<repeat>:F<fold>`), `macro_f1`. |
 | `aggregate_stats.py` | Reads the file above, averages the splits of each cohort and, for every reference-comparator pair, computes the mean paired difference over the 12 cohorts, its 95% bootstrap interval (12 cohorts resampled, 10,000 resamples), the numbers of cohorts won and lost, the two-sided Wilcoxon signed-rank test (exact, or the normal approximation when a cohort difference is zero or tied) and the Holm correction within the family. |
-| `cohort_level_statistics.csv` | Output of `aggregate_stats.py`; the values reported in the paper. |
+| `results/cohort_level_statistics.csv` | Output of `aggregate_stats.py`; the values reported in the paper. |
 
-Families in `split_level_macroF1.csv`:
+Families in `results/split_level_macroF1.csv`:
 
 | Family | Reported in | Splits |
 |---|---|---|
@@ -30,9 +31,9 @@ The 15-split analyses were run on the primary analysis server (NVIDIA Tesla V100
 To reproduce the reported statistics (requires numpy, pandas and scipy):
 
 ```bash
-cd paper_results
+cd paper
 python aggregate_stats.py
 ```
 
-The script rewrites `cohort_level_statistics.csv`; the result is identical to
+The script rewrites `results/cohort_level_statistics.csv`; the result is identical to
 the file committed here.

@@ -152,9 +152,15 @@ always run the anchor ensemble, and check `clf.execution_plan_` after fitting.
   run times.
 - [docs/configuration.md](docs/configuration.md) — method, all main options,
   outputs, input requirements and tests.
-- [paper_results/](paper_results/) — the paper configuration
-  (`configs/tabpfn_anchor.yaml`), split-level results and the script that
-  reproduces the reported statistics.
+
+## Paper and reproducibility
+
+TabPFN-Anchor was evaluated on 12 TCGA cancer-subtype classification tasks
+comprising 6,537 tumours, against four other high-dimensional TabPFN
+configurations and 17 general classifiers. The configuration that produced the
+reported results, the macro-F1 of every comparison at the level of each outer
+split and the script that reproduces the reported statistics are in
+[paper/](paper/). See the paper for the full evaluation design.
 
 ## Citation
 

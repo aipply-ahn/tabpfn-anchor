@@ -10,7 +10,7 @@ TabPFN view models and out-of-fold probability stacking.
     clf.predict_proba(X_test)
 
 The defaults are the published configuration
-(paper_results/configs/tabpfn_anchor.yaml).
+(paper/configs/tabpfn_anchor.yaml).
 """
 
 from __future__ import annotations

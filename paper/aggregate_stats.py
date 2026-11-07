@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reproduce the reported cohort-level tests from split_level_macroF1.csv.
+"""Reproduce the reported cohort-level tests from results/split_level_macroF1.csv.
 
 Unit of inference: the cancer task (n = 12).  For each method, macro-F1 is
 averaged over all outer splits of a cohort.  Within a family, the reference is
@@ -24,6 +24,8 @@ import pandas as pd
 from scipy.stats import wilcoxon
 
 HERE = Path(__file__).resolve().parent
+# CSVs live in results/ next to this script in the public repository, and next to it here.
+DATA = HERE / "results" if (HERE / "results" / "split_level_macroF1.csv").is_file() else HERE
 B, SEED = 10_000, 20261007
 
 
@@ -35,7 +37,7 @@ def holm(p):
 
 
 def main():
-    d = pd.read_csv(HERE / "split_level_macroF1.csv")
+    d = pd.read_csv(DATA / "split_level_macroF1.csv")
     cm = d.groupby(["family", "role", "method", "cohort"]).macro_f1.mean().reset_index()
     out = []
     for fam, g in cm.groupby("family", sort=False):
@@ -62,7 +64,7 @@ def main():
         r.loc[~k, "p"] = np.nan
         out.append(r)
     out = pd.concat(out, ignore_index=True)
-    out.to_csv(HERE / "cohort_level_statistics.csv", index=False)
+    out.to_csv(DATA / "cohort_level_statistics.csv", index=False)
     pd.set_option("display.width", 220); pd.set_option("display.max_rows", 200)
     print(out.drop(columns="confirmatory").round(4).to_string(index=False))
 

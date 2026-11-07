@@ -91,11 +91,11 @@ The ranking attributes exist only when the anchor ensemble ran.
 
 ## Paper configuration and results
 
-- [`paper_results/configs/tabpfn_anchor.yaml`](../paper_results/configs/tabpfn_anchor.yaml)
+- [`paper/configs/tabpfn_anchor.yaml`](../paper/configs/tabpfn_anchor.yaml)
   is the configuration that produced the reported results. Its values equal the
   estimator defaults, and a test checks that they stay equal. The CLI option
   `--paper-settings` reads this file from a source checkout.
-- [`paper_results/`](../paper_results/) also holds the macro-F1 of every method
+- [`paper/`](../paper/) also holds the macro-F1 of every method
   in every predictive comparison of the paper and `aggregate_stats.py`, which
   reproduces the reported statistics. These files contain results only: no
   expression values, sample identifiers or split assignments.

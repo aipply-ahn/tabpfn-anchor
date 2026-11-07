@@ -106,7 +106,7 @@ correction, and produced the paper's tables and figures. There is no single
 command that reproduces the reported numbers.
 
 What is here is the method, the exact configuration it was run under
-(`paper_results/configs/tabpfn_anchor.yaml`, which is also the estimator's default),
+(`paper/configs/tabpfn_anchor.yaml`, which is also the estimator's default),
 and the provenance of the data. The splits used in the paper are the first
 three repeats for its 15-split analyses and the first ten for its 50-split
 analyses, taken from the assignment file above.

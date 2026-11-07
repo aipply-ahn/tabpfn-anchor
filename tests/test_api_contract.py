@@ -46,7 +46,7 @@ FAST = dict(mode="anchor",
             # visible GPU, which on a multi-GPU machine is far slower.
             device=_pick_device())
 
-PAPER_YAML = Path(__file__).resolve().parents[1] / "paper_results/configs/tabpfn_anchor.yaml"
+PAPER_YAML = Path(__file__).resolve().parents[1] / "paper/configs/tabpfn_anchor.yaml"
 
 
 def synthetic(n_features: int = 4000):

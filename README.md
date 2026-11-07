@@ -16,11 +16,12 @@ takes at once (500 for the TabPFN-3 checkpoint used here):
 You get a classifier you can drop into any scikit-learn benchmark, and a
 100-feature anchor signature you can report and evaluate on its own.
 
-This is the reference implementation of
+This is the reference implementation of the following paper, **accepted for
+publication in *IEEE Access* (2026)**:
 
 > H. Ahn, "TabPFN-Anchor: Anchor-Conditioned Ensemble Adaptation of a Tabular
 > Foundation Model for High-Dimensional Cancer Subtype Classification,"
-> *IEEE Access*, 2026 (accepted).
+> *IEEE Access*, 2026. Accepted for publication.
 
 ---
 
@@ -203,8 +204,22 @@ Tests that need the backbone checkpoint skip themselves when it is absent.
 
 ## Citation
 
-If you use TabPFN-Anchor, please cite the paper above; see
-[CITATION.cff](CITATION.cff).
+If you use TabPFN-Anchor, please cite the paper (accepted for publication in
+*IEEE Access*; volume, pages and DOI will be added on publication):
+
+```bibtex
+@article{ahn2026tabpfnanchor,
+  author  = {Ahn, Hongryul},
+  title   = {{TabPFN-Anchor}: Anchor-Conditioned Ensemble Adaptation of a
+             Tabular Foundation Model for High-Dimensional Cancer Subtype
+             Classification},
+  journal = {IEEE Access},
+  year    = {2026},
+  note    = {Accepted for publication}
+}
+```
+
+See also [CITATION.cff](CITATION.cff).
 
 ## License
 

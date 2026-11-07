@@ -1,12 +1,9 @@
 # -*- coding: utf-8 -*-
-"""STEP 1 -- anchor signature construction.
+"""Cascaded feature ranking for TabPFN-Anchor (Step 1).
 
-Three steps run in order, each using a model that can see a higher order of
-feature--label interaction than the one before it.
-
-    1.1  one-way ANOVA F statistic                      P     -> 2000   (marginal)
-    1.2  Random Forest feature importance (MDI)         2000  ->  500   (low-order N:1)
-    1.3  TabPFN + OddSHAP attribution                    500  ->  100   (high-order N:1)
+    1.1  one-way ANOVA F screening                       P     -> 2000
+    1.2  Random Forest feature-importance refinement     2000  ->  500
+    1.3  TabPFN-based OddSHAP attribution                 500  ->  100 anchors
 
 Every step returns global indices (0..P-1), so the caller carries indices only
 and never has to track a column-name mapping.

@@ -100,17 +100,35 @@ the classifier remembers the column names and refuses a differently ordered
 frame at prediction time.
 
 ```python
-import numpy as np
 import pandas as pd
+from sklearn.model_selection import train_test_split
+
+from tabpfn_anchor import TabPFNAnchorClassifier
 
 # Rows are samples, columns are genes, plus one column holding the label.
 df = pd.read_csv("expression.tsv", sep="\t", index_col=0)
 y = df["subtype"]
 X = df.drop(columns=["subtype"])
 
-# RNA-seq values usually need a log scale; skip this if X is already logged.
-X = np.log2(X + 1.0)
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.3, stratify=y, random_state=42)
+
+clf = TabPFNAnchorClassifier(device="cuda:0", preprocessing="rnaseq")
+clf.fit(X_train, y_train)
+pred = clf.predict(X_test)
 ```
+
+`preprocessing` is applied inside `fit` and `predict`, so training and test
+data always receive the same transformation:
+
+| `preprocessing` | Transformation | Use for |
+|---|---|---|
+| `"none"` (default) | none | data you have already preprocessed |
+| `"rnaseq"` | `log2(x + 1)`; negative values raise an error | non-negative RNA-seq expression values |
+| `"microarray"` | none | microarray data, usually already normalised and on a log scale |
+
+Do not apply `log2(x + 1)` yourself and also pass `preprocessing="rnaseq"`;
+that would transform the data twice.
 
 | Input | Requirement |
 |---|---|

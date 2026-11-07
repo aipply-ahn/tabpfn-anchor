@@ -107,6 +107,17 @@ class TabPFNAnchorClassifier(ClassifierMixin, BaseEstimator):
     shap_max_samples : int
         Upper bound on how many samples OddSHAP explains, which bounds the cost
         of the attribution step.
+    preprocessing : {"none", "rnaseq", "microarray"}, default="none"
+        Transformation applied to X inside fit and predict, so both see the
+        same representation.
+
+          "none"        use X as given (already preprocessed data)
+          "rnaseq"      log2(x + 1); X must be non-negative
+          "microarray"  use X as given (microarray values are usually already
+                        normalised and on a log scale)
+
+        The published runs applied log2(x + 1) to RNA-seq before calling the
+        estimator, so the paper configuration uses "none".
     """
 
     def __init__(self, n_stage1=2000, n_stage2=500, n_anchor=100, n_residual=400,
@@ -127,7 +138,7 @@ class TabPFNAnchorClassifier(ClassifierMixin, BaseEstimator):
                  # -- higher-level API, for humans -----------------------
                  mode="auto", n_views=None,
                  selection_kwargs=None, tabpfn_kwargs=None,
-                 shap_kwargs=None, meta_kwargs=None):
+                 shap_kwargs=None, meta_kwargs=None, preprocessing="none"):
         self.n_stage1 = n_stage1
         self.n_stage2 = n_stage2
         self.n_anchor = n_anchor
@@ -176,6 +187,7 @@ class TabPFNAnchorClassifier(ClassifierMixin, BaseEstimator):
         self.tabpfn_kwargs = tabpfn_kwargs
         self.shap_kwargs = shap_kwargs
         self.meta_kwargs = meta_kwargs
+        self.preprocessing = preprocessing
 
     # -- constructing TabPFN ------------------------------------------------
     def _make_tabpfn(self, n_estimators=None):
@@ -288,7 +300,7 @@ class TabPFNAnchorClassifier(ClassifierMixin, BaseEstimator):
             # Put source into **both** the cache name and the cache key.
             # Splitting only the name leaves the old keys alive; splitting only
             # the key overwrites one method's result under the other's name.
-            # Older lr_pi runs and newer anova_f runs must not mix even when
+            # Rankings from different Step 1.1 sources must not mix even when
             # they share a cache_dir.
             if src == "lr_pi":
                 kw = dict(n_keep=k1, n_repeats=self._cfg("pi_n_repeats"),
@@ -351,13 +363,8 @@ class TabPFNAnchorClassifier(ClassifierMixin, BaseEstimator):
             elif self._cfg("anchor_source") == "rf":
                 anchor_idx = F2[:k3]
             elif self._cfg("anchor_source") == "random":
-                # The control. Anchors are drawn at random from F2, the
-                # survivors of Step 1.2. Asking whether Step 1.3 contributes to
-                # performance means asking whether it matters what the anchors
-                # are. If random anchors perform the same, the SHAP step adds
-                # nothing to accuracy and only the interpretability claim
-                # remains -- and that claim does not hold either while the SHAP
-                # estimate varies from seed to seed.
+                # Random anchors drawn from the Step 1.2 candidates (F2), for
+                # sensitivity analyses of the anchor choice.
                 rs = np.random.RandomState(self.random_state)
                 anchor_idx = F2[rs.choice(len(F2), size=k3, replace=False)]
             else:
@@ -666,6 +673,23 @@ class TabPFNAnchorClassifier(ClassifierMixin, BaseEstimator):
         X = np.ascontiguousarray(np.asarray(X, dtype=np.float32))
         if not np.isfinite(X).all():
             raise ValueError("the input contains NaN or inf.")
+        return self._preprocess_X(X)
+
+    _PREPROCESSING = ("none", "rnaseq", "microarray")
+
+    def _preprocess_X(self, X):
+        """Apply the `preprocessing` option. Called for fit and predict alike."""
+        mode = self.preprocessing
+        if mode not in self._PREPROCESSING:
+            raise ValueError(
+                f"preprocessing must be one of {self._PREPROCESSING}: {mode!r}")
+        if mode == "rnaseq":
+            if (X < 0).any():
+                raise ValueError(
+                    'preprocessing="rnaseq" applies log2(x + 1) and needs '
+                    "non-negative values; the input has negative values. Use "
+                    '"microarray" or "none" for data already on a log scale.')
+            return np.ascontiguousarray(np.log2(X + 1.0, dtype=np.float32))
         return X
 
     def _plan(self, n_samples, n_features, y_enc, n_classes):
@@ -773,7 +797,7 @@ class TabPFNAnchorClassifier(ClassifierMixin, BaseEstimator):
         self.requested_n_views_, self.effective_n_views_ = req_k, int(eff_k)
         self.requested_oof_folds_, self.effective_oof_folds_ = req_j, int(eff_j)
         self.resolved_config_ = {
-            "mode": self.mode, "route": route,
+            "mode": self.mode, "route": route, "preprocessing": self.preprocessing,
             "selection": {"n_stage1": g("n_stage1"), "n_stage2": g("n_stage2"),
                           "n_anchor": g("n_anchor"), "n_residual": g("n_residual"),
                           "stage1_source": g("stage1_source"),

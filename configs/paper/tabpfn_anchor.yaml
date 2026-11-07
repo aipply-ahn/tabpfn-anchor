@@ -46,4 +46,9 @@ tabpfn_n_estimators: 8
 # the ten outer splits of one cohort whose smallest class has four members.
 mode: auto
 
+# Input transformation. The published runs applied log2(x + 1) to the RNA-seq
+# cohorts before calling the estimator and used microarray values as given, so
+# the estimator itself transformed nothing.
+preprocessing: none
+
 random_state: 42

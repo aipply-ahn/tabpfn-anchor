@@ -245,6 +245,41 @@ def test_view_blocks_keep_the_budget_and_share_the_anchors():
     assert used == 100 + 400 * 9 == 3700
 
 
+def test_preprocessing_none_and_microarray_leave_values_unchanged():
+    rng = np.random.default_rng(0)
+    X = rng.normal(size=(8, 5)).astype(np.float32)          # includes negatives
+    for mode in ("none", "microarray"):
+        clf = TabPFNAnchorClassifier(preprocessing=mode)
+        assert np.array_equal(clf._check_X(X, reset=True), X)
+
+
+def test_preprocessing_rnaseq_applies_log2p1_at_fit_and_predict():
+    rng = np.random.default_rng(0)
+    X = rng.uniform(0, 1000, size=(8, 5)).astype(np.float32)
+    clf = TabPFNAnchorClassifier(preprocessing="rnaseq")
+    expected = np.log2(X + 1.0).astype(np.float32)
+    assert np.allclose(clf._check_X(X, reset=True), expected)
+    assert np.allclose(clf._check_X(X, reset=False), expected)
+
+
+def test_preprocessing_rnaseq_rejects_negative_values():
+    X = np.array([[1.0, -0.5], [2.0, 3.0]], dtype=np.float32)
+    with pytest.raises(ValueError, match="non-negative"):
+        TabPFNAnchorClassifier(preprocessing="rnaseq")._check_X(X, reset=True)
+
+
+def test_unknown_preprocessing_is_rejected():
+    X = np.ones((4, 3), dtype=np.float32)
+    with pytest.raises(ValueError, match="preprocessing"):
+        TabPFNAnchorClassifier(preprocessing="log")._check_X(X, reset=True)
+
+
+def test_preprocessing_survives_clone():
+    clf = TabPFNAnchorClassifier(preprocessing="rnaseq")
+    assert clone(clf).get_params()["preprocessing"] == "rnaseq"
+    assert TabPFNAnchorClassifier().get_params()["preprocessing"] == "none"
+
+
 def test_duplicate_feature_names_are_rejected():
     clf = TabPFNAnchorClassifier()
     X = pd.DataFrame(np.zeros((4, 3)), columns=["a", "b", "a"])

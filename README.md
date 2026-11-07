@@ -27,15 +27,19 @@ pip install -e .
 
 TabPFN-Anchor runs on a frozen TabPFN-3 backbone. By default it loads the multiclass
 checkpoint used in the paper, `tabpfn-v3-classifier-v3_20260417_multiclass.ckpt`.
+The checkpoint can be obtained in one of two ways:
 
-[Model access](https://huggingface.co/Prior-Labs/tabpfn_3) · [Setup guide](docs/installation.md)
+**1) Automatic** — sign in with Prior Labs and accept the TabPFN-3 licence
+([model page](https://huggingface.co/Prior-Labs/tabpfn_3)). The checkpoint then downloads
+automatically on the first run. On a server without a browser, set `TABPFN_TOKEN`
+([setup guide](docs/installation.md)).
 
-- **Automatic** — sign in with Prior Labs and accept the licence once; the checkpoint downloads on the first run.
-- **Manual** — if you downloaded the file yourself, put it in place:
+**2) Manual** — download the checkpoint file from the
+[model page](https://huggingface.co/Prior-Labs/tabpfn_3), then run the script below to install it:
 
 ```bash
 tabpfn-anchor checkpoint --install /path/to/tabpfn-v3-classifier-v3_20260417_multiclass.ckpt
-tabpfn-anchor checkpoint      # show the expected location and status
+tabpfn-anchor checkpoint      # check: expected location and status
 ```
 
 Model weights are under a non-commercial licence ([details](THIRD_PARTY_NOTICES.md)).

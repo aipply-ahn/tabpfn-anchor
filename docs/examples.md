@@ -30,8 +30,9 @@ clf = TabPFNAnchorClassifier(device="cuda:0", preprocessing="microarray")
 clf = TabPFNAnchorClassifier(device="cuda:0", preprocessing="none")
 ```
 
-- `"rnaseq"` raises an error if `X` contains negative values, which usually
-  means the data are already log-transformed.
+- `"rnaseq"` applies only the log transformation; it does not perform
+  library-size normalisation or any other RNA-seq preprocessing.
+- Negative inputs are not accepted by `"rnaseq"` and raise an error.
 - Do not apply `log2(x + 1)` yourself **and** pass `preprocessing="rnaseq"`;
   that transforms the data twice.
 - The published experiments applied `log2(x + 1)` to the RNA-seq cohorts before
@@ -224,5 +225,5 @@ the paper.
 
 ---
 
-See the [README](../README.md) for installation, the backbone licence and the
-paper configuration.
+See the [README](../README.md) for installation and the backbone licence, and
+[configuration.md](configuration.md) for all options and outputs.

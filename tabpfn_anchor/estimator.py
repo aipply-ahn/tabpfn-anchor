@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """TabPFN-Anchor classifier with a scikit-learn-compatible interface.
 
-Implements cascaded gene ranking (ANOVA-F, Random Forest importance and
+Implements cascaded feature ranking (ANOVA-F, Random Forest importance and
 TabPFN-based OddSHAP attribution), anchor-conditioned feature views, frozen
 TabPFN view models and out-of-fold probability stacking.
 
@@ -9,7 +9,8 @@ TabPFN view models and out-of-fold probability stacking.
     clf.fit(X_train, y_train)
     clf.predict_proba(X_test)
 
-The defaults are the published configuration (configs/paper/tabpfn_anchor.yaml).
+The defaults are the published configuration
+(paper_results/configs/tabpfn_anchor.yaml).
 """
 
 from __future__ import annotations

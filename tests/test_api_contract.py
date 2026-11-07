@@ -10,7 +10,7 @@ matter and are meaningful here are asserted individually below.
     pytest -q
 
 Most tests run without the backbone. The ones that fit a model need the
-checkpoint named in configs/paper and skip themselves without it.
+checkpoint named in the paper configuration and skip themselves without it.
 """
 
 from __future__ import annotations
@@ -46,7 +46,7 @@ FAST = dict(mode="anchor",
             # visible GPU, which on a multi-GPU machine is far slower.
             device=_pick_device())
 
-PAPER_YAML = Path(__file__).resolve().parents[1] / "configs/paper/tabpfn_anchor.yaml"
+PAPER_YAML = Path(__file__).resolve().parents[1] / "paper_results/configs/tabpfn_anchor.yaml"
 
 
 def synthetic(n_features: int = 4000):
@@ -107,11 +107,11 @@ def test_defaults_match_the_published_configuration():
     defaults = TabPFNAnchorClassifier().get_params()
 
     unknown = sorted(set(published) - set(defaults))
-    assert not unknown, f"configs/paper names parameters the estimator lacks: {unknown}"
+    assert not unknown, f"the paper configuration names parameters the estimator lacks: {unknown}"
 
     mismatched = {k: (v, defaults[k]) for k, v in published.items() if defaults[k] != v}
     assert not mismatched, (
-        "configs/paper disagrees with the estimator defaults "
+        "the paper configuration disagrees with the estimator defaults "
         f"(yaml, default): {mismatched}")
 
 
@@ -442,7 +442,7 @@ def _checkpoint_available() -> bool:
 requires_backbone = pytest.mark.skipif(
     not _checkpoint_available(),
     reason=f"needs tabpfn >= {MIN_TABPFN_MAJOR} and the exact checkpoint named "
-           "in configs/paper (downloading it requires login and licence "
+           "in the paper configuration (downloading it requires login and licence "
            "acceptance)")
 
 

@@ -50,14 +50,14 @@ EXAMPLE_PRESET = dict(
     shap_budget=256, shap_max_samples=16, shap_class_mode="predicted",
     tabpfn_n_estimators=2, shap_tabpfn_n_estimators=2)
 
-PAPER_YAML_NAME = "configs/paper/tabpfn_anchor.yaml"
+PAPER_YAML_NAME = "paper_results/configs/tabpfn_anchor.yaml"
 
 
 def _paper_yaml() -> Path:
     """Locate the published configuration file.
 
     It lives beside the package in a source checkout, but a pip-installed copy
-    has no configs/ directory, so the working directory is tried as well.
+    has no paper_results/ directory, so the working directory is tried as well.
     """
     here = Path(__file__).resolve()
     for base in (here.parents[1], here.parents[2], Path.cwd()):

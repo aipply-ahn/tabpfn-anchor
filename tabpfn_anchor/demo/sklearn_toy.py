@@ -55,9 +55,9 @@ def main() -> None:
     proba = clf.predict_proba(X_test)
     print(f1_score(y_test, pred, average="macro"))
 
-    clf.anchor_features_    # the 100 anchor genes, with attribution rank
-    clf.feature_ranking_    # every ranked gene, with the stage it was ranked in
-    clf.blocks_             # the gene indices given to each view
+    clf.anchor_features_    # the 100 anchor features, with attribution rank
+    clf.feature_ranking_    # every ranked feature and the stage that ranked it
+    clf.blocks_             # the feature indices given to each view
     # --- README EXAMPLE END ---
 
     # Not part of the README block: say what was produced, so that running this

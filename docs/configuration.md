@@ -1,65 +1,72 @@
-# TabPFN-Anchor — method, options and outputs
+# Configuration
 
-Reference for the estimator `TabPFNAnchorClassifier`. For worked examples see
-[examples.md](examples.md); for installation see the [README](../README.md).
+Options and outputs of `TabPFNAnchorClassifier`.
+Examples: [examples.md](examples.md) · Setup: [installation.md](installation.md)
 
 ## Method
 
-| Step | What it does | Keeps (default) | Parameter |
+| Step | What it does | Keeps | Parameter |
 |---|---|---|---|
-| 1.1 | one-way ANOVA *F* screen of all features | 2,000 | `n_stage1` |
-| 1.2 | Random Forest feature importance (mean decrease in impurity) | 500 | `n_stage2` |
-| 1.3 | OddSHAP attribution with the frozen TabPFN-3 backbone | 100 anchors | `n_anchor` |
-| 2.1 | *K* views: the anchors plus a disjoint block of next-ranked features | 3,700 distinct features | `stack_size`, `n_residual` |
-| 2.2 | one TabPFN view model per view; out-of-fold probabilities stacked by ℓ2 logistic regression | | `oof_folds`, `meta_C` |
+| 1.1 | ANOVA-*F* screen | 2,000 | `n_stage1` |
+| 1.2 | Random Forest importance | 500 | `n_stage2` |
+| 1.3 | TabPFN-3 + OddSHAP attribution | 100 anchors | `n_anchor` |
+| 2.1 | *K* views = anchors + next-ranked block | 3,700 distinct features | `stack_size`, `n_residual` |
+| 2.2 | one TabPFN view model per view, stacked by logistic regression | — | `oof_folds`, `meta_C` |
 
-Constraints: `n_anchor ≤ n_stage2 ≤ n_stage1`, and `n_anchor + n_residual =
-n_stage2` (the width of every view). The number of distinct features used is
-`n_stage2 + n_residual × (K − 1)`. Step 1.3 accounts for most of the run time;
-on a TCGA-sized cohort the published configuration takes about eighteen minutes
-per outer split on one GPU.
+**Rules**
+
+- `n_anchor ≤ n_stage2 ≤ n_stage1`
+- `n_anchor + n_residual = n_stage2` (= view width; keep 500 for TabPFN-3)
+- distinct features = `n_stage2 + n_residual × (K − 1)`
+
+## Execution by feature count (`mode="auto"`)
+
+| Features | Route (`execution_plan_["route"]`) | Ranking | *K* |
+|---|---|---|---|
+| ≤ 500 | `direct_tabpfn` | — | — |
+| 501 – 2,000 | `direct_tabpfn` (random feature sampling inside TabPFN) | — | — |
+| 2,001 – 5,000 | `rf_shap_anchor` | RF → OddSHAP | 4 – 9 |
+| > 5,000 | `screen_rf_shap_anchor` | ANOVA-*F* → RF → OddSHAP | 9 |
+
+*K* = min(9, ⌊(features − 100) / 400⌋):
+
+| Features | 2,001–2,099 | 2,100–2,499 | 2,500–2,899 | 2,900–3,299 | 3,300–3,699 | ≥ 3,700 |
+|---|---|---|---|---|---|---|
+| *K* | 4 | 5 | 6 | 7 | 8 | 9 |
 
 ## Execution modes
 
 | `mode` | Behaviour |
 |---|---|
-| `"auto"` (default) | follows the feature-count table in the README: TabPFN-3 directly up to 2,000 features, the anchor ensemble above (the ANOVA-*F* screen is skipped up to 5,000 features), *K* reduced if the input is too narrow |
-| `"anchor"` | always the full anchor ensemble; raises an error instead of adapting (nine views need at least 3,700 features — lower `stack_size` for narrower inputs) |
-| `"tabpfn"` | always TabPFN-3 directly, with no ranking and no anchors |
+| `"auto"` (default) | follows the table above |
+| `"anchor"` | always the anchor ensemble; errors if the input is too narrow (9 views need ≥ 3,700 features) |
+| `"tabpfn"` | always native TabPFN-3; no ranking, no anchors |
 
-After fitting, `clf.execution_plan_` records the route that ran
-(`"direct_tabpfn"`, `"rf_shap_anchor"` or `"screen_rf_shap_anchor"`), the
-ranking stages used and the number of views and folds; `clf.resolved_config_`
-records every resolved setting.
+Check what ran: `clf.execution_plan_` · all settings: `clf.resolved_config_`
 
 ## Preprocessing
 
-`preprocessing` is applied inside `fit` and `predict`, so training and test data
-always receive the same transformation.
-
 | `preprocessing` | Transformation | Use for |
 |---|---|---|
-| `"none"` (default) | none | data you have already preprocessed |
-| `"rnaseq"` | `log2(x + 1)` | non-negative RNA-seq expression values that are not yet log-transformed |
-| `"microarray"` | none | microarray data, usually already normalised and on a log scale |
+| `"none"` (default) | none | data you preprocessed yourself |
+| `"rnaseq"` | `log2(x + 1)` | non-negative RNA-seq values, not yet logged |
+| `"microarray"` | none | normalised, log-scale arrays |
 
-- `"rnaseq"` applies only the log transformation. It does not perform
-  library-size normalisation or any other RNA-seq preprocessing.
-- Negative inputs are not accepted by `"rnaseq"` and raise an error.
-- Do not apply `log2(x + 1)` yourself and also pass `"rnaseq"`; that transforms
-  the data twice.
+- Applied inside both `fit` and `predict`.
+- `"rnaseq"` is a log transform only — no library-size normalisation.
+- `"rnaseq"` rejects negative values.
+- Do not log-transform yourself *and* pass `"rnaseq"`.
 
 ## Input requirements
 
 | Input | Requirement |
 |---|---|
-| `X` | numeric, no missing values; with a DataFrame, unique column names |
-| `y` | one label per row, at least two classes |
-| class sizes | at least two samples in the smallest class |
-| features | more than 2,000 for the anchor ensemble under `mode="auto"` |
+| `X` | numeric, no missing values; DataFrame column names unique |
+| `y` | ≥ 2 classes |
+| class size | ≥ 2 samples in the smallest class |
+| features | > 2,000 for the anchor ensemble under `"auto"` |
 
-A pandas DataFrame is preferable: the classifier remembers the column names and
-refuses a differently ordered frame at prediction time.
+A DataFrame is recommended: column order is checked at prediction time.
 
 ## Outputs after `fit`
 
@@ -67,50 +74,30 @@ refuses a differently ordered frame at prediction time.
 |---|---|
 | `anchor_features_` | DataFrame: `anchor_rank`, `feature`, `importance`, `source_stage` |
 | `feature_ranking_` | DataFrame: `rank`, `feature`, `source_stage`, `score`, `is_anchor` |
-| `blocks_` | list of feature-index arrays, one per view |
-| `execution_plan_`, `resolved_config_` | the route and settings actually used |
-| `classes_`, `n_features_in_`, `feature_names_in_` | as in scikit-learn |
+| `blocks_` | feature indices per view |
+| `execution_plan_` | route, ranking stages, number of views and folds |
+| `resolved_config_` | every resolved setting |
 
-The ranking attributes exist only when the anchor ensemble ran.
+Ranking outputs exist only when the anchor ensemble ran.
 
 ## Main parameters
 
 | Parameter | Default | Meaning |
 |---|---|---|
-| `device` | `"auto"` | pass a single device such as `"cuda:0"`; `"auto"` with several GPUs is much slower |
+| `device` | `"auto"` | set one device, e.g. `"cuda:0"` |
 | `preprocessing` | `"none"` | see above |
 | `mode` | `"auto"` | see above |
-| `n_stage1`, `n_stage2`, `n_anchor`, `n_residual` | 2000, 500, 100, 400 | cascade and view sizes |
+| `n_stage1` · `n_stage2` · `n_anchor` · `n_residual` | 2000 · 500 · 100 · 400 | cascade and view sizes |
 | `stack_size` | 9 | number of views *K* |
-| `anchor_source` | `"shap"` | `"rf"` uses the top Random Forest features as anchors and skips OddSHAP |
-| `rf_n_estimators` | 2000 | trees in the Random Forest step |
-| `shap_max_samples`, `shap_budget` | 32, 1024 | explained samples and coalition budget of OddSHAP |
-| `tabpfn_n_estimators` | 8 | internal estimators per TabPFN view model |
-| `oof_folds` | 5 | stacking folds (reduced automatically if a class is smaller) |
+| `anchor_source` | `"shap"` | `"rf"` skips OddSHAP (faster) |
+| `rf_n_estimators` | 2000 | Random Forest trees |
+| `shap_max_samples` · `shap_budget` | 32 · 1024 | OddSHAP cost controls |
+| `tabpfn_n_estimators` | 8 | estimators per TabPFN view model |
+| `oof_folds` | 5 | stacking folds (auto-reduced for small classes) |
 | `random_state` | 42 | seed |
 
-## Paper configuration and results
+## Paper configuration
 
-- [`paper/configs/tabpfn_anchor.yaml`](../paper/configs/tabpfn_anchor.yaml)
-  is the configuration that produced the reported results. Its values equal the
-  estimator defaults, and a test checks that they stay equal. The CLI option
-  `--paper-settings` reads this file from a source checkout.
-- [`paper/`](../paper/) also holds the macro-F1 of every method
-  in every predictive comparison of the paper and `aggregate_stats.py`, which
-  reproduces the reported statistics. These files contain results only: no
-  expression values, sample identifiers or split assignments.
-- [DATA.md](../DATA.md) identifies the source data by GDC UUID and MD5.
-
-The repository provides the method and its configuration, not the harness that
-ran the full twelve-cohort benchmark.
-
-## Tests
-
-```bash
-pip install -e ".[test]"
-pytest -q
-```
-
-The estimator follows the scikit-learn contract (`fit`, `predict`,
-`predict_proba`, `get_params`, `set_params`, `clone`). Tests that need the
-backbone checkpoint skip themselves when it is absent.
+- Settings: [`paper/configs/tabpfn_anchor.yaml`](../paper/configs/tabpfn_anchor.yaml) (= the defaults; checked by a test)
+- CLI: `tabpfn-anchor tcga-example --paper-settings` reads it from a source checkout
+- Results and statistics: [`paper/`](../paper/)

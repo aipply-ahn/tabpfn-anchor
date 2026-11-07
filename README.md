@@ -1,95 +1,56 @@
 # TabPFN-Anchor
 
-Reference implementation of
+TabPFN-Anchor is a scikit-learn-compatible classifier for high-dimensional
+tabular data, such as gene-expression profiles with about 20,000 features. It
+lets a frozen TabPFN backbone use far more features than one TabPFN estimator
+takes at once (500 for the TabPFN-3 checkpoint used here):
 
-> **TabPFN-Anchor: Anchor-Conditioned Ensemble Adaptation of a Tabular
-> Foundation Model for High-Dimensional Cancer Subtype Classification**
-> Hongryul Ahn, Division of AI and Data Science, The University of Suwon
+1. **Anchor-gene selection.** A cascaded ranking (one-way ANOVA *F* →
+   Random Forest importance → TabPFN-based OddSHAP attribution) orders the
+   features and keeps the top 100 as *anchors*.
+2. **Stacked TabPFN ensemble.** Each of *K* = 9 views contains the anchors plus
+   a different block of 400 next-ranked features. A frozen TabPFN model is fitted
+   to each view, and a logistic-regression meta-learner stacks their
+   out-of-fold probabilities.
 
-A transcriptome has around twenty thousand genes, far more than the number of
-features a TabPFN estimator handles well at once. TabPFN-Anchor uses the subtype
-labels to decide *which* genes each fixed-width model receives, rather than
-leaving that to the backbone: a cascaded ranking produces a 100-gene **anchor
-set** that can be reported on its own, and the genes ranked below it supply
-ordered additional context to nine 500-gene views whose predictions are combined
-by a stacked meta-learner. The 500-gene view width is a setting of this
-procedure, not a property of any TabPFN release.
+You get a classifier you can drop into any scikit-learn benchmark, and a
+100-feature anchor signature you can report and evaluate on its own.
 
-The estimator is an ordinary scikit-learn classifier.
+This is the reference implementation of
+
+> H. Ahn, "TabPFN-Anchor: Anchor-Conditioned Ensemble Adaptation of a Tabular
+> Foundation Model for High-Dimensional Cancer Subtype Classification,"
+> *IEEE Access*, 2026 (accepted).
 
 ---
 
-## Install
+## Installation
+
+Requires **Python 3.12 or later** (needed by `shapiq >= 1.6`). A GPU is
+strongly recommended.
 
 ```bash
+git clone https://github.com/aipply-ahn/tabpfn-anchor.git
+cd tabpfn-anchor
 pip install -e .
 ```
 
-A GPU is strongly recommended. The TabPFN backbone checkpoint is downloaded by
-the `tabpfn` package on first use.
+**The TabPFN backbone.** On first use the `tabpfn` package downloads the
+TabPFN-3 checkpoint (about 203 MB). It asks you to log in with Prior Labs and
+accept the model licence; on a headless machine, accept the licence on the web
+and set `TABPFN_TOKEN`. **The TabPFN-3 weights are under a non-commercial
+licence** — see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
-## Running it on real data
+**Name a single GPU.** Pass `device="cuda:0"` rather than leaving the default.
+With several GPUs visible, the backbone's `"auto"` setting places a context on
+every GPU and was about fifty times slower in our measurements.
 
-```bash
-tabpfn-anchor download-tcga --cohort UCEC --data-dir ./data
-tabpfn-anchor tcga-example  --cohort UCEC --repeat 1 --fold 1 --data-dir ./data
-```
-
-`download-tcga` fetches the release archive from the NCI Genomic Data Commons,
-checks it against the published size and MD5, and extracts one cohort. **No
-data ships with this repository**; everything it writes goes to a local
-directory that `.gitignore` excludes. See [DATA.md](DATA.md).
-
-`tcga-example` reads one column of the cross-validation assignment distributed
-with that release rather than calling `train_test_split`, so the partition is
-not ours and another method can be run on the same column. Selection is fitted
-on the training partition alone. It writes the anchor set, the full ranking,
-the metrics and the resolved configuration to `results/`.
-
-**This is one split, not the paper.** The reported numbers are means over
-twelve cohorts and many splits with a paired test across them. A single split
-has a standard error wide enough that comparing its macro-F1 against a number
-in the paper says nothing. Treat it as a demonstration that the method runs end
-to end on real data.
-
-The example preset cuts the attribution budget so the command finishes; the
-view construction is the published one (100 anchors, 400 residual genes per
-view, K = 9, 3,700 distinct genes). `--paper-settings` restores the published
-budgets, which are far slower.
-
-If you only want to check the installation, run
-`python -m tabpfn_anchor.demo.sklearn_toy` instead: it generates synthetic data
-in place and needs no download.
-
-### The backbone
-
-The `tabpfn` package downloads the checkpoint on first use: it opens a browser
-to log in with Prior Labs, requires you to accept the model licence, and
-fetches about 203 MB. On a headless machine, accept the licence through the web
-interface and set `TABPFN_TOKEN` first. **The TabPFN-3 weights are under a
-non-commercial licence** — see
-[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
-
-Almost all of the runtime is the OddSHAP attribution stage; the screen and the
-Random Forest refinement together take under a second even at transcriptome
-scale.
-
-**Name a single device.** With several GPUs visible, the backbone's `auto`
-setting was measured about fifty times slower than naming one device (68 s
-against 1.4 s to fit one view model on 240 samples by 60 features), and it
-places a context on every visible GPU. The CLI therefore selects `cuda:0`
-itself and tells you so; override with `--device`. In Python, pass
-`TabPFNAnchorClassifier(device="cuda:0")` rather than leaving the default.
-
-## Python API
+## Quick start
 
 ### A complete example you can paste and run
 
-The data are synthetic, straight from scikit-learn. They contain nothing from
-any cohort; the values are not on an expression scale and the columns are not
-genes. What they reproduce is the shape of the task — far more features than
-samples, a few informative features, many correlated with those, imbalanced
-classes.
+The data are synthetic, straight from scikit-learn: far more features than
+samples, a few informative features, many correlated with them, three classes.
 
 ```python
 import pandas as pd
@@ -120,35 +81,22 @@ clf.feature_ranking_    # every ranked gene, with the stage it was ranked in
 clf.blocks_             # the gene indices given to each view
 ```
 
-The same code is in `tabpfn_anchor/demo/sklearn_toy.py`, so you can check an
-installation without pasting anything:
+The same code runs as a script:
 
 ```bash
 python -m tabpfn_anchor.demo.sklearn_toy
 ```
 
-A test compares that file against this page, so the two cannot drift apart.
+It takes **about nine minutes on one modern GPU**, because it uses the
+published configuration; most of that time is the OddSHAP attribution step. The
+run reports `views 9   distinct features used 3,700` (100 anchors plus nine
+blocks of 400). The score on this synthetic task means nothing in itself.
 
-**It takes about nine minutes on one modern GPU** — it runs the published
-configuration, and roughly four fifths of that is the OddSHAP attribution
-stage, whose cost is (explained samples) x (classes explained) x (coalition
-budget). It is not hanging. It also needs the backbone checkpoint, which is
-downloaded on first use.
+## Using your own data
 
-The run prints `views 9   distinct features used 3,700`, which is the published
-view construction: 100 anchors plus nine disjoint blocks of 400. That is why
-the example generates 4,000 features and not fewer — below 3,700 the number of
-views is capped by the data rather than by `stack_size`.
-
-Do not read anything into the score. The difficulty of `make_classification`
-output is whatever its arguments make it, and at these arguments the task is
-easy.
-
-### Loading your own data
-
-`fit` takes anything scikit-learn takes. A DataFrame is worth preferring: the
-classifier slices features by position, remembers the column names, and refuses
-a differently ordered frame at predict time — with a bare array it cannot check.
+`fit` accepts anything scikit-learn accepts. A pandas DataFrame is preferable:
+the classifier remembers the column names and refuses a differently ordered
+frame at prediction time.
 
 ```python
 import numpy as np
@@ -156,135 +104,117 @@ import pandas as pd
 
 # Rows are samples, columns are genes, plus one column holding the label.
 df = pd.read_csv("expression.tsv", sep="\t", index_col=0)
-
-y = df["subtype"]                       # whatever your label column is called
+y = df["subtype"]
 X = df.drop(columns=["subtype"])
 
-# RNA-seq counts need a log scale; skip this if your matrix is already logged
-# (microarray usually is, and it may contain negative values).
-if X.to_numpy().min() >= 0 and X.to_numpy().max() >= 50:
-    X = np.log2(X + 1.0)
+# RNA-seq values usually need a log scale; skip this if X is already logged.
+X = np.log2(X + 1.0)
 ```
 
-Requirements, all of which raise a clear error rather than failing quietly:
-
-| | |
+| Input | Requirement |
 |---|---|
 | `X` | numeric, no missing values, unique column names |
 | `y` | one label per row, at least two classes |
-| class sizes | the smallest class needs at least two members for the stacking folds |
-| features | see the note below on how many |
+| class sizes | at least two samples in the smallest class |
+| features | more than 2,000 for the anchor ensemble (see below) |
 
-### How many features you need
+With the default `mode="auto"`, an input of **2,000 features or fewer** is
+passed to TabPFN directly, because nine 500-feature views cannot be built from
+so few features; `anchor_features_` then does not exist. Pass `mode="anchor"`
+to force the full procedure on a narrower input.
 
-The default `mode="auto"` skips the whole anchor construction when the input
-has **2,000 features or fewer** and calls TabPFN directly, because building
-nine 500-gene views out of 1,000 genes is not a meaningful decomposition. That
-is the right default for a transcriptome, but it surprises people testing on a
-small table:
+## Benchmarking against other methods
 
-```python
-X, y = make_classification(n_samples=300, n_features=1000, n_informative=20)
-clf = TabPFNAnchorClassifier().fit(X, y)
-clf.anchor_features_                    # AttributeError: no ranking was built
+`TabPFNAnchorClassifier` follows the scikit-learn estimator contract (`fit`,
+`predict`, `predict_proba`, `get_params`, `set_params`, `clone`), so it can be
+placed in the same cross-validation loop as any other classifier. Feature
+selection is fitted on the training split only, so no preprocessing outside the
+estimator is needed.
+
+To compare on the data used in the paper, with the paper's own
+cross-validation splits:
+
+```bash
+tabpfn-anchor download-tcga --cohort UCEC --data-dir ./data
+tabpfn-anchor tcga-example  --cohort UCEC --repeat 1 --fold 1 --data-dir ./data
 ```
 
-Pass `mode="anchor"` to force the full cascade on a narrow input, or use data
-with more than 2,000 features. The error message says which case you are in.
+`download-tcga` fetches the TCGA release archive from the NCI Genomic Data
+Commons, verifies its size and MD5, and extracts one cohort; no data ship with
+this repository (see [DATA.md](DATA.md)). `tcga-example` trains and evaluates
+on one column of the cross-validation assignment distributed with that
+release, so another method can be run on exactly the same partition. It writes
+the anchors, the full ranking, the metrics and the resolved configuration to
+`results/`.
 
-## Method
+This example shortens the attribution step so that it finishes quickly; add
+`--paper-settings` to use the published settings. One split is a demonstration,
+not a replication: the paper reports means over twelve cohorts and many
+splits.
+
+## Method and outputs
 
 | Step | What it does | Keeps |
 |---|---|---|
-| 1.1 | one-way ANOVA *F* screen of the transcriptome | 2,000 genes |
-| 1.2 | Random Forest feature importance (mean decrease in impurity) | 500 genes |
-| 1.3 | OddSHAP attribution against the frozen backbone | **100 anchors** |
-| 2.1 | build *K* = 9 views, each the anchors plus a disjoint block of 400 lower-ranked genes | 3,700 distinct genes |
-| 2.2 | fit one view model per view; combine out-of-fold probabilities with an L2 logistic meta-learner | |
+| 1.1 | one-way ANOVA *F* screen of all features | 2,000 |
+| 1.2 | Random Forest feature importance (mean decrease in impurity) | 500 |
+| 1.3 | OddSHAP attribution with the frozen TabPFN-3 backbone | **100 anchors** |
+| 2.1 | *K* = 9 views: the anchors plus a disjoint block of 400 next-ranked features | 3,700 distinct features |
+| 2.2 | one TabPFN view model per view; out-of-fold probabilities stacked by ℓ2 logistic regression | |
 
-The expensive stage is 1.3, which is about four fifths of the cost. What it
-buys is not accuracy but a compact gene set that can be reported and evaluated
-independently of the ensemble.
+| Attribute after `fit` | Contents |
+|---|---|
+| `anchor_features_` | the 100 anchor features with their attribution rank |
+| `feature_ranking_` | the full cascaded ranking and the stage that ranked each feature |
+| `blocks_` | the feature indices given to each view |
+| `classes_`, `n_features_in_`, `feature_names_in_` | as in scikit-learn |
 
-This repository implements the published method. The ablation variants used
-in the paper's ablation tables (an earlier Step 1.1 ranker, an earlier
-attribution backend) are not included: publishing two implementations invites
-confusion about which one produced the results.
+Step 1.3 accounts for most of the run time. What it buys is the anchor
+signature, which can be evaluated independently of the ensemble. On a
+TCGA-sized cohort the published configuration takes about eighteen minutes per
+outer split on one GPU.
 
-## Published configuration and data provenance
+## Paper configuration and results
 
-**This is a reference implementation of the method, not the benchmark harness.**
-It does not ship the code that ran twelve cohorts across repeated
-cross-validation or generated the paper's tables and figures. There is no
-single command here that re-runs the experiments, and you should not expect
-one. The reported macro-F1 values themselves, and the script that derives the
-reported statistics from them, are in [`paper_results/`](paper_results/).
+- [`configs/paper/tabpfn_anchor.yaml`](configs/paper/tabpfn_anchor.yaml) is the
+  configuration that produced the reported results. Its values equal the
+  estimator defaults, and a test checks that they stay equal.
+  `--paper-settings` reads this file.
+- [`paper_results/`](paper_results/) holds the macro-F1 of every method in every
+  predictive comparison of the paper (one row per method, cohort and outer
+  split) and `aggregate_stats.py`, which reproduces the reported paired
+  differences, bootstrap intervals, Wilcoxon tests and Holm correction. These
+  files contain results only: no expression values, sample identifiers or split
+  assignments.
+- [DATA.md](DATA.md) identifies the source data by GDC UUID and MD5.
 
-What this repository does give you is the method itself, the exact
-configuration it was run under, and the provenance of the data:
+This repository provides the method and its configuration. It does not include
+the harness that ran the full twelve-cohort benchmark or generated the paper's
+tables and figures.
 
-- `configs/paper/tabpfn_anchor.yaml` records the configuration that produced
-  the reported results, transcribed from the configuration file the run itself
-  wrote. Every value in it also equals the estimator's default, and
-  `tests/test_api_contract.py` compares the whole file against
-  `get_params()`, so the two cannot drift apart.
-- `--paper-settings` reads that file rather than relying on the defaults.
-- [DATA.md](DATA.md) identifies the source archive by GDC UUID and MD5, and
-  the cross-validation splits distributed with it. Those splits are not ours;
-  the paper uses the first three repeats for its 15-split analyses and the
-  first ten for its 50-split analyses.
-- `paper_results/split_level_macroF1.csv` holds the macro-F1 of every method
-  in every predictive comparison of the paper, one row per method, cohort and
-  outer split. `paper_results/aggregate_stats.py` averages the splits of each
-  cohort and reproduces every reported paired difference, bootstrap interval,
-  exact Wilcoxon signed-rank test and Holm correction, with the cohort as the
-  unit of inference (`cohort_level_statistics.csv`). These files contain
-  results only: no expression value, sample identifier or split assignment.
-- `configs/legacy/` records defaults that were superseded on 2026-09-02. They
-  were never the published method: every configuration that produced a reported
-  result set those values explicitly, so no reported number depends on them.
-
-Running the published configuration on real data is slow — roughly eighteen
-minutes per outer split on one GPU for a TCGA-sized cohort, about four fifths
-of it in the OddSHAP stage.
-
-## scikit-learn compliance
-
-`clone`, `get_params`, `set_params`, `classes_`, `n_features_in_`,
-`feature_names_in_`, `predict`, `predict_proba` and the inherited `score`
-behave as scikit-learn requires, and `tests/test_api_contract.py` asserts each
-of them.
-
-`sklearn.utils.estimator_checks.check_estimator` is **not** run as a whole. It
-refits the estimator many times on small low-dimensional arrays, whereas this
-estimator needs a downloaded backbone checkpoint, a GPU to be practical, and an
-input with more features than samples — a regime the generic checks do not
-produce. The individually meaningful checks are asserted instead.
+## Tests
 
 ```bash
 pip install -e ".[test]"
 pytest -q
 ```
 
-Tests that require the backbone checkpoint skip themselves when it is absent.
+Tests that need the backbone checkpoint skip themselves when it is absent.
 
 ## Citation
 
-See `CITATION.cff`.
+If you use TabPFN-Anchor, please cite the paper above; see
+[CITATION.cff](CITATION.cff).
 
 ## License
 
-The TabPFN-Anchor source code in this repository is licensed under the MIT
-License (`LICENSE`).
+The TabPFN-Anchor source code is released under the MIT License
+([LICENSE](LICENSE)).
 
-This repository distributes no TabPFN source code and no model weights. The
-default configuration requires a separately distributed TabPFN-3 checkpoint,
-which is licensed under its own terms; those permit non-commercial research and
-limited internal evaluation and restrict commercial and production use. You
-must obtain the checkpoint from Prior Labs, accept its licence and comply with
-it.
-
-**The MIT License here grants no rights to the TabPFN package, the model
-weights, the model outputs, or any third-party dataset.** A repository marked
-MIT does not make TabPFN-3 usable commercially. See
-[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [DATA.md](DATA.md).
+This repository contains no TabPFN source code and no model weights. The
+default configuration uses the TabPFN-3 checkpoint, which is distributed by
+Prior Labs under its own licence: non-commercial research and limited internal
+evaluation are permitted, commercial and production use are restricted. The MIT
+License here grants no rights to the TabPFN package, its weights, its outputs
+or any third-party dataset. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)
+and [DATA.md](DATA.md).

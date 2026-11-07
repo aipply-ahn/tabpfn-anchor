@@ -24,11 +24,6 @@ sight, and it is the same code as the example in README.md — a test compares
 the two. That data contains nothing from any cohort: the values are not on an
 expression scale and the columns are not genes.
 
-An earlier release drew synthetic samples from per-subtype summary statistics
-of a real cohort. **That is gone**, which removes the question of whether
-aggregate statistics of a redistributed dataset may themselves be
-redistributed. Nothing derived from a cohort leaves your machine now.
-
 **Neither reproduces the paper's results.** Synthetic data obviously does not,
 and the real-data example is a single outer split of a single cohort, whereas
 the reported numbers are means over twelve cohorts and many splits.

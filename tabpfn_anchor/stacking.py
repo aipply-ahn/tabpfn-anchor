@@ -34,10 +34,8 @@ def build_blocks(rank_pool, anchor_idx, n_stage2=500, n_residual=400, k=9):
            R_pool[:n_stage2].
     k>=2 : anchors plus the next n_residual non-anchors; blocks do not overlap.
 
-    An earlier version assumed the anchors were inside the top n_stage2 and
-    merely subtracted them from the residual. Ablations that change
-    anchor_source break that assumption: views came out smaller than 500 and
-    the intersection fell short of 100.
+    The anchors are removed from the pool explicitly, so every view has exactly
+    n_stage2 genes even when anchor_source places them outside the top n_stage2.
 
     If the pool runs out before a block can be filled **exactly**, this stops
     and returns only the blocks it built. It never builds a partial view --

@@ -1,7 +1,7 @@
 # TabPFN-Anchor, the configuration reported in the paper.
 #
 # Transcribed from the configuration file written by the run that produced the
-# reported results (results/runs/model/F1_rank50_v3_K9), not from any document.
+# reported results.
 # Every value below is also the estimator's default, so
 #
 #     TabPFNAnchorClassifier()

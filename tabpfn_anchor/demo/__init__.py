@@ -13,15 +13,9 @@
 from a real cohort. Everything these modules write goes to a local directory
 that .gitignore excludes. See DATA.md.
 
-An earlier release drew synthetic samples from per-subtype summary statistics
-of a real cohort. That path is gone: nothing derived from a cohort leaves your
-machine now.
-
 ``sklearn_toy`` is deliberately not a data generator with options. It holds one
 ``make_classification`` call with its arguments in plain sight, identical to the
-block in README.md, and a test compares the two so they cannot drift apart. An
-earlier version wrapped that call behind presets, which forwarded its arguments
-and made chosen numbers look meaningful.
+block in README.md, and a test compares the two so they cannot drift apart.
 """
 
 from . import download_tcga, sklearn_toy, tcga_example

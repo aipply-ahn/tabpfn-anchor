@@ -11,10 +11,8 @@ redistributed by this repository.
 split, whereas the paper reports means over twelve cohorts and many splits with
 a paired test across them.
 
-There is no synthetic demo command. Calling the estimator on
-``sklearn.datasets.make_classification`` output is two lines of Python and
-README.md shows them; wrapping that in a subcommand added a vocabulary of
-preset names without adding anything you could not read off the page.
+To check an installation on synthetic data, run
+``python -m tabpfn_anchor.demo.sklearn_toy`` (the README example).
 
 The example preset below is smaller than the published configuration so that
 the command finishes. ``--paper-settings`` restores the published

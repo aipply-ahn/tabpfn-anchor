@@ -8,9 +8,6 @@ feature--label interaction than the one before it.
     1.2  Random Forest feature importance (MDI)         2000  ->  500   (low-order N:1)
     1.3  TabPFN + OddSHAP attribution                    500  ->  100   (high-order N:1)
 
-Step 1.1 was logistic regression with permutation importance in an earlier
-version; see stage1_anova_f for why it was replaced.
-
 Every step returns global indices (0..P-1), so the caller carries indices only
 and never has to track a column-name mapping.
 """
@@ -53,11 +50,9 @@ SHAP_IMPUTER = "baseline"
 class NullRecorder:
     """Default recorder that measures nothing.
 
-    It exists so that the package does not depend on the experiment harness.
-    When the runner passes a real recorder (StageRecorder in
-    runner/instrument.py), per-stage time and memory accumulate in events.tsv;
-    when nothing is passed this one is used and costs nothing. The interface is
-    the single method stage().
+    A caller may pass any object with a stage() context manager to collect
+    per-stage time and memory; when nothing is passed this one is used and
+    costs nothing.
     """
 
     @contextmanager
@@ -74,37 +69,12 @@ NULL_RECORDER = NullRecorder()
 def stage1_anova_f(X, y, n_keep=2000, logger=None, recorder=None, **_):
     """Step 1.1 -- the plain marginal F test (ANOVA-F).
 
-    Why this one
-    ------------
-    This is Step 1.1 of the published method. The earlier version
-    (`legacy_lr_pi.stage1_logistic_pi`) used ridge logistic regression with
-    permutation importance, and was replaced for the following reason. With
-    P (20,531) >> N, ridge **spreads weight evenly across a correlated block of
-    genes.** In a block of size k each gene gets a coefficient of roughly 1/k,
-    so permuting one gene moves the linear predictor by roughly 1/k as well and
-    the permutation importance is diluted in inverse proportion to block size.
-    The consequence is that **the strongest marginal signals get pushed out of
-    the pool.** Measured on eight cohorts (how many of the limma-F top 100 fall
-    inside the top 2,000 of Step 1.1; the value expected by chance is 9.7):
-
-        LR+PI     0.2 ~ 24.7      (LUAD 1.3, KIRCKICH 0.2)
-        RF-FI    92.0 ~ 100.0     <- multivariate, yet free of the effect
-        ANOVA-F 100.0             <- all of them, by definition
-
-    So this is not a consequence of being multivariate; it is specific to the
-    ridge-plus-permutation-importance combination. ANOVA-F looks at each gene
-    on its own, so nothing is diluted, and it is far more reproducible across
-    splits (IoU at depth 100: 0.49-0.88 for ANOVA-F against 0.15-0.27 for
-    LR+PI).
-
-    Why ANOVA-F rather than limma-F
-    -------------------------------
-    The only difference is empirical Bayes variance shrinkage, and at
-    n = 444-995 the two rankings were effectively the same (top-100 IoU
-    0.978-0.997 over eight cohorts). ANOVA-F is not domain-specific, so it does
-    not invite the objection that a transcriptomics-specific tool gave us an
-    advantage, and it carries no dependency on R. Do not generalise this
-    equivalence: in cohorts of a few dozen samples the shrinkage does real work.
+    ANOVA-F scores each gene on its own, so a block of correlated genes does
+    not dilute the scores of its members, and the ranking is stable across
+    splits. It is a fast, general-purpose marginal screen with no dependency
+    on R. On cohorts of several hundred samples it ranks genes almost
+    identically to the moderated F statistic of limma; with only a few dozen
+    samples, variance shrinkage can matter more.
 
     The contract is the one shared by every Step 1.1 implementation: return
     (rank[P], importance[P]) where rank holds global indices in decreasing
@@ -139,19 +109,17 @@ def stage1_anova_f(X, y, n_keep=2000, logger=None, recorder=None, **_):
 # downstream (Steps 1.2 and 1.3, build_rank_pool) assumes only that rank holds
 # global indices.
 def _legacy_lr_pi(*args, **kwargs):
-    """[ablation only] the former Step 1.1. Not used on the main path.
+    """Optional alternative Step 1.1, not part of the published method.
 
-    legacy_lr_pi uses this module's NULL_RECORDER, so importing it at module
-    level would be circular. It is imported only when actually called.
+    Imported only when called (and only where its implementation is present).
     """
     from .legacy_lr_pi import stage1_logistic_pi
     return stage1_logistic_pi(*args, **kwargs)
 
 
-# Step 1.1 of the published method is anova_f. lr_pi is kept for ablations only,
-# and it is registered only where its implementation is actually present. The
-# public release does not ship legacy_lr_pi.py, so offering "lr_pi" there would
-# advertise an option that raises ModuleNotFoundError when selected.
+# Step 1.1 of the published method is anova_f. Alternatives are registered only
+# where their implementation is present, so an option that cannot run is never
+# offered.
 STAGE1_SOURCES = {
     "anova_f": stage1_anova_f,
 }
@@ -159,10 +127,8 @@ if (_Path(__file__).with_name("legacy_lr_pi.py")).exists():
     STAGE1_SOURCES["lr_pi"] = _legacy_lr_pi
 
 
-# Step 1.3 backends, gated the same way. "kernelshap"/"batched" reach an
-# implementation the public release does not ship, so they are offered only
-# where that file is present rather than failing with ModuleNotFoundError at
-# the point of use.
+# Step 1.3 backends, gated the same way: "kernelshap"/"batched" are offered only
+# where their implementation is present.
 SHAP_BACKENDS = {"auto", "shapiq"}
 if (_Path(__file__).with_name("kernelshap_legacy.py")).exists():
     SHAP_BACKENDS |= {"kernelshap", "batched"}
@@ -246,11 +212,8 @@ def stage3_tabpfn_shap(model, X, y, n_keep=100, max_samples=200, budget=2048,
             f"unknown shap_backend: {backend!r}. available: "
             f"{sorted(SHAP_BACKENDS)}")
     if backend in ("kernelshap", "batched"):
-        # The estimator the manuscript describes. It is a rewrite that fixes
-        # the validity problems of the old implementation: explaining only one
-        # class, no efficiency constraint, |mean phi|, resampling the data for
-        # every coalition, and shuffling each column independently. See
-        # kernelshap.py.
+        # Alternative batched KernelSHAP implementation (not included in this
+        # package).
         from .kernelshap_legacy import batched_kernel_shap
         return batched_kernel_shap(
             model, X, y, n_keep=n_keep, n_coalitions=budget,
@@ -304,7 +267,7 @@ def _shapiq_importance(model, X_bg, Xe, budget, random_state, n_classes=None,
 
     class_mode
         "all"       explain once per class and average |value|. This is the
-                    same definition as the manuscript's "mean |SHAP|", but its
+                    same definition as the paper's "mean |SHAP|", but its
                     cost is proportional to the number of classes (seven times
                     over for GEA and LGGGBM, which have seven).
         "predicted" explain only the class the model actually chose for each
@@ -368,7 +331,7 @@ def _shapiq_importance(model, X_bg, Xe, budget, random_state, n_classes=None,
     # equal weight. Even with balanced sampling, a small subtype can run out
     # (BLCA's smallest has six members), which changes how many were drawn; a
     # plain mean would then give the large subtypes more weight again. The
-    # manuscript's definition is subtype-macro, so it is matched here.
+    # paper's definition is subtype-macro, so it is matched here.
     ye = np.asarray(ye)
     return np.mean([per_sample[ye == t].mean(axis=0)
                     for t in np.unique(ye)], axis=0)
@@ -465,7 +428,7 @@ def _balanced_subsample(y, max_n, random_state):
 # Unified ranking pool
 # ---------------------------------------------------------------------------
 def build_rank_pool(rank_shap_global, rank_rf_global, rank_lr_global, n_total):
-    """Build one global ranking, SHAP before RF before LR (Algorithm 1).
+    """Build one global ranking: OddSHAP order, then RF order, then ANOVA-F order.
 
         R_pool = R_SHAP(F2)  ||  R_RF(F1 \\ F2)  ||  R_LR(~F1)
 

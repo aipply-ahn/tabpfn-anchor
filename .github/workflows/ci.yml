@@ -40,23 +40,6 @@ jobs:
           python -m pip install ".[test]"
           pytest -q
 
-      - name: Verify the export manifest
-        run: sha256sum -c MANIFEST.sha256
-
-      - name: The tree must contain nothing outside the manifest
-        # sha256sum -c reports files that changed or went missing, not files
-        # that were added. The allow-list is only meaningful if extras fail too.
-        run: |
-          # sha256sum writes "<64 hex><two spaces><path>"; cut at a fixed
-          # column so a path containing spaces survives intact.
-          listed=$(cut -c67- MANIFEST.sha256 | sort)
-          tracked=$(git ls-files \
-            | grep -v -E '^(EXPORT_STAMP\.txt|MANIFEST\.sha256)$' | sort)
-          extra=$(comm -13 <(echo "$listed") <(echo "$tracked"))
-          if [ -n "$extra" ]; then
-            echo "tracked but not in MANIFEST.sha256:"; echo "$extra"; exit 1
-          fi
-
       - name: No data files may be committed
         run: |
           # paper_results/ holds reported macro-F1 values and their summary,

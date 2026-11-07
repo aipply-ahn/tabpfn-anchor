@@ -1,22 +1,15 @@
 # -*- coding: utf-8 -*-
-"""The TabPFN-Anchor classifier.
+"""TabPFN-Anchor classifier with a scikit-learn-compatible interface.
 
-It follows the scikit-learn estimator contract, so the experiment harness
-evaluates it by exactly the same route as every other baseline: the same
-cross-validation splits, the same preprocessing, the same metric computation.
+Implements cascaded gene ranking (ANOVA-F, Random Forest importance and
+TabPFN-based OddSHAP attribution), anchor-conditioned feature views, frozen
+TabPFN view models and out-of-fold probability stacking.
 
-    clf = TabPFNAnchorClassifier(stack_size=9, device="cuda:0")
+    clf = TabPFNAnchorClassifier(device="cuda:0")
     clf.fit(X_train, y_train)
     clf.predict_proba(X_test)
 
-Wherever an early manuscript draft disagreed with itself, the choice is exposed
-as a parameter and the default is stated here. For the three below the draft
-contained contradictory statements, and the defaults follow what was actually
-run.
-
-    lr_penalty="l2"        Algorithm 1 said L2; the Step 1.1 prose said L1
-    residual_source="pool" Algorithm 1 said R_pool; the Step 2.1 equation said R_1
-    oof_meta=True          Algorithm 1 used in-sample predictions, which leak
+The defaults are the published configuration (configs/paper/tabpfn_anchor.yaml).
 """
 
 from __future__ import annotations
@@ -73,59 +66,47 @@ class TabPFNAnchorClassifier(ClassifierMixin, BaseEstimator):
         (tabpfn_n_estimators is used with the same value in the attribution
         step and the prediction step.)
     stage1_source : str
-        The Step 1.1 selector. The published method uses **"anova_f"**, which
-        is the only value the released package offers. An earlier version
-        ("lr_pi": ridge logistic regression plus permutation importance) is
-        registered only where its implementation is present, which it is not in
-        the public release; selection.STAGE1_SOURCES lists what is available.
+        The Step 1.1 ranking. "anova_f" (one-way ANOVA F statistic) is the
+        published setting and the only value this package offers;
+        selection.STAGE1_SOURCES lists what is available.
     lr_penalty, lr_C, pi_n_repeats, pi_oof_splits
-        Settings of that earlier Step 1.1. They are accepted so that recorded
-        configurations still load, and have no effect under "anova_f".
+        Accepted for compatibility with recorded configurations. They have no
+        effect when stage1_source="anova_f".
     residual_source : {"pool", "rf", "lr"}
         Whether residual features are drawn from the unified ranking (R_pool)
         or from the Step 1.1 ranking (R_1).
     oof_meta : bool
-        Whether meta-features are built out of fold. False reproduces the early
-        Algorithm 1 exactly, but then the meta-learner trains on leaked
-        probabilities.
+        If True (default), the meta-learner is trained on out-of-fold
+        predictions of the view models.
     nested_selection : bool
-        If True, Step 1 (PI / RF / SHAP) is redone inside every inner fold.
+        If True, Step 1 (ANOVA-F / RF / OddSHAP) is redone inside every inner fold.
         oof_meta=True alone withholds the inner validation split from base
         model fitting only; its labels have already entered feature selection.
         This option removes that residual dependence. The price is repeating
-        the most expensive step oof_folds times (PI, a 2000-tree RF and
-        KernelSHAP), which lengthens the run considerably. Either way, the
+        the most expensive step oof_folds times (a 2000-tree RF and
+        OddSHAP), which lengthens the run considerably. Either way, the
         model used at inference is refitted on the whole outer training split.
     view_strategy : {"anchor_ranked", "single", "random_disjoint", "ranked_disjoint"}
-        How to build the feature view each view model sees. This is the axis of
-        the A0-A4 ablation.
+        How to build the feature view each view model sees.
 
-          single            one top-500 view from F2 (same as K=1)          -> A0
-          random_disjoint   all genes shuffled under a fixed seed, then cut
-                            into disjoint blocks of 500                     -> A1
-          ranked_disjoint   the unified supervised ranking cut into disjoint
-                            blocks of 500                                   -> A2
-          anchor_ranked     100 shared anchors plus 400 ranked residuals
-                            (the published method)                       -> A3/A4
+          anchor_ranked     100 shared anchors plus 400 ranked genes per view
+                            (default; the published method)
+          single            one view of the 500 highest-ranked genes
+          ranked_disjoint   the ranking cut into disjoint 500-gene blocks
+          random_disjoint   a seeded random permutation of all genes cut into
+                            disjoint 500-gene blocks
 
-        random_disjoint is not the comparator of Ye et al. That one *samples* a
-        500-feature random subset m times and does not require disjointness.
-        This is a controlled ablation, made disjoint on purpose so that its
-        coverage structure matches A2 and the only thing that differs is random
-        against supervised ordering.
+        The last three are the comparison constructions of the paper's ablation.
+        random_disjoint differs from TabPFN-D&C, which draws independent random
+        subsets that may overlap.
     aggregation : {"stack", "vote", "none"}
-        "none" exists for A0, which has a single view (one 500-feature
-        learner). It uses that one prediction directly, with no meta-learner
-        and no vote. "vote" would send it down the odd path of a one-voter
-        majority, and "stack" would attach a pointless meta logistic regression
-        that blurs what A0 is.
-        "stack" is the logistic regression on out-of-fold meta-features (the
-        published method); "vote" is a hard majority vote. A1-A3 must differ
-        only in how views are built, so they all use "vote". Ties break
-        deterministically towards the lower class index (the np.argmax rule).
+        "stack" (default) fits a logistic-regression meta-learner on the
+        view models' out-of-fold probabilities. "vote" is a hard majority vote;
+        ties break towards the lower class index. "none" passes the prediction
+        of a single view through unchanged and is valid only with one view.
     shap_max_samples : int
-        Upper bound on how many samples SHAP explains, because of KernelSHAP's
-        cost.
+        Upper bound on how many samples OddSHAP explains, which bounds the cost
+        of the attribution step.
     """
 
     def __init__(self, n_stage1=2000, n_stage2=500, n_anchor=100, n_residual=400,
@@ -163,8 +144,7 @@ class TabPFNAnchorClassifier(ClassifierMixin, BaseEstimator):
         self.residual_source = residual_source
         self.anchor_source = anchor_source
         # With anchor_source="slot", which 100-gene block of R_pool to repeat.
-        # q=1 gives R[1:100], which equals the OddSHAP anchors (confirmed on
-        # 180 of 180 splits).
+        # q=1 gives R[1:100], the OddSHAP anchors.
         self.anchor_slot = anchor_slot
         self.oof_meta = oof_meta
         self.oof_folds = oof_folds
@@ -184,9 +164,8 @@ class TabPFNAnchorClassifier(ClassifierMixin, BaseEstimator):
         self.n_jobs = n_jobs
         self.verbose = verbose
         self.cache_dir = cache_dir
-        # Where the experiment harness plugs in a per-stage instrument. None
-        # measures nothing (NULL_RECORDER). This keeps the package independent
-        # of the runner.
+        # Optional per-stage instrumentation hook (an object with a stage()
+        # method). None measures nothing (NULL_RECORDER).
         self.recorder = recorder
         # The higher-level API. The four below override the flat parameters
         # above. The flat ones exist for reproducing the paper (the YAML files
@@ -207,15 +186,9 @@ class TabPFNAnchorClassifier(ClassifierMixin, BaseEstimator):
 
         Each view holds 100 anchors plus 400 residuals, so a view model always
         receives its whole view. The external view width is fixed by this
-        procedure rather than inferred from any backbone-internal limit;
-        successive TabPFN releases share neither an identical architecture nor
-        an identical per-estimator feature budget, so nothing here should be
-        read as a claim about what the backbone does internally.
-
-        Earlier development used a TabPFN-2.5 synthetic-only checkpoint, chosen
-        so that no real gene-expression data had entered backbone training. The
-        2.5 checkpoints are no longer the backbone or a baseline here; see
-        configs/legacy/ for the superseded defaults.
+        procedure. It equals the per-estimator feature limit of the TabPFN-3
+        checkpoint used here (500), so a view is not subsampled further inside
+        the backbone. Other TabPFN releases may use a different limit.
         """
         from tabpfn import TabPFNClassifier
         kw = {}
@@ -302,11 +275,9 @@ class TabPFNAnchorClassifier(ClassifierMixin, BaseEstimator):
         k1 = min(self._cfg("n_stage1"), n_features)
         route = self._pv("route", "screen_rf_shap_anchor")
         if not self._pv("stage1_enabled", True):
-            # Skipping Step 1.1 means **passing every feature straight to the
-            # RF.** An earlier version kept k1, making F1 = rank[:2000]; since
-            # the ordering is the identity, that was "the first 2,000 columns
-            # in their original order" -- truncation, not selection. Skipping
-            # is defined as not filtering, so k1 opens up to everything too.
+            # Skipping Step 1.1 passes every feature straight to the RF.
+            # Keeping k1 here would truncate to the first 2,000 columns in
+            # their original order, which is not a selection.
             k1 = n_features
             rank_stage1 = np.arange(n_features, dtype=int)
             imp_stage1 = np.full(n_features, np.nan)
@@ -402,8 +373,8 @@ class TabPFNAnchorClassifier(ClassifierMixin, BaseEstimator):
             # for prediction. shapiq calls the model once per coalition, so the
             # cost is close to proportional to n_estimators (measured on BRCA
             # with 500 features: 13.5 s at 32, 3.6 s at 8, 0.8 s at 1, per
-            # explanation). At the manuscript's setting (n_est=32, 200 samples)
-            # that is three hours per fold, so 180 hours over 60 folds. SHAP is
+            # explanation). With n_estimators=32 and 200 explained samples that
+            # is about three hours per fold. SHAP is
             # here only to produce an ordering, so the explanation step uses a
             # small ensemble while prediction keeps tabpfn_n_estimators.
             t0 = time.perf_counter()
@@ -431,11 +402,9 @@ class TabPFNAnchorClassifier(ClassifierMixin, BaseEstimator):
                         backend=self._cfg("shap_backend"), class_mode=self._cfg("shap_class_mode"),
                         approximator=self._cfg("shap_approximator"),
                         random_state=self.random_state, logger=logger),
-                    # Without the approximator, the checkpoint and the imputer
-                    # in the key, a ranking produced by KernelSHAP would be
-                    # read back under an OddSHAP setting -- the kind of
-                    # accident that voids a central decision of the paper to
-                    # save a few minutes of computation.
+                    # The approximator, checkpoint and imputer are part of the
+                    # key, so a ranking computed under different settings is
+                    # never read back as an OddSHAP ranking.
                     params=dict(max_samples=self._cfg("shap_max_samples"),
                                 budget=self._cfg("shap_budget"), backend=self._cfg("shap_backend"),
                                 approximator=self._cfg("shap_approximator"),
@@ -458,8 +427,8 @@ class TabPFNAnchorClassifier(ClassifierMixin, BaseEstimator):
             elif self._cfg("residual_source") == "lr":
                 rank_pool = np.asarray(rank_stage1, dtype=int)
             elif self._cfg("residual_source") == "rf":
-                # R_RF = RF-FI(F1) || ANOVA-F(G \ F1). Added 2026-08-29.
-                # The second scheme in the gene-ranking comparison. It drops
+                # R_RF = RF-FI(F1) || ANOVA-F(G \ F1), the two-stage ranking
+                # used as a comparison in the paper. It drops
                 # the SHAP re-ranking, orders the inside of F1 by RF
                 # importance, and leaves everything outside F1 in stage-1
                 # (ANOVA-F) order. The only difference from "pool" is that the
@@ -476,7 +445,7 @@ class TabPFNAnchorClassifier(ClassifierMixin, BaseEstimator):
         #   A_q = R[100(q-1)+1 : 100q]
         # This is overwritten here because A_q depends on rank_pool; the branch
         # above runs before rank_pool exists and so cannot cut the slot.
-        # q=1 equals the OddSHAP anchors (confirmed on 180 of 180 splits), and
+        # q=1 equals the OddSHAP anchors, and
         # for q<=5 we have A_q inside F2, so S_1 = F2 still holds. The union at
         # K=9 is R[1:3700] for every q.
         if self._cfg("anchor_source") == "slot":
@@ -520,8 +489,7 @@ class TabPFNAnchorClassifier(ClassifierMixin, BaseEstimator):
         size = k2
         views = [pool[i * size:(i + 1) * size] for i in range(self._cfg("stack_size"))]
         # The same rule as build_blocks: discard a final block that is too
-        # small. Keeping it would give the learners different feature budgets
-        # and blur the A1/A2 comparison.
+        # small, so that every view model receives the same number of genes.
         return [v for v in views if len(v) == size]
 
     # -- fitting -------------------------------------------------------------
@@ -878,10 +846,8 @@ class TabPFNAnchorClassifier(ClassifierMixin, BaseEstimator):
         self.importance_lr_ = self.importance_stage1_
         self.stage2_idx_ = sel['F2']
         self.stage1_idx_ = sel['F1']
-        # The RF importances from Step 1.2. The paper's LR->RF-100 selector
-        # (the partial pipeline without the SHAP step) is defined by these
-        # values. They were in the returned dictionary but were not kept as an
-        # attribute, so they were missing from the ranking dumps.
+        # The RF importances from Step 1.2, kept so that the two-stage
+        # ANOVA-F -> RF ranking (without the OddSHAP step) can be reported.
         self.imp_rf_ = sel.get('imp_rf')
         self._build_ranking_table(sel, n_features)
         F2, k2, m1 = sel['F2'], sel['k2'], sel['m1']
@@ -916,7 +882,7 @@ class TabPFNAnchorClassifier(ClassifierMixin, BaseEstimator):
             return self
 
         if self.aggregation_ == "vote":
-            # For A1-A3. Aggregation is a hard majority vote at test time, so
+            # Majority-vote aggregation is applied at test time, so
             # neither a meta-learner nor out-of-fold meta-features are needed.
             self.models_ = []
             for i, feats in enumerate(self.blocks_, start=1):
@@ -937,7 +903,7 @@ class TabPFNAnchorClassifier(ClassifierMixin, BaseEstimator):
             # inner fold. With oof_meta alone, the inner validation samples'
             # labels stay out of base model fitting but have already entered
             # selection; this removes that residual dependence. The price is
-            # repeating the most expensive step (PI / RF / SHAP) once per
+            # repeating the most expensive step (RF / OddSHAP) once per
             # fold.
             counts = np.bincount(y_enc, minlength=n_classes)
             nz = counts[counts > 0]
@@ -1029,7 +995,7 @@ class TabPFNAnchorClassifier(ClassifierMixin, BaseEstimator):
         # changes no computation; it only retains a reference to arrays that
         # already exist.
         #
-        # The development experiments use this. blocks_ is a prefix that does
+        # Used for the residual-view sensitivity analysis. blocks_ is a prefix that does
         # not depend on k (see build_blocks: view j = anchor +
         # non_anchor[400(j-1):400j]), so one fit at stack_size=30 makes the
         # first K blocks exactly the meta-input for stack_size=K. Refitting
@@ -1094,7 +1060,7 @@ class TabPFNAnchorClassifier(ClassifierMixin, BaseEstimator):
         #   stack : predict_proba's column order follows meta_.classes_
         #   vote  : already in encoded class-index order
         #   none  : a single learner passed through _align, so index order
-        # Handling none together with stack dies on A0, where meta_ is None.
+        # With aggregation="none" there is no meta-learner (meta_ is None).
         # Call predict_proba **once**. TabPFN's fit is lazy and the real
         # computation happens in predict, so calling it twice would run the
         # test-time inference of all K view models twice over, exactly

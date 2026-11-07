@@ -34,10 +34,9 @@ __all__ = ["StageCache", "array_fingerprint"]
 def array_fingerprint(*arrays):
     """SHA-256 fingerprint of the **entire** contents of the arrays.
 
-    An earlier version sampled 20,000 values and appended the sum and standard
-    deviation. Under that scheme a change to an unsampled value can leave the
-    fingerprint unchanged -- a silent stale hit. Reading a wrong value out of
-    the cache costs far more than the seconds it saves. The BRCA training
+    Hashing every value avoids the stale cache hits a sampled fingerprint could
+    produce, where a change to an unsampled value leaves the key unchanged. A
+    typical training
     matrix is 796 x 20,531 float32 = 65 MB and hashing it takes about 0.05 s,
     which is nothing in front of a Step 1 measured in minutes.
 

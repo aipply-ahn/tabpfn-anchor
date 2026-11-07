@@ -5,8 +5,7 @@
 fits the estimator many times on tiny low-dimensional arrays, and TabPFN-Anchor
 needs a downloaded backbone checkpoint, a GPU to be practical, and an input
 where the number of features exceeds the number of samples.  The checks that
-matter and are meaningful here are asserted individually below; the ones that
-are skipped, and why, are listed in README.md.
+matter and are meaningful here are asserted individually below.
 
     pytest -q
 
@@ -143,7 +142,7 @@ def test_only_runnable_stage1_sources_are_offered():
 def test_only_runnable_shap_backends_are_offered():
     """Same rule for Step 1.3: an offered backend must have an implementation.
 
-    The legacy KernelSHAP path is not part of this release, so it must be
+    The KernelSHAP backend is not part of this package, so it must be
     rejected by name rather than reaching a missing import at fit time.
     """
     from tabpfn_anchor.selection import SHAP_BACKENDS

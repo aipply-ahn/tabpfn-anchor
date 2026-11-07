@@ -22,9 +22,7 @@ TMP_v12_*.tar.gz.part
 *_v12_*.tsv
 *_CVfolds_*.tsv
 
-# Superseded: an earlier release derived synthetic samples from per-subtype
-# summary statistics of a real cohort. That path is gone, but a working tree
-# from before it was removed may still hold the files.
+# Files derived from a real cohort must never be committed.
 tcga_summary_statistics*
 tcga_synthetic*
 

@@ -678,7 +678,12 @@ class TabPFNAnchorClassifier(ClassifierMixin, BaseEstimator):
     _PREPROCESSING = ("none", "rnaseq", "microarray")
 
     def _preprocess_X(self, X):
-        """Apply the `preprocessing` option. Called for fit and predict alike."""
+        """Apply the `preprocessing` option. Called for fit and predict alike.
+
+        "rnaseq"      X -> log2(X + 1), i.e. np.log2(1 + X); X must be >= 0
+        "microarray"  X unchanged (already normalised, log-scale values)
+        "none"        X unchanged (data preprocessed by the caller)
+        """
         mode = self.preprocessing
         if mode not in self._PREPROCESSING:
             raise ValueError(

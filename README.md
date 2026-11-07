@@ -16,6 +16,8 @@ takes at once (500 for the TabPFN-3 checkpoint used here):
 You get a classifier you can drop into any scikit-learn benchmark, and a
 100-feature anchor signature you can report and evaluate on its own.
 
+![TabPFN-Anchor graphical abstract](docs/graphical_abstract.png)
+
 This is the reference implementation of the following paper, **accepted for
 publication in *IEEE Access* (2026)**:
 
@@ -93,6 +95,47 @@ published configuration; most of that time is the OddSHAP attribution step. The
 run reports `views 9   distinct features used 3,700` (100 anchors plus nine
 blocks of 400). The score on this synthetic task means nothing in itself.
 
+## Execution path by number of features
+
+With the default `mode="auto"`, the procedure that runs depends on how many
+features the input has. The table below is for the default configuration
+(`n_anchor=100`, `n_residual=400`, `stack_size=9`).
+
+| Number of features | What runs | Feature ranking | Views *K* |
+|---|---|---|---|
+| ≤ 500 | TabPFN-3 directly | none | — |
+| 501 – 2,000 | TabPFN-3 directly (each estimator samples 500 features at random) | none | — |
+| 2,001 – 5,000 | TabPFN-Anchor | Random Forest → OddSHAP (ANOVA-*F* screen skipped) | 4 – 9 |
+| > 5,000 | TabPFN-Anchor | ANOVA-*F* → Random Forest → OddSHAP | 9 |
+
+In the TabPFN-Anchor rows the number of views is
+*K* = min(9, ⌊(number of features − 100) / 400⌋): 4 views for 2,001–2,099
+features, 5 for 2,100–2,499, 6 for 2,500–2,899, 7 for 2,900–3,299, 8 for
+3,300–3,699 and 9 from 3,700 on. Each view holds the 100 shared anchors plus
+400 ranked features.
+
+**With 2,000 features or fewer, `mode="auto"` runs TabPFN-3 itself, not the
+anchor ensemble, and no anchor signature is produced.** Results from that path
+should not be reported as TabPFN-Anchor results. To fix the procedure
+regardless of input width, set `mode` explicitly:
+
+| `mode` | Behaviour |
+|---|---|
+| `"auto"` (default) | as in the table above |
+| `"anchor"` | always the full anchor ensemble; with the default nine views this needs at least 3,700 features, otherwise it raises an error (lower `stack_size` for narrower inputs) |
+| `"tabpfn"` | always TabPFN-3 directly |
+
+After fitting, the path that actually ran is recorded:
+
+```python
+clf.fit(X_train, y_train)
+clf.execution_plan_     # route, which ranking stages ran, number of views and folds
+clf.resolved_config_    # the full resolved configuration, including preprocessing
+```
+
+When comparing against other classifiers, report the number of input
+features, `mode`, `preprocessing` and the number of views alongside the score.
+
 ## Using your own data
 
 `fit` accepts anything scikit-learn accepts. A pandas DataFrame is preferable:
@@ -113,6 +156,8 @@ X = df.drop(columns=["subtype"])
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.3, stratify=y, random_state=42)
 
+# preprocessing="rnaseq" applies log2(x + 1) to X inside fit and predict.
+# Use "microarray" or "none" for data that are already on a log scale.
 clf = TabPFNAnchorClassifier(device="cuda:0", preprocessing="rnaseq")
 clf.fit(X_train, y_train)
 pred = clf.predict(X_test)
@@ -124,7 +169,7 @@ data always receive the same transformation:
 | `preprocessing` | Transformation | Use for |
 |---|---|---|
 | `"none"` (default) | none | data you have already preprocessed |
-| `"rnaseq"` | `log2(x + 1)`; negative values raise an error | non-negative RNA-seq expression values |
+| `"rnaseq"` | `log2(x + 1)` (i.e. `np.log2(1 + X)`); negative values raise an error | non-negative RNA-seq expression values not yet log-transformed |
 | `"microarray"` | none | microarray data, usually already normalised and on a log scale |
 
 Do not apply `log2(x + 1)` yourself and also pass `preprocessing="rnaseq"`;
@@ -135,12 +180,11 @@ that would transform the data twice.
 | `X` | numeric, no missing values, unique column names |
 | `y` | one label per row, at least two classes |
 | class sizes | at least two samples in the smallest class |
-| features | more than 2,000 for the anchor ensemble (see below) |
+| features | more than 2,000 for the anchor ensemble (see above) |
 
-With the default `mode="auto"`, an input of **2,000 features or fewer** is
-passed to TabPFN directly, because nine 500-feature views cannot be built from
-so few features; `anchor_features_` then does not exist. Pass `mode="anchor"`
-to force the full procedure on a narrower input.
+With 2,000 features or fewer, `anchor_features_` does not exist because the
+anchor ensemble is not run (see
+[Execution path by number of features](#execution-path-by-number-of-features)).
 
 ## Benchmarking against other methods
 
